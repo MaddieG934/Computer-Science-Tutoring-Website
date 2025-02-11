@@ -1,0 +1,30 @@
+*{
+	margin: 0px; padding: 0px;
+	}
+	
+body {
+	background-color: #848B66;
+	}
+		
+#wrapper {
+	width: 1130px;
+	margin: 0px auto;
+		
+	}
+		
+header {
+	background-color: #EED5CE;
+	min-height: 120px;
+	}
+		
+nav {
+	background-color: #E8E4E1;
+	min-height: 50px;
+	text-align: right;
+	}
+		
+#maincontent {
+	background-color: #E8E4E1;
+	min-height: 800px;
+	}
+	
