@@ -1,3 +1,17 @@
+@font-face {
+	font-family: "PP Woodland Bold";
+	src: url('fonts/PPWoodland-Bold.woff') format(woff);
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "PP Woodland";
+	src: url('fonts/PPWoodland-Ultralight.woff') format(woff);
+	font-weight: normal;
+	font-style: normal;
+}
+
 *{
 	margin: 0px; padding: 0px;
 	}
@@ -14,9 +28,32 @@ body {
 		
 header {
 	background-color: #EED5CE;
-	min-height: 120px;
+	height: 120px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: #848B66;
+	font-family: 'PP Woodland Bold';
+	font-size: 2em;
+	padding: 0 20px;
 	}
-		
+	
+h1 {
+	flex-grow: 1;
+    text-align: center;
+    margin: 0;
+}
+
+header img.left {
+	width: 170px;
+	height: auto;
+}
+
+header img.right {
+	width: 170px;
+	height: auto;
+}
+
 nav {
 	background-color: #E8E4E1;
 	min-height: 50px;
