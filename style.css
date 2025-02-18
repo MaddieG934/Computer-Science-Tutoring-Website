@@ -19,6 +19,38 @@
 body {
 	background-color: #848B66;
 	}
+	
+body img.left1 {
+	position: relative;
+	width: 150px;
+	height: auto;
+	top: -1150px;
+	right: -100px;
+}
+
+body img.left2 {
+	position: relative;
+	width: 130px;
+	height: auto;
+	top: -850px;
+	left: -130px;
+}
+
+body img.left3 {
+	position: relative;
+	width: 130px;
+	height: auto;
+	top: -600px;
+	left: -150px;
+}
+
+body img.right1 {
+	position: relative;
+	width: 150px;
+	height: auto;
+	top: -1050px;
+	left: 1120px;
+}
 		
 #wrapper {
 	width: 1130px;
@@ -62,6 +94,6 @@ nav {
 		
 #maincontent {
 	background-color: #E8E4E1;
-	min-height: 800px;
+	min-height: 1200px;
 	}
 	
