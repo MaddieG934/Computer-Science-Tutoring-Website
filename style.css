@@ -48,8 +48,24 @@ body img.right1 {
 	position: relative;
 	width: 150px;
 	height: auto;
-	top: -1050px;
-	left: 1120px;
+	top: -1075px;
+	left: 1110px;
+}
+
+body img.right2 {
+	position: relative;
+	width: 150px;
+	height: auto;
+	top: -750px;
+	left: 850px;
+}
+
+body img.right3 {
+	position: relative;
+	width: 150px;
+	height: auto;
+	top: -500px;
+	left: 810px;
 }
 		
 #wrapper {
@@ -91,6 +107,14 @@ nav {
 	min-height: 50px;
 	text-align: right;
 	}
+	
+ul .Login {
+	font-family: 'PP Woodland Bold';
+	color: #848B66;
+	font-size: 1.6em;
+	padding-top: 5px;
+	padding-right: 100px;
+}
 		
 #maincontent {
 	background-color: #E8E4E1;
