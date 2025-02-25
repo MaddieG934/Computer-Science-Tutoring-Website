@@ -24,25 +24,25 @@
       {
         "lessonID": 1,
         "courseID": 1,
-        "header": "lorem ipsum dolor",
+        "header": "Introduction to Computer Science",
         "conent": "lorem ipsum dolor sit amet"
       },
       {
         "lessonID": 2,
         "courseID": 2,
-        "header": "lorem ipsum dolor",
+        "header": "Data Structures",
         "conent": "lorem ipsum dolor sit amet"
       },
       {
         "lessonID": 3,
         "courseID": 3,
-        "header": "lorem ipsum dolor",
+        "header": "Assembly Language Programming",
         "conent": "lorem ipsum dolor sit amet"
       },
       {
         "lessonID": 4,
         "courseID": 4,
-        "header": "lorem ipsum dolor",
+        "header": "Programming Languages",
         "conent": "lorem ipsum dolor sit amet"
       }
     ]
