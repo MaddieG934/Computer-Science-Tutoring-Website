@@ -19,7 +19,7 @@
 body {
 	background-color: #848B66;
 	}
-	
+
 body img.left1 {
 	position: relative;
 	width: 150px;
@@ -67,12 +67,274 @@ body img.right3 {
 	top: -500px;
 	left: 810px;
 }
-		
+
 #wrapper {
-	width: 1130px;
+	max-width: 1130px;
 	margin: 0px auto;
 		
 	}
+	
+@media (max-width: 1440px) { /*laptop large*/
+
+	#wrapper {
+		max-width: 65%;
+		margin: 0px auto;
+	}
+	
+	body img.left3 {
+		position: relative;
+		width: 130px;
+		height: auto;
+		top: -575px;
+		left: -170px;
+	}
+	
+	body img.right1 {
+		position: relative;
+		width: 150px;
+		height: auto;
+		top: -1075px;
+		left: 850px;
+	}
+	
+	body img.right2 {
+		position: relative;
+		width: 150px;
+		height: auto;
+		top: -750px;
+		left: 625px;
+	}
+	
+	body img.right3 {
+		position: relative;
+		width: 150px;
+		height: auto;
+		top: -500px;
+		left: 555px;
+	}
+	
+	* {
+  outline: 1px solid red;
+}
+}
+
+@media (max-width: 1024px) { /*laptop*/
+	#wrapper {
+		max-width: 60%;
+		margin: 0px auto;
+	}
+	
+	header img.left, header img.right {
+		max-width: 140px !important;
+		height: auto !important;
+}
+	
+	ul li.Login {
+		padding-top: 5px;
+		font-size: 1.5em !important;
+		padding-right: 75px !important;
+	}
+	
+	header {
+		font-size: 1.7em !important;
+	}
+	
+	body img.left1 {
+		position: relative;
+		width: 120px;
+		height: auto;
+		top: -1150px;
+		right: -75px;
+	}
+	
+	body img.left2 {
+		position: relative;
+		width: 100px;
+		height: auto;
+		top: -925px;
+		left: -120px;
+	}
+	
+	body img.left3 {
+		position: relative;
+		width: 100px;
+		height: auto;
+		top: -675px;
+		left: -130px;
+	}
+	
+	body img.right1 {
+		position: relative;
+		width: 120px;
+		height: auto;
+		top: -1075px;
+		left: 570px;
+	}
+	
+	body img.right2 {
+		position: relative;
+		width: 120px;
+		height: auto;
+		top: -825px;
+		left: 370px;
+	}
+	
+	body img.right3 {
+		position: relative;
+		width: 120px;
+		height: auto;
+		top: -600px;
+		left: 320px;
+	}
+}
+
+@media (max-width: 768px) { /*tablet*/
+
+	#wrapper {
+		max-width: 75%;
+		margin: 0px auto;
+	}
+	
+	header img.left, header img.right {
+		max-width: 130px !important;
+		height: auto !important;
+	}
+	
+	ul li.Login {
+		padding-top: 10px !important;
+		font-size: 1.3em !important;
+		padding-right: 20px !important;
+	}
+	
+	header {
+		font-size: 1.6em !important;
+	}
+	
+	body img.left1 {
+		position: relative;
+		width: 80px;
+		height: auto;
+		top: -1150px;
+		right: -15px;
+	}
+	
+	body img.left2 {
+		position: relative;
+		width: 60px;
+		height: auto;
+		top: -945px;
+		left: -80px;
+	}
+	
+	body img.left3 {
+		position: relative;
+		width: 60px;
+		height: auto;
+		top: -750px;
+		left: -115px;
+	}
+	
+	body img.right1 {
+		position: relative;
+		width: 80px;
+		height: auto;
+		top: -1075px;
+		left: 475px;
+	}
+	
+	body img.right2 {
+		position: relative;
+		width: 80px;
+		height: auto;
+		top: -850px;
+		left: 380px;
+	}
+	
+	body img.right3 {
+		position: relative;
+		width: 80px;
+		height: auto;
+		top: -680px;
+		left: 305px;
+	}
+}
+
+@media (max-width: 430px) { /*mobile L*/
+	
+
+	#wrapper {
+		max-width: 100%;
+		margin: 0px auto;
+	}
+	
+	header img.left, header img.right {
+		max-width: 75px !important;
+		height: auto !important;
+	}
+	
+	header {
+		font-size: 1em !important;
+	}
+	
+	body img.left1 {
+		display: none;
+	}
+	
+	body img.left2 {
+		display: none;
+	}
+	
+	body img.left3 {
+		display: none;
+	}
+	
+	body img.right1 {
+		display: none;
+	}
+	
+	body img.right2 {
+		display: none;
+	}
+	
+	body img.right3 {
+		display: none;
+	}
+}
+
+@media (max-width: 380px) { /*mobile M*/
+
+	header {
+	font-size: 0.8em !important;
+	}
+	header img.left, header img.right {
+		max-width: 60px !important;
+		height: auto !important;
+	}
+	
+	body img.left1 {
+		display: none;
+	}
+	
+	body img.left2 {
+		display: none;
+	}
+	
+	body img.left3 {
+		display: none;
+	}
+	
+	body img.right1 {
+		display: none;
+	}
+	
+	body img.right2 {
+		display: none;
+	}
+	
+	body img.right3 {
+		display: none;
+	}
+}
 		
 header {
 	background-color: #EED5CE;
@@ -93,12 +355,12 @@ h1 {
 }
 
 header img.left {
-	width: 170px;
+	max-width: 170px;
 	height: auto;
 }
 
 header img.right {
-	width: 170px;
+	max-width: 170px;
 	height: auto;
 }
 
@@ -108,7 +370,7 @@ nav {
 	text-align: right;
 	}
 	
-ul .Login {
+ul li.Login {
 	font-family: 'PP Woodland Bold';
 	color: #848B66;
 	font-size: 1.6em;
