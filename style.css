@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&display=swap');
+
 @font-face {
 	font-family: "PP Woodland Bold";
 	src: url('fonts/PPWoodland-Bold.woff') format(woff);
@@ -316,10 +318,6 @@ body img.right3 {
 		height: auto !important;
 	}
 	
-	nav {
-		outline: 2px solid #848B66;
-	}
-	
 	/*
 	body img.left1 {
 		display: none;
@@ -379,6 +377,7 @@ nav {
 	background-color: #E8E4E1;
 	min-height: 50px;
 	text-align: right;
+	outline: 2px solid #848B66;
 	}
 	
 ul li.Login {
