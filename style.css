@@ -19,7 +19,7 @@
 body {
 	background-color: #848B66;
 	}
-
+/*
 body img.left1 {
 	position: relative;
 	width: 150px;
@@ -67,6 +67,7 @@ body img.right3 {
 	top: -500px;
 	left: 810px;
 }
+*/
 
 #wrapper {
 	max-width: 1130px;
@@ -80,7 +81,7 @@ body img.right3 {
 		max-width: 65%;
 		margin: 0px auto;
 	}
-	
+	/*
 	body img.left3 {
 		position: relative;
 		width: 130px;
@@ -112,15 +113,12 @@ body img.right3 {
 		top: -500px;
 		left: 555px;
 	}
-	
-	* {
-  outline: 1px solid red;
-}
+	*/
 }
 
 @media (max-width: 1024px) { /*laptop*/
 	#wrapper {
-		max-width: 60%;
+		max-width: 70%;
 		margin: 0px auto;
 	}
 	
@@ -132,13 +130,14 @@ body img.right3 {
 	ul li.Login {
 		padding-top: 5px;
 		font-size: 1.5em !important;
-		padding-right: 75px !important;
+		padding-right: 50px !important;
+		outline: 2px #848B66;
 	}
 	
 	header {
 		font-size: 1.7em !important;
 	}
-	
+	/*
 	body img.left1 {
 		position: relative;
 		width: 120px;
@@ -186,6 +185,7 @@ body img.right3 {
 		top: -600px;
 		left: 320px;
 	}
+	*/
 }
 
 @media (max-width: 768px) { /*tablet*/
@@ -209,7 +209,7 @@ body img.right3 {
 	header {
 		font-size: 1.6em !important;
 	}
-	
+	/*
 	body img.left1 {
 		position: relative;
 		width: 80px;
@@ -257,6 +257,7 @@ body img.right3 {
 		top: -680px;
 		left: 305px;
 	}
+	*/
 }
 
 @media (max-width: 430px) { /*mobile L*/
@@ -275,7 +276,10 @@ body img.right3 {
 	header {
 		font-size: 1em !important;
 	}
-	
+	nav {
+		outline: 2px solid #848B66;
+	}
+	/*
 	body img.left1 {
 		display: none;
 	}
@@ -299,6 +303,7 @@ body img.right3 {
 	body img.right3 {
 		display: none;
 	}
+	*/
 }
 
 @media (max-width: 380px) { /*mobile M*/
@@ -311,6 +316,11 @@ body img.right3 {
 		height: auto !important;
 	}
 	
+	nav {
+		outline: 2px solid #848B66;
+	}
+	
+	/*
 	body img.left1 {
 		display: none;
 	}
@@ -334,6 +344,7 @@ body img.right3 {
 	body img.right3 {
 		display: none;
 	}
+	*/
 }
 		
 header {
