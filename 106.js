@@ -1,7 +1,7 @@
 // Fetch data from data.json and display in html
 let jsData = {};
 
-fetch('./data.json')
+fetch('data.json')
     .then(response => response.json())
     .then(data => {
         jsData = data;
