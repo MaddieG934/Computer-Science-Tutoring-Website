@@ -132,12 +132,12 @@ body img.right3 {
 	ul li.Login {
 		padding-top: 5px;
 		font-size: 1.5em !important;
-		padding-right: 50px !important;
+		padding-right: 5% !important;
 		outline: 2px #848B66;
 	}
 	
 	header {
-		font-size: 1.7em !important;
+		font-size: 170% !important;
 	}
 	/*
 	body img.left1 {
@@ -205,11 +205,11 @@ body img.right3 {
 	ul li.Login {
 		padding-top: 10px !important;
 		font-size: 1.3em !important;
-		padding-right: 20px !important;
+		padding-right: 3% !important;
 	}
 	
 	header {
-		font-size: 1.6em !important;
+		font-size: 160% !important;
 	}
 	/*
 	body img.left1 {
@@ -276,7 +276,7 @@ body img.right3 {
 	}
 	
 	header {
-		font-size: 1em !important;
+		font-size: 100% !important;
 	}
 	nav {
 		outline: 2px solid #848B66;
@@ -311,7 +311,7 @@ body img.right3 {
 @media (max-width: 380px) { /*mobile M*/
 
 	header {
-	font-size: 0.8em !important;
+	font-size: 80% !important;
 	}
 	header img.left, header img.right {
 		max-width: 60px !important;
