@@ -1,6 +1,7 @@
 [
   {
-    "courses": [
+    "type": "course",
+    "members": [
       {
         "courseID": 1,
         "title": "Introduction to Computer Science"
@@ -20,7 +21,8 @@
     ]
   },
   {
-    "lessons": [
+    "type": "lesson",
+    "members": [
       {
         "lessonID": 1,
         "courseID": 1,
@@ -48,7 +50,8 @@
     ]
   },
   {
-    "quizzes": [
+    "type": "quiz",
+    "members": [
       {
         "quizzID": 1,
         "lessonID": 1,
@@ -71,4 +74,4 @@
       }
     ]
   }
- ]
+]

@@ -1,24 +1,17 @@
-// Fetch data from data.json and display in html
-document.addEventListener("DOMContentLoaded", function () {
-    displayLesson();
-    console.log('content displayed');
-});
+// Fetch data from data.json as an array of objects
+async function fetchData() {
+    const response = await fetch('./data.json');
+    const data = await response.json();
+    return data;
+}
 
 // Display object => lessons => second lesson (106) => header, content
-function displayLesson() {
-    let jsData = {};
-    fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
-            jsData = data;
-            console.log(jsData);
-        })
-        .catch(error => {
-            console.error('Error fetching JSON data: ', error);
-        });
+async function displayLesson() {
+    let jsData = await fetchData();
+    console.log(jsData);
 
-    let lesson = jsData[1].lessons[1];
-    console.log(lesson);
+    console.log(jsData[1]);
+    let lesson = jsData[1].members[1];
 
     if (lesson) {
         document.getElementById("lessonHeader").textContent = lesson.header;
@@ -27,3 +20,9 @@ function displayLesson() {
         console.error('Lesson not found.');
     }
 }
+
+// On document load, display appropriate content
+document.addEventListener("DOMContentLoaded", function () {
+    displayLesson();
+    console.log('content displayed');
+});
