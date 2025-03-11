@@ -25,89 +25,99 @@
         <div id="maincontent">
             <h2 id="lessonHeader">Data Structures</h2>
             <p id="lessonContent">
-                Common data structures include arrays, vectors, structures. and classes.
-                <br /><br />
-                <b>Arrays</b> are lists of a fixed size whose elements are all the same type. They are created like this:
-                <br /><br />
-                &emsp; int myArr = [1, 2, 3];
-                <br /><br />
-                or like this (for an empty array of size 3):
-                <br /><br />
-                &emsp; myArr(3);
+                <br />
+                <div id="intro">
+                    Common data structures include arrays, vectors, structures. and classes.
+                    <br /><br />
+                </div>
+                
+                <div id="arrays">
+                    <b>Arrays</b> are lists of a fixed size whose elements are all the same type. They are created like this:
+                    <br /><br />
+                    &emsp; int myArr = [1, 2, 3];
+                    <br /><br />
+                    or like this (for an empty array of size 3):
+                    <br /><br />
+                    &emsp; myArr(3);
+                    <br /><br />
+                </div>
+                
+                <div id="vectors">
+                    <b>Vectors</b> are also lists whose elements are all the same type, but you can dynamically add and delete element.
+                    To use vectors, you need to include the vector library. They are created like this:
+                    <br /><br />
+                    &emsp; vector&ltchar&gt myvec = {'a', 'b', 'c'};
+                    <br /><br />
+                    or like this (for an empty vector with no capacity):
+                    <br /><br />
+                    &emsp; vector&ltchar&gt myvec;
+                    <br /><br />
+                    You can add an element to the end of a vector like this:
+                    <br /><br />
+                    &emsp; myVec.push_back('d');
+                    <br /><br />
+                    You can also delete the last element of a vector like this:
+                    <br /><br />
+                    &emsp; myVec.pop_back(); // push_back() and pop_back() are both "methods" you can use on a vector
+                    <br /><br />
+                    Other methods include .size(), which returns the number of elements in a vector; .empty(), which checks
+                    whether the vector is empty and returns true or false; and .at(), which takes an element in the vector
+                    and returns its position
+                    <br /><br />
+                </div>
 
-                <br /><br />
-                <b>Vectors</b> are also lists whose elements are all the same type, but you can dynamically add and delete element.
-                To use vectors, you need to include the vector library. They are created like this:
-                <br /><br />
-                &emsp; vector&ltchar&gt myvec = {'a', 'b', 'c'};
-                <br /><br />
-                or like this (for an empty vector with no capacity):
-                <br /><br />
-                &emsp; vector&ltchar&gt myvec;
-                <br /><br />
-                You can add an element to the end of a vector like this:
-                <br /><br />
-                &emsp; myVec.push_back('d');
-                <br /><br />
-                You can also delete the last element of a vector like this:
-                <br /><br />
-                &emsp; myVec.pop_back(); // push_back() and pop_back() are both "methods" you can use on a vector
-                <br /><br />
-                Other methods include .size(), which returns the number of elements in a vector; .empty(), which checks
-                whether the vector is empty and returns true or false; and .at(), which takes an element in the vector
-                and returns its position
+                <div id="structures">
+                    <b>Structures</b> are containers that can hold elements of multiple types. They are created like this:
+                    <br /><br />
+                    &emsp; struct {
+                    <br /> &emsp; &emsp; int num;
+                    <br /> &emsp; &emsp; string myString;
+                    <br /> &emsp; &emsp; char myArr(3);
+                    <br /> &emsp; } structure1, structure2;
+                    <br /> &emsp; // There will be 2 "instances" of the structure, one named structure1 and the other structure2
+                    <br /><br />
+                    You can initialize structure data like this:
+                    <br /><br />
+                    &emsp; structure1.num = 1;
+                    <br />&emsp; structure2.myString = "Hello world";
+                    <br />&emsp; // The structure1 variable has its "num" element set to 1
+                    <br /> &emsp; // The structure2 variable has its "myString" element set to "Hello world"
+                </div>
 
-                <br /><br />
-                <b>Structures</b> are containers that can hold elements of multiple types. They are created like this:
-                <br /><br />
-                &emsp; struct {
-                <br /> &emsp; &emsp; int num;
-                <br /> &emsp; &emsp; string myString;
-                <br /> &emsp; &emsp; char myArr(3);
-                <br /> &emsp; } structure1, structure2;
-                <br /> &emsp; // There will be 2 "instances" of the structure, one named structure1 and the other structure2
-                <br /><br />
-                You can initialize structure data like this:
-                <br /><br />
-                &emsp; structure1.num = 1;
-                <br />&emsp; structure2.myString = "Hello world";
-                <br />&emsp; // The structure1 variable has its "num" element set to 1
-                <br /> &emsp; // The structure2 variable has its "myString" element set to "Hello world"
-
-                <br /><br />
-                <b>Classes</b> also can hold elements of different types, as well as functions to manipulaate those elements. They are created like this:
-                <br /><br />
-                &emsp; class Box {
-                <br /> &emsp; private: // "private" means only an instance of this class itself can access these variables
-                <br /> &emsp; &emsp; int height, length, width;
-                <br /> &emsp; public: // "public" means anyone can access these variables and functions
-                <br /> &emsp; &emsp; // The "constructor" function is called when an instance of the class is first created.
-                <br /> &emsp; &emsp; Box(int h = 0, int l = 0, int w = 0) {
-                <br /> &emsp; &emsp; &emsp; height = h;
-                <br /> &emsp; &emsp; &emsp; length = l;
-                <br /> &emsp; &emsp; &emsp; weight = w;
-                <br /> &emsp; &emsp; }
-                <br /> &emsp; &emsp; double calcVolume() { // This function returns the volume of a particular box by multiplying the three dimensions
-                <br /> &emsp; &emsp; &emsp; return height * length * width;
-                <br /> &emsp; &emsp; }
-                <br /> &emsp; }
-                <br /><br />
-                You can create an instance of a class like this:
-                <br /><br />
-                &emsp; Box myBox(1, 2, 3); // Create a Box with height 1, length 2, and width 3
-                <br /><br />
-                You can call public functions like this:
-                <br /><br />
-                &emsp; double volume = myBox.calcVolume();
-                <br /> &emsp; // volume = myBox.height * myBox.length * myBox.width = 1 * 2 * 3 = 6
-                <br /><br />
-                But if you try to access private variables directly like this:
-                <br /><br />
-                &emsp; volume = myBox.height * myBox.length * myBox.width;
-                <br /><br />
-                you will get an error.
-
-
+                <div id="classes">
+                    <br /><br />
+                    <b>Classes</b> also can hold elements of different types, as well as functions to manipulaate those elements. They are created like this:
+                    <br /><br />
+                    &emsp; class Box {
+                    <br /> &emsp; private: // "private" means only an instance of this class itself can access these variables
+                    <br /> &emsp; &emsp; int height, length, width;
+                    <br /> &emsp; public: // "public" means anyone can access these variables and functions
+                    <br /> &emsp; &emsp; // The "constructor" function is called when an instance of the class is first created.
+                    <br /> &emsp; &emsp; Box(int h = 0, int l = 0, int w = 0) {
+                    <br /> &emsp; &emsp; &emsp; height = h;
+                    <br /> &emsp; &emsp; &emsp; length = l;
+                    <br /> &emsp; &emsp; &emsp; weight = w;
+                    <br /> &emsp; &emsp; }
+                    <br /> &emsp; &emsp; double calcVolume() { // This function returns the volume of a particular box by multiplying the three dimensions
+                    <br /> &emsp; &emsp; &emsp; return height * length * width;
+                    <br /> &emsp; &emsp; }
+                    <br /> &emsp; }
+                    <br /><br />
+                    You can create an instance of a class like this:
+                    <br /><br />
+                    &emsp; Box myBox(1, 2, 3); // Create a Box with height 1, length 2, and width 3
+                    <br /><br />
+                    You can call public functions like this:
+                    <br /><br />
+                    &emsp; double volume = myBox.calcVolume();
+                    <br /> &emsp; // volume = myBox.height * myBox.length * myBox.width = 1 * 2 * 3 = 6
+                    <br /><br />
+                    But if you try to access private variables directly like this:
+                    <br /><br />
+                    &emsp; volume = myBox.height * myBox.length * myBox.width;
+                    <br /><br />
+                    you will get an error.
+                </div>
             </p>
         </div>
     </div>
