@@ -8,14 +8,10 @@ async function fetchData() {
 // Display object => lessons => second lesson (106) => header, content
 async function displayLesson() {
     let jsData = await fetchData();
-    console.log(jsData);
-
-    console.log(jsData[1]);
     let lesson = jsData[1].members[1];
 
     if (lesson) {
         document.getElementById("lessonHeader").textContent = lesson.header;
-        document.getElementById("lessonContent").textContent = lesson.content;
     } else {
         console.error('Lesson not found.');
     }

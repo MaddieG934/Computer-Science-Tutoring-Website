@@ -32,8 +32,7 @@
       {
         "lessonID": 2,
         "courseID": 2,
-        "header": "Data Structures",
-        "content": "lorem ipsum dolor sit amet"
+        "header": "Data Structures"
       },
       {
         "lessonID": 3,
