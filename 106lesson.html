@@ -20,7 +20,7 @@
         <ul>
             <li class="Login"><a href="#">Login</a></li>
     </nav>
-    
+
     <div id="wrapper">
         <div id="maincontent">
             <div id="lessoncontent">
@@ -35,15 +35,15 @@
                 <p>
                     <b>Arrays</b> are lists of a fixed size whose elements are all the same type. They are created like this:
                     <br /><br />
-                    <p id="code-block">
-                        <code>&emsp; <span style="color:blue">int</span> myArr = [<span style="color:seagreen">1</span>, <span style="color:seagreen">2</span>, <span style="color:seagreen">3</span>];</code>
-                    </p>
-                    <br />
-                    or like this (for an empty array of size 3):
-                    <br /><br />
-                    <p id="code-block">
-                        <code>&emsp; <span style="color:blue">int</span> myArr(<span style="color:seagreen">3</span>);</code>
-                    </p>
+                <p id="code-block">
+                    <code>&emsp; <span style="color:blue">int</span> myArr = [<span style="color:seagreen">1</span>, <span style="color:seagreen">2</span>, <span style="color:seagreen">3</span>];</code>
+                </p>
+                <br />
+                or like this (for an empty array of size 3):
+                <br /><br />
+                <p id="code-block">
+                    <code>&emsp; <span style="color:blue">int</span> myArr(<span style="color:seagreen">3</span>);</code>
+                </p>
                 </p>
                 <br />
 
@@ -51,120 +51,121 @@
                     <b>Vectors</b> are also lists whose elements are all the same type, but you can dynamically add and delete element.
                     To use vectors, you need to include the vector library. They are created like this:
                     <br /><br />
-                    <p id="code-block">
-                        <code>&emsp; <span style="color:teal">vector</span>&lt<span style="color:blue">char</span>&gt myvec = {<span style="color:crimson">'a'</span>, <span style="color:crimson">'b'</span>, <span style="color:crimson">'c'</span>};</code>
-                    </p>
-                    <br />
-                    or like this (for an empty vector with no capacity):
-                    <br /><br />
-                    <p id="code-block">
-                        <code>&emsp; <span style="color:teal">vector</span>&lt<span style="color:blue">char</span>&gt myvec;</code>
-                    </p>
-                    <br />
-                    You can add an element to the end of a vector like this:
-                    <br /><br />
-                    <p id="code-block">
-                        <code>&emsp; myVec.push_back(<span style="color:crimson">'d'</span>);</code>
-                    </p>
-                    <br />
-                    You can also delete the last element of a vector like this:
-                    <br /><br />
-                    <p id="code-block">
-                        <code>&emsp; myVec.pop_back(); <span style="color:green">// push_back() and pop_back() are both "methods" you can use on a vector</span></code>
-                    </p>
-                    <br />
-                    Other methods include <code>.size()</code>, which returns the number of elements in a vector; <code>.empty()</code>, which checks
-                    whether the vector is empty and returns true or false; and <code>.at()</code>, which takes an element in the vector
-                    and returns its position
+                <p id="code-block">
+                    <code>&emsp; <span style="color:teal">vector</span>&lt<span style="color:blue">char</span>&gt myvec = {<span style="color:crimson">'a'</span>, <span style="color:crimson">'b'</span>, <span style="color:crimson">'c'</span>};</code>
+                </p>
+                <br />
+                or like this (for an empty vector with no capacity):
+                <br /><br />
+                <p id="code-block">
+                    <code>&emsp; <span style="color:teal">vector</span>&lt<span style="color:blue">char</span>&gt myvec;</code>
+                </p>
+                <br />
+                You can add an element to the end of a vector like this:
+                <br /><br />
+                <p id="code-block">
+                    <code>&emsp; myVec.push_back(<span style="color:crimson">'d'</span>);</code>
+                </p>
+                <br />
+                You can also delete the last element of a vector like this:
+                <br /><br />
+                <p id="code-block">
+                    <code>&emsp; myVec.pop_back(); <span style="color:green">// push_back() and pop_back() are both "methods" you can use on a vector</span></code>
+                </p>
+                <br />
+                Other methods include <code>.size()</code>, which returns the number of elements in a vector; <code>.empty()</code>, which checks
+                whether the vector is empty and returns true or false; and <code>.at()</code>, which takes an element in the vector
+                and returns its position
                 </p>
                 <br />
 
                 <p>
                     <b>Structures</b> are containers that can hold elements of multiple types. They are created like this:
                     <br /><br />
-                    <p id="code-block">
-                        <code>
-                            &emsp; struct {
-                            <br /> &emsp; &emsp; <span style="color:blue">int</span> num;
-                            <br /> &emsp; &emsp; <span style="color:blue">string</span> myString;
-                            <br /> &emsp; &emsp; <span style="color:blue">char</span> myArr(<span style="color: seagreen">3</span>);
-                            <br /> &emsp; } structure1, structure2;
-                            <br /> &emsp; <span style="color:green">// There will be 2 "instances" of the structure, one named structure1 and the other structure2</span>
-                        </code>
-                    </p>
-                    <br />
-                    You can initialize structure data like this:
-                    <br /><br />
-                    <p id="code-block">
-                        <code>
-                            &emsp; structure1.num = <span style="color: seagreen">1</span>;
+                <p id="code-block">
+                    <code>
+                        &emsp; struct {
+                        <br /> &emsp; &emsp; <span style="color:blue">int</span> num;
+                        <br /> &emsp; &emsp; <span style="color:blue">string</span> myString;
+                        <br /> &emsp; &emsp; <span style="color:blue">char</span> myArr(<span style="color: seagreen">3</span>);
+                        <br /> &emsp; } structure1, structure2;
+                        <br /> &emsp; <span style="color:green">// There will be 2 "instances" of the structure, one named structure1 and the other structure2</span>
+                    </code>
+                </p>
+                <br />
+                You can initialize structure data like this:
+                <br /><br />
+                <p id="code-block">
+                    <code>
+                        &emsp; structure1.num = <span style="color: seagreen">1</span>;
+                        <br />
+                        &emsp; structure2.myString = <span style="color:crimson">"Hello World!"</span>;
+                        <br />
+                        <span style="color:green">
+                            &emsp; // The structure1 variable has its "num" element set to 1
                             <br />
-                            &emsp; structure2.myString = <span style="color:crimson">"Hello World!"</span>;
-                            <br />
-                            <span style="color:green">
-                                &emsp; // The structure1 variable has its "num" element set to 1
-                                <br />
-                                &emsp; // The structure2 variable has its "myString" element set to "Hello world"
-                            </span>
-                        </code>
-                    </p>
+                            &emsp; // The structure2 variable has its "myString" element set to "Hello world"
+                        </span>
+                    </code>
+                </p>
                 </p>
                 <br />
 
                 <p>
                     <b>Classes</b> also can hold elements of different types, as well as functions to manipulaate those elements. They are created like this:
                     <br /><br />
-                    <p id="code-block">
-                        <code>
-                            &emsp; class Box {
-                            <br /> &emsp; private: <span style="color:green">// "private" means only an instance of this class itself can access these variables</span>
-                            <br /> &emsp; &emsp; int height, length, width;
-                            <br /> &emsp; public: <span style="color:green">// "public" means anyone can access these variables and functions</span>
-                            <br /> &emsp; &emsp; <span style="color:green">// The "constructor" function is called when an instance of the class is first created.</span>
-                            <br /> &emsp; &emsp; Box(<span style="color:blue">int</span> h = <span style="color:seagreen">0</span>, <span style="color:blue">int</span> l = <span style="color: seagreen">0</span>, <span style="color:blue">int</span> w = <span style="color: seagreen">0</span>) {
-                            <br /> &emsp; &emsp; &emsp; height = h;
-                            <br /> &emsp; &emsp; &emsp; length = l;
-                            <br /> &emsp; &emsp; &emsp; weight = w;
-                            <br /> &emsp; &emsp; }
-                            <br /> &emsp; &emsp; <span style="color:blue">double</span> calcVolume() { <span style="color:green">// This function returns the volume of a particular box by multiplying the three dimensions</span>
-                            <br /> &emsp; &emsp; &emsp; return height * length * width;
-                            <br /> &emsp; &emsp; }
-                            <br /> &emsp; }
-                        </code>
-                    </p>
-                    <br />
-                    You can create an instance of a class like this:
-                    <br /><br />
-                    <p id="code-block">
-                        <code>&emsp; Box myBox(<span style="color: seagreen">1</span>, <span style="color: seagreen">2</span>, <span style="color: seagreen">3</span>); <span style="color:green">// Create a Box with height 1, length 2, and width 3</span></code>
-                    </p>
-                    <br />
-                    You can call public functions like this:
-                    <br /><br />
-                    <p id="code-block">
-                        <code>
-                            &emsp; <span style="color:blue">double</span> volume = myBox.calcVolume();
-                            <br /> 
-                            <span style="color:green">&emsp; // volume = myBox.height * myBox.length * myBox.width = 1 * 2 * 3 = 6</span>
-                        </code>
-                    </p>
-                    <br />
-                    But if you try to access private variables directly like this:
-                    <br /><br />
-                    <p id="code-block">
-                        <code>&emsp; <span style="color:blue">double</span> volume = myBox.height * myBox.length * myBox.width;</code>
-                    </p>
-                    <br />
-                    you will get an error.
+                <p id="code-block">
+                    <code>
+                        &emsp; class Box {
+                        <br /> &emsp; private: <span style="color:green">// "private" means only an instance of this class itself can access these variables</span>
+                        <br /> &emsp; &emsp; int height, length, width;
+                        <br /> &emsp; public: <span style="color:green">// "public" means anyone can access these variables and functions</span>
+                        <br /> &emsp; &emsp; <span style="color:green">// The "constructor" function is called when an instance of the class is first created.</span>
+                        <br /> &emsp; &emsp; Box(<span style="color:blue">int</span> h = <span style="color:seagreen">0</span>, <span style="color:blue">int</span> l = <span style="color: seagreen">0</span>, <span style="color:blue">int</span> w = <span style="color: seagreen">0</span>) {
+                        <br /> &emsp; &emsp; &emsp; height = h;
+                        <br /> &emsp; &emsp; &emsp; length = l;
+                        <br /> &emsp; &emsp; &emsp; weight = w;
+                        <br /> &emsp; &emsp; }
+                        <br /> &emsp; &emsp; <span style="color:blue">double</span> calcVolume() { <span style="color:green">// This function returns the volume of a particular box by multiplying the three dimensions</span>
+                        <br /> &emsp; &emsp; &emsp; return height * length * width;
+                        <br /> &emsp; &emsp; }
+                        <br /> &emsp; }
+                    </code>
+                </p>
+                <br />
+                You can create an instance of a class like this:
+                <br /><br />
+                <p id="code-block">
+                    <code>&emsp; Box myBox(<span style="color: seagreen">1</span>, <span style="color: seagreen">2</span>, <span style="color: seagreen">3</span>); <span style="color:green">// Create a Box with height 1, length 2, and width 3</span></code>
+                </p>
+                <br />
+                You can call public functions like this:
+                <br /><br />
+                <p id="code-block">
+                    <code>
+                        &emsp; <span style="color:blue">double</span> volume = myBox.calcVolume();
+                        <br />
+                        <span style="color:green">&emsp; // volume = myBox.height * myBox.length * myBox.width = 1 * 2 * 3 = 6</span>
+                    </code>
+                </p>
+                <br />
+                But if you try to access private variables directly like this:
+                <br /><br />
+                <p id="code-block">
+                    <code>&emsp; <span style="color:blue">double</span> volume = myBox.height * myBox.length * myBox.width;</code>
+                </p>
+                <br />
+                you will get an error.
                 </p>
             </div>
         </div>
     </div>
-    <img src="img/flower1.png" alt="Flower Decor" class="left1">
+
+    <!--<img src="img/flower1.png" alt="Flower Decor" class="left1">
     <img src="img/flower2.png" alt="Flower Decor" class="left2">
     <img src="img/flower3.png" alt="Flower Decor" class="left3">
     <img src="img/flower3INV.png" alt="Flower Decor" class="right1">
     <img src="img/flower1INV.png" alt="Flower Decor" class="right2">
-    <img src="img/flower2.png" alt="Flower Decor" class="right3">
+    <img src="img/flower2.png" alt="Flower Decor" class="right3">-->
 </body>
 </html>
