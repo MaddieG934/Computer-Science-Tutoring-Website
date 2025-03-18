@@ -72,5 +72,100 @@
         "numberOfQuestions": 5
       }
     ]
+  },
+  {
+    "type": "question",
+    "members": [
+      {
+        "questionID": 1,
+        "quizID": 2,
+        "prompt": "What is the main difference between arrays and vectors?",
+        "optionA": "Vectors have a fixed size, while arrays have dynamic size",
+        "optionB": "Vectors can hold items of multiple types, while arrays cannot",
+        "optionC": "Arrays can hold items of multiple types, while vectors cannot",
+        "solution": "Arrays have a fixed size, while vectors have dynamic size"
+      },
+      {
+        "questionID": 2,
+        "quizID": 2,
+        "prompt": "Which way to declare an array is CORRECT?",
+        "optionA": "myArr = [1, 2, 'a'];",
+        "optionB": "int myArr;",
+        "optionC": "char myArr = {'a', 'b', 'c'};",
+        "solution": "int myArr(3);"
+      },
+      {
+        "questionID": 3,
+        "quizID": 2,
+        "prompt": "Which way to declare a vector is NOT CORRECT?",
+        "optionA": "vector<int> myVec = {1, 2, 3};",
+        "optionB": "vector<char> myVec;",
+        "optionC": "vector<int> myVec(3);",
+        "solution": "vector<char> myVec = 'a';"
+      },
+      {
+        "questionID": 4,
+        "quizID": 2,
+        "prompt": "Given: vector<int> myVec = {1, 2, 3};\nHow do you add the element 5 to the end of myVec?",
+        "optionA": "myVec.add_el(5);",
+        "optionB": "myVec += 5;",
+        "optionC": "myVec.push(5);",
+        "solution": "myVec.push_back(5);"
+      },
+      {
+        "questionID": 5,
+        "quizID": 2,
+        "prompt": "Given: vector<int> myVec = {1, 2, 3};\nHow do you remove the last element from myVec?",
+        "optionA": "myVec.pop();",
+        "optionB": "myVec -= 5",
+        "optionC": "myVec.pop_back(5);",
+        "solution": "myVec.pop_back();"
+      },
+      {
+        "questionID": 6,
+        "quizID": 2,
+        "prompt": "What makes a structure different from an array?",
+        "optionA": "An array can change its size, while a structure cannot",
+        "optionB": "The values of structure elements can change, while those of an array cannot",
+        "optionC": "An array can hold elements of multiple types, while a structure cannot",
+        "solution": "An array is a container whose elements are all the same type. A structure is a blueprint of a container whose instances can hold elements of different types"
+      },
+      {
+        "questionID": 7,
+        "quizID": 2,
+        "prompt": "Given: class Box {\nprivate:\n\t\tint height, length, width;\npublic:\n\tBox(int h = 0, int l = 0, int w = 0) {\n\t\theight = h;\n\t\tlength = l;\n\t\twidth = w;\n\t}\n\tdouble calcVolume() {\n\t\treturn height * length * width;\n\t}\n}\nWhich of these code snippets contains an error?",
+        "optionA": "Box myBox();",
+        "optionB": "Box myBox(1, 2, 3);",
+        "optionC": "double volume = myBox.calcVolume();",
+        "solution": "myBox.height = 3;"
+      },
+      {
+        "questionID": 8,
+        "quizID": 2,
+        "prompt": "What is the difference between public and private variables and functions in a class?",
+        "optionA": "Private variables cannot be changed, while public ones can",
+        "optionB": "Public variables and functions are known to the user, while private variables are secret",
+        "optionC": "Private variables can be accessed but not changed from outside the class, while public variables can be changed outside the class",
+        "solution": "Private variables can only be accessed from inside the class, such as through a function. Public variables and functions can be accessed and changed from outside the class"
+      },
+      {
+        "questionID": 9,
+        "quizID": 2,
+        "prompt": "Given: class Box {\nprivate:\n\t\tint height, length, width;\npublic:\n\tBox(int h = 0, int l = 0, int w = 0) {\n\t\theight = h;\n\t\tlength = l;\n\t\twidth = w;\n\t}\n\tdouble calcVolume() {\n\t\treturn height * length * width;\n\t}\n}\nBox myBox(2, 3, 4);\nWhat does myBox.calcVolume() return?",
+        "optionA": "18",
+        "optionB": "9",
+        "optionC": "22",
+        "solution": "24"
+      },
+      {
+        "questionID": 10,
+        "quizID": 2,
+        "prompt": "When you declare a class or structure, you are creating a blueprint for a container that can hold a certain combination of elements. When you create an actual object from that blueprint, it is called a(n) _____ of that class or structure",
+        "optionA": "container",
+        "optionB": "model",
+        "optionC": "iteration",
+        "solution": "instance"
+      }
+    ]
   }
 ]
