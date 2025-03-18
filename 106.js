@@ -17,6 +17,10 @@ async function displayLesson() {
     }
 }
 
+function goToQuiz() {
+    window.open('./106quiz.html');
+}
+
 // On document load, display appropriate content
 document.addEventListener("DOMContentLoaded", function () {
     displayLesson();
