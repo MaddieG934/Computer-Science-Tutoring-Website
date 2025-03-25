@@ -29,7 +29,7 @@
 
             <h3> What is C++?</h3>
             <p>
-                C++ is a high-performance programming language developed by Bjarne Stroustrup in 1983. It extends the C language with additional features, including object-oriented programming. C++ is widely used for game development, system software, and real-time applications.
+                C++ is a high-performance programming language developed by Bjarne Stroustrup in 1983. C++ is widely used for game development, system software, and real-time applications.
             </p>
 
             <br> <br>
@@ -159,10 +159,213 @@ bool isStudent;
             </tr>
             </table>
 
+            </pre>
+
+            <br> <br>
+
+            <h3> 3 Control Structures</h3>
+            <p>
+                Control structures are fundamental concepts in C++ programming that determine the flow of execution in a program.
+                They help programmers make decisions, repeat actions, and control the sequence in which code is executed.
+            </p>
+
+            <br> <br>
+
+            <p>
+                Conditional Statements (if, else, switch)
+            </p>
+            <h4> a. if Statement</h4>
+
+            <pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+int age = 18;
+if (age >= 18)
+{
+    cout << "You are eligible to vote.";
+}
+
+    </pre>
+
+            <br> <br>
+
+
+            <h4> b.if-else Statement </h4>
+            <pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+ int num = 10;
+            if (num > 0)
+            {
+            cout << "Positive number";
+            }
+            else
+            {
+            cout << "Negative number";
+            }
+    </pre>
+
+            <br> <br>
+
+            <h4> c.switch Statement </h4>
+            <pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+ int choice = 2;
+            switch (choice)
+            {
+            case 1:
+            cout << "Option 1 selected.";
+            break;
+            case 2:
+            cout << "Option 2 selected.";
+            break;
+            default:
+            cout << "Invalid choice.";
+            }
+    </pre>
+
+            <br> <br>
+
+
+            <h3>  4 Looping Statements (for, while, do-while) </h3>
+            <p>
+                Loops allow a program to repeat a block of code multiple times.
+            </p>
+
+            <br> <br>
+
+
+            <h4>
+                a. for Loop
+            </h4>
+            <pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+ for (int i = 1; i <= 5; i++)
+            {
+            cout << i << " ";
+            }
+    </pre>
+
+            <br> <br>
+
+
+            <h4> b. while Loop </h4>
+            <pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+ int i = 1;
+ while (i <= 5)
+ {
+ cout << i << " ";
+ i++;
+ }
+
+    </pre>
+
+            <br> <br>
+
+
+            <h4> c. do-while Loop </h4>
+            <pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+int i = 1;
+do
+ {
+  cout << i << " ";
+  i++;
+} while (i <= 5);
+
+    </pre>
+
+            <br> <br>
+
+            <h3> 5 Functions in C++ </h3>
+            <p>Functions enable modular programming and code reuse.</p>
+
+            <br> <br>
+
+
+            <h4>a. Defining a Function </h4>
+            <pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+ #include &lt;iostream&gt;
+using namespace std;
+
+                void greet() {
+                cout << "Hello, welcome to C++!";
+                }
+
+                int main() {
+                greet(); // Function call
+                return 0;
+                }
+    </pre>
+
+            <br> <br>
+
+            <h4> b. Function with Parameters</h4>
+            <pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+   void add(int a, int b)
+            {
+            cout << "Sum: " << a + b;
+            }
+
+   int main()
+            {
+            add(5, 10);
+            return 0;
+            }
+
+    </pre>
+
+            <br> <br>
+
+            <h3>
+                6 Arrays and Strings
+            </h3>
+
+            <p>
+                An array is a fixed-size collection of elements that are all the same data type. Each element is stored in a specific position called an index (starting at 0). Strings are used to store and work with text. To use strings in C++, you must include the <string> library.
+            </p>
+
+            <br> <br>
+
+            <h4> a. Arrays </h4>
+
+
+            <pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+int numbers[5] = {1, 2, 3, 4, 5};
+cout << numbers[0]; // Output: 1
+
+    </pre>
+
+            <br> <br>
+
+            <h4> b. Strings </h4>
+            <pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() 
+{
+    string name = "Alice";
+    cout << "Hello, " << name;
+    return 0;
+}
+
 </pre>
 
-            
-            <!-- CONTINUE HERE -->
+            <br> <br>
+
+            <h3> Let's test your understanding!</h3>
+            <h4>   Click here to take CSCI 105 - Intro to C++ QUIZ </h4>
+
+            <!-- QUIZ HERE -->
+
+            <br> <br>
+
+            <h3> REFERENCES </h3>
+            <pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+Stroustrup, B. (2013). <a href="https://chenweixiang.github.io/docs/The_C++_Programming_Language_4th_Edition_Bjarne_Stroustrup.pdf" target="_blank"><i>The C++ Programming Language</i> (4th ed.)</a>. Addison-Wesley.
+
+Malik, D. (2018). <a href="https://library.uniq.edu.iq/storage/books/file/C++%20Programming/1667727523C++%20Programming%20From%20Problem%20Analysis%20to%20Program%20Design%20(D.%20S.%20Malik)%20(z-lib.org).pdf" target="_blank"><i>C++ Programming: From Problem Analysis to Program Design</i> (8th ed.)</a>. Cengage Learning.
+</pre>
+
+                 <br> <br>
+
+
+            <!-- END HERE -->
 
         </div>
         
