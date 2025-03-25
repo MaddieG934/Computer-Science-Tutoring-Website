@@ -391,10 +391,10 @@ ul li.Login {
 #maincontent {
 	background-color: #E8E4E1;
 	min-height: 1200px;
-	font-family:'Alegreya';
-	padding:10px;
-}
+  padding:10px;
 
+}
+	
 #lessoncontent {
 	padding: 5px;
 }
@@ -407,4 +407,23 @@ ul li.Login {
 	border-radius:10px;
 	border-style:solid;
 	width:fit-content;
+}
+	
+/* 220 Content Styling */
+
+#lessonHeader220 {
+	font-family: 'PP Woodland Bold';
+	font-size: 2em;
+	color: #848B66;
+	text-align: center;
+}
+
+#intro {
+	font-family: 'Alegreya';
+	padding-left: 15px;
+}
+
+#conversions {
+	font-family: 'Alegreya';
+	padding-left: 15px;
 }
