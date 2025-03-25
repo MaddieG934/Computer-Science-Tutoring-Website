@@ -1,24 +1,15 @@
-// Fetch data from data.json and display in html
-let jsData = {};
+// Fetch data from data.json as an array of objects
+async function fetchData() {
+    const response = await fetch('./data.json');
+    const data = await response.json();
+    return data;
+}
 
-fetch('data.json')
-    .then(response => response.json())
-    .then(data => {
-        jsData = data;
-        console.log(jsData);
+// Display object => lessons => second lesson (106) => header, content
+async function displayLesson() {
+    let jsData = await fetchData();
+    let lesson = jsData[1].members[1];
 
-        document.addEventListener("DOMContentLoaded", function () {
-            displayLessonHeader();
-            displayLessonContent();
-        });
-    })
-    .catch(error => {
-        console.error('Error fetching JSON data: ', error);
-    });
-
-// Display object => lessons => second lesson (106) => header
-function displayLessonHeader() {
-    let lesson = jsData[1].lessons.find(lesson => lesson.lessonID === 2);
     if (lesson) {
         document.getElementById("lessonHeader").textContent = lesson.header;
     } else {
@@ -26,12 +17,12 @@ function displayLessonHeader() {
     }
 }
 
-// Display object => lessons => second lesson (106) => content
-function displayLessonContent() {
-    let lesson = jsData[1].lessons.find(lesson => lesson.lessonID === 2);
-    if (lesson) {
-        document.getElementById("lessonContent").textContent = lesson.content;
-    } else {
-        console.error('Lesson not found.');
-    }
+function goToQuiz() {
+    window.open('./106quiz.html');
 }
+
+// On document load, display appropriate content
+document.addEventListener("DOMContentLoaded", function () {
+    displayLesson();
+    console.log('content displayed');
+});
