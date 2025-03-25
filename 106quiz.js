@@ -42,17 +42,10 @@ async function populateQuiz() {
         }
 
         // Display and style data
-        document.getElementById("1_A").textContent = answers[0];
-        document.getElementById("1_B").textContent = answers[1];
-        document.getElementById("1_C").textContent = answers[2];
-        document.getElementById("1_D").textContent = answers[3];
-
-        if (question.isCode) {
-            document.getElementById("1_A").style.fontFamily = 'Courier';
-            document.getElementById("1_B").style.fontFamily = 'Courier';
-            document.getElementById("1_C").style.fontFamily = 'Courier';
-            document.getElementById("1_D").style.fontFamily = 'Courier';
-        }
+        document.getElementById("1_A").innerHTML = answers[0];
+        document.getElementById("1_B").innerHTML = answers[1];
+        document.getElementById("1_C").innerHTML = answers[2];
+        document.getElementById("1_D").innerHTML = answers[3];
 
         // Pull question 2 from the data
         qIdx = indices[Math.floor(Math.random() * 9)];
@@ -78,17 +71,10 @@ async function populateQuiz() {
         }
 
         // Display and style data
-        document.getElementById("2_A").textContent = answers[0];
-        document.getElementById("2_B").textContent = answers[1];
-        document.getElementById("2_C").textContent = answers[2];
-        document.getElementById("2_D").textContent = answers[3];
-
-        if (question.isCode) {
-            document.getElementById("2_A").style.fontFamily = 'Courier';
-            document.getElementById("2_B").style.fontFamily = 'Courier';
-            document.getElementById("2_C").style.fontFamily = 'Courier';
-            document.getElementById("2_D").style.fontFamily = 'Courier';
-        }
+        document.getElementById("2_A").innerHTML = answers[0];
+        document.getElementById("2_B").innerHTML = answers[1];
+        document.getElementById("2_C").innerHTML = answers[2];
+        document.getElementById("2_D").innerHTML = answers[3];
 
         // Pull question 3 from the data
         qIdx = indices[Math.floor(Math.random() * 8)];
@@ -114,17 +100,10 @@ async function populateQuiz() {
         }
 
         // Display and style data
-        document.getElementById("3_A").textContent = answers[0];
-        document.getElementById("3_B").textContent = answers[1];
-        document.getElementById("3_C").textContent = answers[2];
-        document.getElementById("3_D").textContent = answers[3];
-
-        if (question.isCode) {
-            document.getElementById("3_A").style.fontFamily = 'Courier';
-            document.getElementById("3_B").style.fontFamily = 'Courier';
-            document.getElementById("3_C").style.fontFamily = 'Courier';
-            document.getElementById("3_D").style.fontFamily = 'Courier';
-        }
+        document.getElementById("3_A").innerHTML = answers[0];
+        document.getElementById("3_B").innerHTML = answers[1];
+        document.getElementById("3_C").innerHTML = answers[2];
+        document.getElementById("3_D").innerHTML = answers[3];
 
         // Pull question 4 from the data
         qIdx = indices[Math.floor(Math.random() * 7)];
@@ -149,18 +128,11 @@ async function populateQuiz() {
             answers[idx2] = temp;
         }
 
-        // Display and style data
-        document.getElementById("4_A").textContent = answers[0];
-        document.getElementById("4_B").textContent = answers[1];
-        document.getElementById("4_C").textContent = answers[2];
-        document.getElementById("4_D").textContent = answers[3];
-
-        if (question.isCode) {
-            document.getElementById("4_A").style.fontFamily = 'Courier';
-            document.getElementById("4_B").style.fontFamily = 'Courier';
-            document.getElementById("4_C").style.fontFamily = 'Courier';
-            document.getElementById("4_D").style.fontFamily = 'Courier';
-        }
+        // Display the data
+        document.getElementById("4_A").innerHTML = answers[0];
+        document.getElementById("4_B").innerHTML = answers[1];
+        document.getElementById("4_C").innerHTML = answers[2];
+        document.getElementById("4_D").innerHTML = answers[3];
 
         // Pull question 5 from the data
         qIdx = indices[Math.floor(Math.random() * 6)];
@@ -185,17 +157,10 @@ async function populateQuiz() {
         }
 
         // Display and style data
-        document.getElementById("5_A").textContent = answers[0];
-        document.getElementById("5_B").textContent = answers[1];
-        document.getElementById("5_C").textContent = answers[2];
-        document.getElementById("5_D").textContent = answers[3];
-
-        if (question.isCode) {
-            document.getElementById("5_A").style.fontFamily = 'Courier';
-            document.getElementById("5_B").style.fontFamily = 'Courier';
-            document.getElementById("5_C").style.fontFamily = 'Courier';
-            document.getElementById("5_D").style.fontFamily = 'Courier';
-        }
+        document.getElementById("5_A").innerHTML = answers[0];
+        document.getElementById("5_B").innerHTML = answers[1];
+        document.getElementById("5_C").innerHTML = answers[2];
+        document.getElementById("5_D").innerHTML = answers[3];
 
     } else {
         console.error('Questions not found.');
