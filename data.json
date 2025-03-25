@@ -106,7 +106,7 @@
       {
         "questionID": 4,
         "quizID": 2,
-        "prompt": "Given:\n<code>vector<int> myVec = {1, 2, 3};</code>\nHow do you add the element 5 to the end of myVec?",
+        "prompt": "Given:<p id='code-block'><code>vector<int> myVec = {1, 2, 3};</p></code>\nHow do you add the element 5 to the end of myVec?",
         "optionA": "<code>myVec.add_el(5);</code>",
         "optionB": "<code>myVec += 5;</code>",
         "optionC": "<code>myVec.push(5);</code>",
@@ -115,7 +115,7 @@
       {
         "questionID": 5,
         "quizID": 2,
-        "prompt": "Given:\n<code>vector<int> myVec = {1, 2, 3};</code>\nHow do you remove the last element from myVec?",
+        "prompt": "Given:<p id='code-block'><code>vector<int> myVec = {1, 2, 3};</p></code>\nHow do you remove the last element from myVec?",
         "optionA": "<code>myVec.pop();</code>",
         "optionB": "<code>myVec -= 5;</code>",
         "optionC": "<code>myVec.pop_back(5);</code>",
@@ -133,7 +133,7 @@
       {
         "questionID": 7,
         "quizID": 2,
-        "prompt": "Given:\n<code>class Box { private:\n\t\tint height, length, width;\npublic:\n\tBox(int h = 0, int l = 0, int w = 0) {\n\t\theight = h;\n\t\tlength = l;\n\t\twidth = w;\n\t}\n\tdouble calcVolume() {\n\t\treturn height * length * width;\n\t}\n}</code>\nWhich of these code snippets contains an error?",
+        "prompt": "Given:<p id='code-block'><code>class Box { private:\n\t\tint height, length, width;\npublic:\n\tBox(int h = 0, int l = 0, int w = 0) {\n\t\theight = h;\n\t\tlength = l;\n\t\twidth = w;\n\t}\n\tdouble calcVolume() {\n\t\treturn height * length * width;\n\t}\n}</p></code>\nWhich of these code snippets contains an error?",
         "optionA": "<code>Box myBox();</code>",
         "optionB": "<code>Box myBox(1, 2, 3);</code>",
         "optionC": "<code>double volume = myBox.calcVolume();</code>",
@@ -152,7 +152,7 @@
       {
         "questionID": 9,
         "quizID": 2,
-        "prompt": "Given:\n<code>class Box {\nprivate:\n\t\tint height, length, width;\npublic:\n\tBox(int h = 0, int l = 0, int w = 0) {\n\t\theight = h;\n\t\tlength = l;\n\t\twidth = w;\n\t}\n\tdouble calcVolume() {\n\t\treturn height * length * width;\n\t}\n}\nBox myBox(2, 3, 4);</code>\nWhat does myBox.calcVolume() return?",
+        "prompt": "Given:<p id='code-block'><code>class Box {\nprivate:\n\t\tint height, length, width;\npublic:\n\tBox(int h = 0, int l = 0, int w = 0) {\n\t\theight = h;\n\t\tlength = l;\n\t\twidth = w;\n\t}\n\tdouble calcVolume() {\n\t\treturn height * length * width;\n\t}\n}\nBox myBox(2, 3, 4);</code></p>\nWhat does myBox.calcVolume() return?",
         "optionA": "18",
         "optionB": "9",
         "optionC": "22",
