@@ -393,3 +393,23 @@ ul li.Login {
 	min-height: 1200px;
 	}
 	
+	
+	
+/* 220 Content Styling */
+
+#lessonHeader220 {
+	font-family: 'PP Woodland Bold';
+	font-size: 2em;
+	color: #848B66;
+	text-align: center;
+}
+
+#intro {
+	font-family: 'Alegreya';
+	padding-left: 15px;
+}
+
+#conversions {
+	font-family: 'Alegreya';
+	padding-left: 15px;
+}
