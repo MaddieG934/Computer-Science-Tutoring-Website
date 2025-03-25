@@ -9,7 +9,18 @@ async function fetchData() {
 async function populateQuiz() {
     let jsData = await fetchData();
     let questions = jsData[3].members;
-    let quizQuestions = questions.filter(question => question.quizID === 2);
+
+    /*****************************************************************************
+     *                                                                           *
+     * TO GRILLS WHO WANT TO COPY: YOU ONLY HAVE TO CHANGE 2 (KINDA) THINGS!!!   *
+     *                                                                           *
+     * 1) Change the line below (most important!!!), see the comment right below *
+     *                                                                           *
+     * 2) Change the lines under the "Display data" comments, the first of these *
+     *    lines has more details in a comment                                    *
+     *                                                                           *
+     *****************************************************************************/
+    let quizQuestions = questions.filter(question => question.quizID === 2); // Change "2" to the correct quizID, all questions for the same quiz should have the same quizID
 
     console.log(quizQuestions);
 
@@ -41,9 +52,9 @@ async function populateQuiz() {
             answers[idx2] = temp;
         }
 
-        // Display and style data
-        document.getElementById("1_A").innerHTML = answers[0];
-        document.getElementById("1_B").innerHTML = answers[1];
+        // Display data
+        document.getElementById("1_A").innerHTML = answers[0]; // SECOND CHANGE IS OVER HERE!!! Change the ID here to the ID of the LABEL for the first radio input (see 106quiz.html)
+        document.getElementById("1_B").innerHTML = answers[1]; // Do the same for all these lines, and for all similar lines for questions 2-5 under the "Display data" comments
         document.getElementById("1_C").innerHTML = answers[2];
         document.getElementById("1_D").innerHTML = answers[3];
 
@@ -70,7 +81,7 @@ async function populateQuiz() {
             answers[idx2] = temp;
         }
 
-        // Display and style data
+        // Display data
         document.getElementById("2_A").innerHTML = answers[0];
         document.getElementById("2_B").innerHTML = answers[1];
         document.getElementById("2_C").innerHTML = answers[2];
@@ -99,7 +110,7 @@ async function populateQuiz() {
             answers[idx2] = temp;
         }
 
-        // Display and style data
+        // Display data
         document.getElementById("3_A").innerHTML = answers[0];
         document.getElementById("3_B").innerHTML = answers[1];
         document.getElementById("3_C").innerHTML = answers[2];
@@ -128,7 +139,7 @@ async function populateQuiz() {
             answers[idx2] = temp;
         }
 
-        // Display the data
+        // Display data
         document.getElementById("4_A").innerHTML = answers[0];
         document.getElementById("4_B").innerHTML = answers[1];
         document.getElementById("4_C").innerHTML = answers[2];
@@ -156,7 +167,7 @@ async function populateQuiz() {
             answers[idx2] = temp;
         }
 
-        // Display and style data
+        // Display data
         document.getElementById("5_A").innerHTML = answers[0];
         document.getElementById("5_B").innerHTML = answers[1];
         document.getElementById("5_C").innerHTML = answers[2];
