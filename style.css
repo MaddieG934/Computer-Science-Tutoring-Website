@@ -391,9 +391,23 @@ ul li.Login {
 #maincontent {
 	background-color: #E8E4E1;
 	min-height: 1200px;
-	}
+  padding:10px;
+
+}
 	
-	
+#lessoncontent {
+	padding: 5px;
+}
+
+#code-block {
+	background-color: white;
+	padding: 10px;
+	border-color: black;
+	border-block-width: 2px;
+	border-radius:10px;
+	border-style:solid;
+	width:fit-content;
+}
 	
 /* 220 Content Styling */
 

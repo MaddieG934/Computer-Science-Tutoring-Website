@@ -1,0 +1,377 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title> CSCI 105 - Introduction to C++ </title>
+    <meta name="author" content="Big Green Egg">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img src="img/egg.png" alt="Big Green Egg Logo" class="left">
+        <h1>
+            Big Green Egg
+        </h1>
+        <img src="img/egg.png" alt="Big Green Egg Logo" class="right">
+    </header>
+    <nav id="navbar">
+        <ul>
+            <li><a href="#">Login</a></li>
+    </nav>
+
+    <div id="wrapper">
+
+        <div id="maincontent">
+
+            <h2 style="text-align: center;">CSCI 105 - Introduction to C++</h2>
+            <br> <br>
+
+            <h3> What is C++?</h3>
+            <p>
+                C++ is a high-performance programming language developed by Bjarne Stroustrup in 1983. C++ is widely used for game development, system software, and real-time applications.
+            </p>
+
+            <br> <br>
+
+            <h3> Basic Structure of a C++ Program</h3>
+            <style>
+                .cpp-list {
+                    margin: 10px 0;
+                    padding-left: 20px;
+                    list-style-type: disc;
+                }
+            </style>
+            <p>
+                A simple C++ program consists of:
+            </p>
+            <ul class="cpp-list">
+                <li>Preprocessor directives (<code>#include &lt;iostream&gt;</code>)</li>
+                <li>The main function (<code>int main() { }</code>)</li>
+                <li>Statements ending with a semicolon (<code>;</code>)</li>
+                <li>Comments (single-line using <code>//</code> and multi-line using <code>/* */</code>)</li>
+            </ul>
+
+            <pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() 
+{
+    cout << "Hello, World!" << endl;
+    return 0;
+}
+            </pre>
+
+            <br> <br>
+
+
+            <h3> Understanding the Structure</h3>
+            <p>
+                Understanding the structure of a C++ program is essential for beginners because it provides a foundation for writing efficient and error-free code. Knowing how different components such as headers, functions, and statements interact helps in debugging and structuring programs logically. Mastering the basic structure allows for easier learning of more complex concepts in C++.
+            </p>
+
+            <br> <br>
+
+            <h3> 1 Input and Output</h3>
+
+            <h4> a. Output with “cout”</h4>
+            <p><code>cout</code> (character output) is used to display data on the screen. The <code>&lt;&lt;</code> operator is used to send data to the output stream.</p>
+
+            <pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() 
+{
+    cout &lt;&lt; "Welcome to C++ programming!";
+    return 0;
+}
+    </pre>
+
+            <br> <br>
+
+            <h4> b. Input with "cin"</h4>
+            <p> <code>cin</code> (character input) is used to receive input from the user. The <code>&gt;&gt;</code> operator is used to extract data from the input stream. </p>
+
+            <pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int age;
+    cout &lt;&lt; "Enter your age: ";
+    cin &gt;&gt; age;
+    cout &lt;&lt; "You entered: " &lt;&lt; age;
+    return 0;
+}
+    </pre>
+
+            <br> <br>
+
+            <h3> 2 Variables and Data Types</h3>
+            <h4> a. Variable Declaration</h4>
+            <p>A variable must be declared before it can be used:</p>
+
+            <pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+int number;
+double price;
+char letter;
+bool isStudent;
+    </pre>
+
+            <br> <br>
+
+            <h4> b. Common Data Types</h4>
+
+            <pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+
+            <table border="1" cellpadding="5" cellspacing="0">
+            <tr>
+            <th>Data Type</th>
+            <th>Description</th>
+            </tr>
+            <tr>
+            <td><code>int</code></td>
+            <td>Stores whole numbers (e.g., 10, -5, 100)</td>
+            </tr>
+            <tr>
+            <td><code>float</code></td>
+            <td>Stores decimal numbers with single precision (e.g., 10.5f)</td>
+            </tr>
+            <tr>
+            <td><code>double</code></td>
+            <td>Stores decimal numbers with double precision (e.g., 10.55)</td>
+            </tr>
+            <tr>
+            <td><code>char</code></td>
+            <td>Stores single characters (e.g., 'A')</td>
+            </tr>
+            <tr>
+            <td><code>bool</code></td>
+            <td>Stores true or false values</td>
+            </tr>
+            <tr>
+            <td><code>string</code></td>
+            <td>Stores text (requires <code>#include &lt;string&gt;</code>)</td>
+            </tr>
+            </table>
+
+            </pre>
+
+            <br> <br>
+
+            <h3> 3 Control Structures</h3>
+            <p>
+                Control structures are fundamental concepts in C++ programming that determine the flow of execution in a program.
+                They help programmers make decisions, repeat actions, and control the sequence in which code is executed.
+            </p>
+
+            <br> <br>
+
+            <p>
+                Conditional Statements (if, else, switch)
+            </p>
+            <h4> a. if Statement</h4>
+
+            <pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+int age = 18;
+if (age >= 18)
+{
+    cout << "You are eligible to vote.";
+}
+
+    </pre>
+
+            <br> <br>
+
+
+            <h4> b.if-else Statement </h4>
+            <pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+ int num = 10;
+            if (num > 0)
+            {
+            cout << "Positive number";
+            }
+            else
+            {
+            cout << "Negative number";
+            }
+    </pre>
+
+            <br> <br>
+
+            <h4> c.switch Statement </h4>
+            <pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+ int choice = 2;
+            switch (choice)
+            {
+            case 1:
+            cout << "Option 1 selected.";
+            break;
+            case 2:
+            cout << "Option 2 selected.";
+            break;
+            default:
+            cout << "Invalid choice.";
+            }
+    </pre>
+
+            <br> <br>
+
+
+            <h3>  4 Looping Statements (for, while, do-while) </h3>
+            <p>
+                Loops allow a program to repeat a block of code multiple times.
+            </p>
+
+            <br> <br>
+
+
+            <h4>
+                a. for Loop
+            </h4>
+            <pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+ for (int i = 1; i <= 5; i++)
+            {
+            cout << i << " ";
+            }
+    </pre>
+
+            <br> <br>
+
+
+            <h4> b. while Loop </h4>
+            <pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+ int i = 1;
+ while (i <= 5)
+ {
+ cout << i << " ";
+ i++;
+ }
+
+    </pre>
+
+            <br> <br>
+
+
+            <h4> c. do-while Loop </h4>
+            <pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+int i = 1;
+do
+ {
+  cout << i << " ";
+  i++;
+} while (i <= 5);
+
+    </pre>
+
+            <br> <br>
+
+            <h3> 5 Functions in C++ </h3>
+            <p>Functions enable modular programming and code reuse.</p>
+
+            <br> <br>
+
+
+            <h4>a. Defining a Function </h4>
+            <pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+ #include &lt;iostream&gt;
+using namespace std;
+
+                void greet() {
+                cout << "Hello, welcome to C++!";
+                }
+
+                int main() {
+                greet(); // Function call
+                return 0;
+                }
+    </pre>
+
+            <br> <br>
+
+            <h4> b. Function with Parameters</h4>
+            <pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+   void add(int a, int b)
+            {
+            cout << "Sum: " << a + b;
+            }
+
+   int main()
+            {
+            add(5, 10);
+            return 0;
+            }
+
+    </pre>
+
+            <br> <br>
+
+            <h3>
+                6 Arrays and Strings
+            </h3>
+
+            <p>
+                An array is a fixed-size collection of elements that are all the same data type. Each element is stored in a specific position called an index (starting at 0). Strings are used to store and work with text. To use strings in C++, you must include the <string> library.
+            </p>
+
+            <br> <br>
+
+            <h4> a. Arrays </h4>
+
+
+            <pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+int numbers[5] = {1, 2, 3, 4, 5};
+cout << numbers[0]; // Output: 1
+
+    </pre>
+
+            <br> <br>
+
+            <h4> b. Strings </h4>
+            <pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() 
+{
+    string name = "Alice";
+    cout << "Hello, " << name;
+    return 0;
+}
+
+</pre>
+
+            <br> <br>
+
+            <h3> Let's test your understanding!</h3>
+            <h4>   Click here to take CSCI 105 - Intro to C++ QUIZ </h4>
+
+            <!-- QUIZ HERE -->
+
+            <br> <br>
+
+            <h3> REFERENCES </h3>
+            <pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+Stroustrup, B. (2013). <a href="https://chenweixiang.github.io/docs/The_C++_Programming_Language_4th_Edition_Bjarne_Stroustrup.pdf" target="_blank"><i>The C++ Programming Language</i> (4th ed.)</a>. Addison-Wesley.
+
+Malik, D. (2018). <a href="https://library.uniq.edu.iq/storage/books/file/C++%20Programming/1667727523C++%20Programming%20From%20Problem%20Analysis%20to%20Program%20Design%20(D.%20S.%20Malik)%20(z-lib.org).pdf" target="_blank"><i>C++ Programming: From Problem Analysis to Program Design</i> (8th ed.)</a>. Cengage Learning.
+</pre>
+
+                 <br> <br>
+
+
+            <!-- END HERE -->
+
+        </div>
+        
+
+
+    </div>
+
+</body>
+</html>
