@@ -24,7 +24,7 @@ async function populateQuiz() {
         indices.splice(indices.indexOf(qIdx), 1);
 
         // Display prompt
-        document.getElementById("prompt_1").textContent = question.prompt;
+        document.getElementById("prompt_1").innerHTML = question.prompt.replace(/\n/g, "<br />").replace(/\t/g, "&emsp;");
 
         // Randomize the order of the answer options
         let answers = [question.optionA, question.optionB, question.optionC, question.solution];
@@ -60,7 +60,7 @@ async function populateQuiz() {
         indices.splice(indices.indexOf(qIdx), 1);
 
         // Display prompt
-        document.getElementById("prompt_2").textContent = question.prompt;
+        document.getElementById("prompt_2").innerHTML = question.prompt.replace(/\n/g, "<br />").replace(/\t/g, "&emsp;");
 
         // Randomize the order of the answer options
         answers = [question.optionA, question.optionB, question.optionC, question.solution];
@@ -96,7 +96,7 @@ async function populateQuiz() {
         indices.splice(indices.indexOf(qIdx), 1);
 
         // Display prompt
-        document.getElementById("prompt_3").textContent = question.prompt;
+        document.getElementById("prompt_3").innerHTML = question.prompt.replace(/\n/g, "<br />").replace(/\t/g, "&emsp;");
 
         // Randomize the order of the answer options
         answers = [question.optionA, question.optionB, question.optionC, question.solution];
@@ -132,7 +132,7 @@ async function populateQuiz() {
         indices.splice(indices.indexOf(qIdx), 1);
 
         // Display prompt
-        document.getElementById("prompt_4").textContent = question.prompt;
+        document.getElementById("prompt_4").innerHTML = question.prompt.replace(/\n/g, "<br />").replace(/\t/g, "&emsp;");
 
         // Randomize the order of the answer options
         answers = [question.optionA, question.optionB, question.optionC, question.solution];
@@ -167,7 +167,7 @@ async function populateQuiz() {
         question = quizQuestions[qIdx];
 
         // Display prompt
-        document.getElementById("prompt_5").textContent = question.prompt;
+        document.getElementById("prompt_5").innerHTML = question.prompt.replace(/\n/g, "<br />").replace(/\t/g, "&emsp;");
 
         // Randomize the order of the answer options
         answers = [question.optionA, question.optionB, question.optionC, question.solution];
