@@ -1,3 +1,7 @@
+function goToScore() {
+    window.open('./106score.html');
+}
+
 // Fetch data from data.json as an array of objects
 async function fetchData() {
     const response = await fetch('./data.json');

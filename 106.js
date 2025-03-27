@@ -21,6 +21,10 @@ function goToQuiz() {
     window.open('./106quiz.html');
 }
 
+function goToHome() {
+    window.open('./websitetest.html');
+}
+
 // On document load, display appropriate content
 document.addEventListener("DOMContentLoaded", function () {
     displayLesson();
