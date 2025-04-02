@@ -18,11 +18,11 @@ async function displayLesson() {
 }
 
 function goToQuiz() {
-    window.open('./106quiz.html');
+    window.location.href = './106quiz.html';
 }
 
 function goToHome() {
-    window.open('./websitetest.html');
+    window.location.href = './websitetest.html';
 }
 
 // On document load, display appropriate content
