@@ -166,7 +166,126 @@
         "optionB": "model",
         "optionC": "iteration",
         "solution": "instance"
+      },
+      //add here for intro to c++
+      {
+        "questionID": 20,
+        "quizID": 1,
+        "prompt": "add here",
+        "optionA": "add here",
+        "optionB": "add here",
+        "optionC": "add here",
+        "solution": "add here"
+      },
+      {
+        "questionID": 21,
+        "quizID": 1,
+        "prompt": "add here",
+        "optionA": "add here",
+        "optionB": "add here",
+        "optionC": "add here",
+        "solution": "add here"
+      },
+      {
+        "questionID": 22,
+        "quizID": 1,
+        "prompt": "add here",
+        "optionA": "add here",
+        "optionB": "add here",
+        "optionC": "add here",
+        "solution": "add here"
+      },
+      {
+        "questionID": 23,
+        "quizID": 1,
+        "prompt": "add here",
+        "optionA": "add here",
+        "optionB": "add here",
+        "optionC": "add here",
+        "solution": "add here"
+      },
+      {
+        "questionID": 24,
+        "quizID": 1,
+        "prompt": "add here",
+        "optionA": "add here",
+        "optionB": "add here",
+        "optionC": "add here",
+        "solution": "add here"
+      },
+      {
+        "questionID": 24,
+        "quizID": 1,
+        "prompt": "add here",
+        "optionA": "add here",
+        "optionB": "add here",
+        "optionC": "add here",
+        "solution": "add here"
+      },
+      {
+        "questionID": 25,
+        "quizID": 1,
+        "prompt": "add here",
+        "optionA": "add here",
+        "optionB": "add here",
+        "optionC": "add here",
+        "solution": "add here"
+      },
+      {
+        "questionID": 25,
+        "quizID": 1,
+        "prompt": "add here",
+        "optionA": "add here",
+        "optionB": "add here",
+        "optionC": "add here",
+        "solution": "add here"
+      },
+      {
+        "questionID": 26,
+        "quizID": 1,
+        "prompt": "add here",
+        "optionA": "add here",
+        "optionB": "add here",
+        "optionC": "add here",
+        "solution": "add here"
+      },
+      {
+        "questionID": 27,
+        "quizID": 1,
+        "prompt": "add here",
+        "optionA": "add here",
+        "optionB": "add here",
+        "optionC": "add here",
+        "solution": "add here"
+      },
+      {
+        "questionID": 28,
+        "quizID": 1,
+        "prompt": "add here",
+        "optionA": "add here",
+        "optionB": "add here",
+        "optionC": "add here",
+        "solution": "add here"
+      },
+      {
+        "questionID": 29,
+        "quizID": 1,
+        "prompt": "add here",
+        "optionA": "add here",
+        "optionB": "add here",
+        "optionC": "add here",
+        "solution": "add here"
+      },
+      {
+        "questionID": 30,
+        "quizID": 1,
+        "prompt": "add here",
+        "optionA": "add here",
+        "optionB": "add here",
+        "optionC": "add here",
+        "solution": "add here"
       }
+
     ]
   }
 ]
