@@ -1,7 +1,7 @@
 let qSolutionEls = []; // Store element ID's of the location of the solutions to each question on each page load
 
-// Determine the quiz score, switch the window, and display score
-function goToScore() {
+// Determine the quiz score, write to user data, switch to display score window
+function calcScore() {
     let score = 0;
 
     for (let i = 0; i < 5; i++) {
@@ -10,6 +10,11 @@ function goToScore() {
         }
     }
 
+    goToScore();
+}
+
+// Switch to display score window
+function goToScore() {
     window.location.href = './106score.html';
 }
 
