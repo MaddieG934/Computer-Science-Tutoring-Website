@@ -13,7 +13,7 @@ async function fetchData() {
 }
 
 // Determine the quiz score, write to user data, switch to display score window
-function calcScore() {
+async function calcScore() {
     let score = 0;
 
     for (let i = 0; i < 5; i++) {
@@ -41,7 +41,7 @@ function calcScore() {
 // Display object => question => prompt, optionA, optionB, optionC, solution
 async function populateQuiz() {
     let jsData = await fetchData();
-    let questions = jsData[3].members;
+    let questions = jsData[4].members;
 
     /*****************************************************************************
      *                                                                           *
@@ -69,7 +69,7 @@ async function populateQuiz() {
             indices.splice(indices.indexOf(qIdx), 1);
 
             // Display prompt
-            document.getElementById(`prompt_${i + 1}`).innerHTML = "1. " + question.prompt.replace(/\n/g, "<br />").replace(/\t/g, "&emsp;");
+            document.getElementById(`prompt_${i + 1}`).innerHTML = `${i + 1}` + ". " + question.prompt.replace(/\n/g, "<br />").replace(/\t/g, "&emsp;");
 
             // Randomize the order of the answer options
             let answers = [question.optionA, question.optionB, question.optionC, question.solution];
@@ -98,4 +98,10 @@ async function populateQuiz() {
 document.addEventListener("DOMContentLoaded", function () {
     populateQuiz();
     console.log('content displayed');
+
+    // When form is submitted
+    document.getElementById("quizForm").addEventListener("submit", async function (event) {
+        event.preventDefault();
+        await calcScore();
+    });
 });
