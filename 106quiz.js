@@ -11,8 +11,6 @@ function goToScore() {
     }
 
     window.location.href = './106score.html';
-
-    document.getElementById("scoreNum").innerHTML = score;
 }
 
 // Fetch data from data.json as an array of objects
