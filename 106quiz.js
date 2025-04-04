@@ -1,18 +1,5 @@
 let qSolutionEls = []; // Store element ID's of the location of the solutions to each question on each page load
 
-// Determine the quiz score, write to user data, switch to display score window
-function calcScore() {
-    let score = 0;
-
-    for (let i = 0; i < 5; i++) {
-        if (document.getElementById(qSolutionEls[i]).checked) {
-            score++;
-        }
-    }
-
-    goToScore();
-}
-
 // Switch to display score window
 function goToScore() {
     window.location.href = './106score.html';
@@ -23,6 +10,32 @@ async function fetchData() {
     const response = await fetch('./data.json');
     const data = await response.json();
     return data;
+}
+
+// Determine the quiz score, write to user data, switch to display score window
+function calcScore() {
+    let score = 0;
+
+    for (let i = 0; i < 5; i++) {
+        if (document.getElementById(qSolutionEls[i]).checked) {
+            score++;
+        }
+    }
+
+    let jsData = await fetchData();
+    let user = jsData[0].members[0];
+
+    if (user) {
+        user.last106Score = score;
+
+        if (user.last106Score > user.max106Score) {
+            user.max106Score = user.last106Score;
+        }
+    } else {
+        error.log('User not found');
+    }
+
+    goToScore();
 }
 
 // Display object => question => prompt, optionA, optionB, optionC, solution

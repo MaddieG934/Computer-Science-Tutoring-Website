@@ -1,5 +1,23 @@
 [
   {
+    "type": "user",
+    "members": [
+      {
+        "userID": 0,
+        "userName": "Test User",
+        "password": "password",
+        "last105Score": 0,
+        "last106Score": 0,
+        "last220Score": 0,
+        "last230Score": 0,
+        "max105Score": 0,
+        "max106Score": 0,
+        "max220Score": 0,
+        "max230Score": 0
+      }
+    ]
+  },
+  {
     "type": "course",
     "members": [
       {
