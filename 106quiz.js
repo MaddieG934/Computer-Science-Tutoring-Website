@@ -81,12 +81,14 @@ async function populateQuiz() {
                 
                 // Display that option in the next radio slot
                 document.getElementById(`${i + 1}_${optionElChars[4 - j]}`).innerHTML = answers[optionIdx];
-                answers.splice(optionIdx, 1);
 
                 // When the solution is picked as the next option, save its radio buttion ID
-                if (optionIdx === 3) {
+                if (answers[optionIdx] === question.solution) {
+                    console.log("Adding " + `${i + 1}${optionElChars[4 - j]}` + " to qSolutionEls");
                     qSolutionEls.push(`${i + 1}${optionElChars[4 - j]}`);
                 }
+
+                answers.splice(optionIdx, 1);
             }
         }
     } else {
