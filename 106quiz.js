@@ -14,6 +14,7 @@ async function fetchData() {
 
 // Determine the quiz score, write to user data, switch to display score window
 async function calcScore() {
+    // Calc score
     let score = 0;
 
     for (let i = 0; i < 5; i++) {
@@ -22,20 +23,33 @@ async function calcScore() {
         }
     }
 
+    // Update jsData object
     let jsData = await fetchData();
-    let user = jsData[0].members[0];
 
-    if (user) {
-        user.last106Score = score;
+    if (jsData[0].members[0]) {
+        jsData[0].members[0].last106Score = score;
 
-        if (user.last106Score > user.max106Score) {
-            user.max106Score = user.last106Score;
+        if (score > jsData[0].members[0].max106Score) {
+            jsData[0].members[0].max106Score = score;
         }
     } else {
         error.log('User not found');
     }
 
-    goToScore();
+    // Write to json file
+
+    const fs = require('fs');
+    const jsonString = JSON.stringify(data, null, 2);
+    const filePath = 'data.json';
+
+    try {
+        fs.writeFileSync(filePath, jsonString);
+        console.log('Data written to file successfully');
+    } catch (err) {
+        console.error('Error writing to file:', err);
+    }
+
+    goToScore(); // Go to score page
 }
 
 // Display object => question => prompt, optionA, optionB, optionC, solution
