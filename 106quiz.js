@@ -38,16 +38,27 @@ async function calcScore() {
 
     // Write to json file
 
-    const fs = require('fs');
-    const jsonString = JSON.stringify(data, null, 2);
-    const filePath = 'data.json';
+    fetch('/save-data', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(jsData)
+    })
+        .then(res => res.text())
+        .then(msg => console.log(msg))
+        .catch(err => console.error('Save failed', err));
 
-    try {
-        fs.writeFileSync(filePath, jsonString);
-        console.log('Data written to file successfully');
-    } catch (err) {
-        console.error('Error writing to file:', err);
-    }
+    //const fs = require('fs');
+    //const jsonString = JSON.stringify(data, null, 2);
+    //const filePath = 'data.json';
+
+    //try {
+    //    fs.writeFileSync(filePath, jsonString);
+    //    console.log('Data written to file successfully');
+    //} catch (err) {
+    //    console.error('Error writing to file:', err);
+    //}
 
     goToScore(); // Go to score page
 }
