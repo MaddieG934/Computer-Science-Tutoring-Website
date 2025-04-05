@@ -1,18 +1,8 @@
 let qSolutionEls = []; // Store element ID's of the location of the solutions to each question on each page load
 
-// Determine the quiz score, switch the window, and display score
+// Switch to display score window
 function goToScore() {
-    let score = 0;
-
-    for (let i = 0; i < 5; i++) {
-        if (document.getElementById(qSolutionEls[i]).checked) {
-            score++;
-        }
-    }
-
     window.location.href = './106score.html';
-
-    document.getElementById("scoreNum").innerHTML = score;
 }
 
 // Fetch data from data.json as an array of objects
@@ -22,10 +12,61 @@ async function fetchData() {
     return data;
 }
 
+// Determine the quiz score, write to user data, switch to display score window
+async function calcScore() {
+    // Calc score
+    let score = 0;
+
+    for (let i = 0; i < 5; i++) {
+        if (document.getElementById(qSolutionEls[i]).checked) {
+            score++;
+        }
+    }
+
+    // Update jsData object
+    let jsData = await fetchData();
+
+    if (jsData[0].members[0]) {
+        jsData[0].members[0].last106Score = score;
+
+        if (score > jsData[0].members[0].max106Score) {
+            jsData[0].members[0].max106Score = score;
+        }
+    } else {
+        error.log('User not found');
+    }
+
+    // Write to json file
+
+    fetch('/save-data', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(jsData)
+    })
+        .then(res => res.text())
+        .then(msg => console.log(msg))
+        .catch(err => console.error('Save failed', err));
+
+    //const fs = require('fs');
+    //const jsonString = JSON.stringify(data, null, 2);
+    //const filePath = 'data.json';
+
+    //try {
+    //    fs.writeFileSync(filePath, jsonString);
+    //    console.log('Data written to file successfully');
+    //} catch (err) {
+    //    console.error('Error writing to file:', err);
+    //}
+
+    goToScore(); // Go to score page
+}
+
 // Display object => question => prompt, optionA, optionB, optionC, solution
 async function populateQuiz() {
     let jsData = await fetchData();
-    let questions = jsData[3].members;
+    let questions = jsData[4].members;
 
     /*****************************************************************************
      *                                                                           *
@@ -53,7 +94,7 @@ async function populateQuiz() {
             indices.splice(indices.indexOf(qIdx), 1);
 
             // Display prompt
-            document.getElementById(`prompt_${i + 1}`).innerHTML = "1. " + question.prompt.replace(/\n/g, "<br />").replace(/\t/g, "&emsp;");
+            document.getElementById(`prompt_${i + 1}`).innerHTML = `${i + 1}` + ". " + question.prompt.replace(/\n/g, "<br />").replace(/\t/g, "&emsp;");
 
             // Randomize the order of the answer options
             let answers = [question.optionA, question.optionB, question.optionC, question.solution];
@@ -65,12 +106,14 @@ async function populateQuiz() {
                 
                 // Display that option in the next radio slot
                 document.getElementById(`${i + 1}_${optionElChars[4 - j]}`).innerHTML = answers[optionIdx];
-                answers.splice(optionIdx, 1);
 
                 // When the solution is picked as the next option, save its radio buttion ID
-                if (optionIdx === 3) {
+                if (answers[optionIdx] === question.solution) {
+                    console.log("Adding " + `${i + 1}${optionElChars[4 - j]}` + " to qSolutionEls");
                     qSolutionEls.push(`${i + 1}${optionElChars[4 - j]}`);
                 }
+
+                answers.splice(optionIdx, 1);
             }
         }
     } else {
@@ -82,4 +125,10 @@ async function populateQuiz() {
 document.addEventListener("DOMContentLoaded", function () {
     populateQuiz();
     console.log('content displayed');
+
+    // When form is submitted
+    document.getElementById("quizForm").addEventListener("submit", async function (event) {
+        event.preventDefault();
+        await calcScore();
+    });
 });

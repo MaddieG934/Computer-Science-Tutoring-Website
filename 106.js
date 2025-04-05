@@ -21,10 +21,6 @@ function goToQuiz() {
     window.location.href = './106quiz.html';
 }
 
-function goToHome() {
-    window.location.href = './websitetest.html';
-}
-
 // On document load, display appropriate content
 document.addEventListener("DOMContentLoaded", function () {
     displayLesson();

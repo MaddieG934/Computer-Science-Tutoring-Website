@@ -3,7 +3,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
-	<title> 1-column layout</title>
+	<title> CSCI 220 - Computer Organization and Assembly Language Programming</title>
 	<meta name="author" content="Big Green Egg">
 	<link rel="stylesheet" type="text/css"  href="style.css">
 </head>
@@ -24,50 +24,244 @@
 		
 		<div id="maincontent">
 		<p>&nbsp</p>
-		<h2 id="lessonHeader220">Computer Organization and Assembly Language Programming</h2>
-		<p id="lessonContent">
+		<h2 style="text-align: center;">CSCI 220 - Computer Organization and Assembly Language Programming</h2>
 		<br />
-		<div id="intro">
+		<p>
 			Now that you have gone through the basics of learning C++,
 			understanding the architecture of computer systems, comprehending how data is represented, 
 			and assembly language programming are so important to your computer science journey.
-		</div>
+		</p>
 		<br />
-		<div id="conversions">
+		<p>
 			Let's start with some conversions. Your numbers systems are binary, hexadecimal, and decimal.
 			Binary is a system of 0's and 1's. Hexadecimals are numbers 0-9, then A-F (representing 10-15).
 			Decimals are what you'd be familiar with, just 0-9 digits.
+		</p>
 		<br /> <br /> <br />
-			Binary:
-		<br /> <br />
+		<h3> Binary: </h3>
+		<p>
 			We'll just practice converting Binary to Hexadecimal, and vice versa.
-		<br />
+		<br /> <br />
 			Working with Binaries is pretty straight forward, in this case. The string '0000', is, in fact, '0'.
 			Then '0001' is '1'! To make '2', you would change the 4th digit back to zero, then the 3rd digit to one. '0010' is two.
 			To get to Hexadecimal 0x6, this would be your process.
-		<br />
-			0000
-		<br />
-			0001
-		<br />
-			0010
-		<br />
-			0011
-		<br />
-			0100
-		<br />
-			0101
-		<br />
-			0110, six!
+		</p>
+		
+		<pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+	
+0000
+0001
+0010
+0011
+0100
+0101
+0110, six!
+		</pre>
+		
+		<p>
 		<br /> <br />
 			When you reach what would be 10 in binary, 1010, that would simply just be 0xA.
 		<br /> <br />
 			Once you know your binaries, converting from Hexadecimal to binary is a piece of cake! 0xA6? 1010 0110!
-		<br />
-			
-		</div>
+		<br /> <br />
+		</p>
+		
+		<h3> Hexadecimal to Decimal: </h3>
 		
 		</p>
+		<br />
+			When it comes to converting Hexadecimals to Decimals and vice versa, this involves a little bit more math.
+		<br />
+			We know that our A-F Hexadecimals are just 10-15 in decimal, so those are what we use to calculate. Let's take
+			0xAB2. Basically, we are going to take each hex number and multiply it by a base of 16 (since there are 16 digits in hex), 
+			with an exponent that is the placement they're in, then add each one together. Lets break it down:
+		<br />
+			There are three hex digits-- A, B, and 2. Starting from right to left, we can place these 0-2. These are our exponents.
+			We multiply each one by 16^x. So,
+		</p>
+		
+		<pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+
+A = 10 x 16^2 = 2560
+B = 11 x 16^1 = 176
+2 = 2 x 16^0 = 2
+2560 + 176 + 2 = 2738
+		</pre>
+		<br />
+		<p>
+			And there you go, you converted your hexidecimal to a decimal number! Good job! Our decimal number is 2738. Now, 
+			We know that 2738 is 0xAB2, but let's continue and convert it back, to show the process.
+		</p>
+		<br />
+		<h3> Decimal to Hexadecimal: </h3>
+		<br />
+		
+		<p>
+			Like we talked about before, we are still going to work with the 16 digit number. Instead of multiplying, we divide. 
+		<br />
+			We start with 2738, which we divide by 16. The closest whole number quotient to 2738 is 171 (171 x 16 = 2736).
+		<br />
+			If we subtract 2738 - 2736, we get 2. That is the last digit of the hex number!
+		<br /> <br />
+			Remember to keep track of your quotients, since they are what we use to continue dividing. Now, we use 171, and divide that by 16. 
+			Our closest number is 10 (16 x 10 = 160).
+		<br />
+			171 - 160 = 11. Or, 0xB.
+		<br /> <br />
+			Now we're left with 10 as our last quotient. 10 cannot be divided by 16 in a way that gives us another whole number quotient. 
+			So 10 is considered our last remainder, leaving it converted to be 0xA.
+		<br />
+			We've worked from right to left to convert this decimal back to hexadecimal. Now you have 0xAB2 again!
+		<br /> <br />
+		</p>
+		
+		<h3> Intro to Writing in Assembly </h3>
+		<br />
+		
+		<p>
+			Assembly is a low level language that translates your higher levels (like C) into machine language. 
+			It is actually faster for your computer to run since it is in a language easier for the machine to understand. However, 
+			of course, it is harder for a human to work in than your high level languages.
+		<br />
+			This review will not go too in depth on assembly, but we will go over some of the basics of syntax and characteristics.
+		<br /> <br />
+		</p>
+		
+		<h4> Characteristics of Assembly Data Types (x86) </h4>
+		<br />
+			Our "integers" are composed of 1, 2, 4, or 8 bytes. The Floats are 4, 8, or 10 bytes. In assembly, 
+			you also don't see arrays or structures--just allocated bytes of memory adjoining each other.
+		<br />
+			In assembly, you work with registers. Registers store variables, and as you calculate in assembly you will end up moving your numbers around, to different variables.
+		<br />
+			Your 64 bit registers are:
+		<br /> <br />
+		<pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+%rax
+%rbx
+%rcx
+%rdx
+%rsi
+%rdi
+%rbp
+%rsp
+%r8
+%r9
+%r10
+%r11
+%r12
+%r13
+%r14
+%r15</pre>
+
+		<p>
+		<br /> <br />
+			There are even more registers for 32 bits, 16 bits, and 8 bits, though we won't focus on much else but the 64 bit registers.
+		<br />
+			When it comes to moving data and other commands, we code in assembly like this:
+		<br /> <br />
+		</p>
+		<pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+<strong> Command </strong> source, destination </pre>
+		<p>
+		<br />
+			Some basic commands are:
+		<br /> <br />
+		</p>
+		<pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+Moving data: mov
+Adding data: add
+Subtracting data: sub
+Multiplying data: imul </pre>
+		<br />
+		<p>
+			These commands come with suffixes depending on the data sizes. There are four suffixes: Q (8 bytes), L (4 bytes), W (2 bytes), B (1 byte). 
+			For this introduction and working with 64 bit registers, you will use Q for your command suffix.
+		<br /> <br />
+			When calculating variables in Assembly, you also have to accommodate for ASCII values. This means before you even work to calculate variables 
+			you might work with, you have to subtract 0x30 from your variable. Then, once you calculate your number, before you output 
+			it you add back 0x30 so it outputs correctly.
+		<br /> <br />
+			Here are some example bits of code for different things you can do in assembly!
+		<br /> <br />
+			Declaring a string:
+		<br /> <br />
+		</p>
+		<pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+.data	# data segment, at the top of your program
+hello:	# variable name
+	.string "Hello World!\n" # String to output </pre>
+		<p>
+		<br />
+			To declare a number in bss segment. Size in bytes:
+		</p>
+		<pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+.bss #uninitialized variables segment
+	.lcomm num, 2 #variable name, byte Size </pre>
+		<p>
+		<br />
+			Coverting from ASCII to number:
+		<br />
+		</p>
+		<pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+movq num1, %rdx  # move num1 to edx register
+subq $0x30, %rdx # subtract ASCII value for
+		 #'0' to convert to number </pre>
+		<p>
+		<br />
+			Converting from number to ASCII:
+		<br />
+		</p>
+		<pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+addq $0x30, %rdx # add ASCII value for '0' to
+		 # convert back to ASCII
+movq %rdx, res   # move to res </pre>
+		<p>
+		<br />
+			To display string to output:
+		<br />
+		</p>
+		<pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+movq $4, %rdx # $4 is sys_write
+movq $1, %rcx # $1 is stdout
+movq $hello, %rax # message to write
+movq $13, %rbx # length of the message
+int  $0x80   # system interrupt to kernel </pre>
+		<p>
+		<br />
+			Reading a predefined variable:
+		<br />
+		</p>
+		<pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+movq $3, %rax # sys_read
+movq $0, %rbx # $0 is stdin
+movq $x, %rcx # x
+movq $0x2, %rdx # size
+int $0x80   #system interrupt to kernel </pre>
+		<p>
+		<br />
+			Exit program with return 0:
+		<br />
+		</p>
+		<pre style="border: 2px solid black; padding: 10px; background-color: #f4f4f4; border-radius: 5px;">
+movl $1, %eax # $1 is sys_exit
+movl $0, %ebx # $0 is return value
+int  $0x80 # system interrupt to kernel </pre>
+
+        <br> <br>
+
+        <h3> Let's test your understanding!</h3>
+        <h4>   Click below to take CSCI 220 - Comp Org QUIZ </h4>
+		<br>
+        <button id="toQuiz" onclick="goToQuiz()">Take the Quiz</button>
+
+            <!-- QUIZ HERE -->
+
+            <br> <br>
+            <br> <br>
+
+
+            <!-- END HERE -->
 		
 		</div>
 	</div>

@@ -1,5 +1,23 @@
 [
   {
+    "type": "user",
+    "members": [
+      {
+        "userID": 0,
+        "userName": "Test User",
+        "password": "password",
+        "last105Score": 0,
+        "last106Score": 5,
+        "last220Score": 0,
+        "last230Score": 0,
+        "max105Score": 0,
+        "max106Score": 5,
+        "max220Score": 0,
+        "max230Score": 0
+      }
+    ]
+  },
+  {
     "type": "course",
     "members": [
       {
@@ -166,8 +184,88 @@
         "optionB": "model",
         "optionC": "iteration",
         "solution": "instance"
-      },
-      // add here for intro to c++
+      },	  
+      {
+          "questionID": 11,
+          "quizID": 3,
+          "prompt": "QUESTION",
+          "optionA": "A",
+          "optionB": "B",
+          "optionC": "C",
+          "solution": "D"
+        },
+      {
+          "questionID": 12,
+          "quizID": 3,
+          "prompt": "QUESTION",
+          "optionA": "A",
+          "optionB": "B",
+          "optionC": "C",
+          "solution": "D"
+        },
+      {
+          "questionID": 13,
+          "quizID": 3,
+          "prompt": "QUESTION",
+          "optionA": "A",
+          "optionB": "B",
+          "optionC": "C",
+          "solution": "D"
+        },
+      {
+          "questionID": 14,
+          "quizID": 3,
+          "prompt": "QUESTION",
+          "optionA": "A",
+          "optionB": "B",
+          "optionC": "C",
+          "solution": "D"
+        },
+      {
+          "questionID": 15,
+          "quizID": 3,
+          "prompt": "QUESTION",
+          "optionA": "A",
+          "optionB": "B",
+          "optionC": "C",
+          "solution": "D"
+        },
+      {
+          "questionID": 16,
+          "quizID": 3,
+          "prompt": "QUESTION",
+          "optionA": "A",
+          "optionB": "B",
+          "optionC": "C",
+          "solution": "D"
+        },
+      {
+          "questionID": 17,
+          "quizID": 3,
+          "prompt": "QUESTION",
+          "optionA": "A",
+          "optionB": "B",
+          "optionC": "C",
+          "solution": "D"
+        },
+      {
+          "questionID": 18,
+          "quizID": 3,
+          "prompt": "QUESTION",
+          "optionA": "A",
+          "optionB": "B",
+          "optionC": "C",
+          "solution": "D"
+        },
+      {
+          "questionID": 19,
+          "quizID": 3,
+          "prompt": "QUESTION",
+          "optionA": "A",
+          "optionB": "B",
+          "optionC": "C",
+          "solution": "D"
+        },
       {
         "questionID": 20,
         "quizID": 1,
