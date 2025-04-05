@@ -184,8 +184,7 @@
         "optionB": "model",
         "optionC": "iteration",
         "solution": "instance"
-      },
-	  
+      },	  
       {
           "questionID": 11,
           "quizID": 3,
@@ -268,16 +267,6 @@
           "solution": "D"
         },
       {
-          "questionID": 20,
-          "quizID": 3,
-          "prompt": "QUESTION",
-          "optionA": "A",
-          "optionB": "B",
-          "optionC": "C",
-          "solution": "D"
-      },
-  
-      {
         "questionID": 20,
         "quizID": 1,
         "prompt": "add here",
@@ -315,24 +304,6 @@
       },
       {
         "questionID": 24,
-        "quizID": 1,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
-      },
-      {
-        "questionID": 24,
-        "quizID": 1,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
-      },
-      {
-        "questionID": 25,
         "quizID": 1,
         "prompt": "add here",
         "optionA": "add here",
@@ -387,7 +358,88 @@
       },
       {
         "questionID": 30,
-        "quizID": 1,
+        "quizID": 4,
+        "prompt": "add here",
+        "optionA": "add here",
+        "optionB": "add here",
+        "optionC": "add here",
+        "solution": "add here"
+      },
+      {
+        "questionID": 31,
+        "quizID": 4,
+        "prompt": "add here",
+        "optionA": "add here",
+        "optionB": "add here",
+        "optionC": "add here",
+        "solution": "add here"
+      },
+      {
+        "questionID": 32,
+        "quizID": 4,
+        "prompt": "add here",
+        "optionA": "add here",
+        "optionB": "add here",
+        "optionC": "add here",
+        "solution": "add here"
+      },
+      {
+        "questionID": 33,
+        "quizID": 4,
+        "prompt": "add here",
+        "optionA": "add here",
+        "optionB": "add here",
+        "optionC": "add here",
+        "solution": "add here"
+      },
+      {
+        "questionID": 34,
+        "quizID": 4,
+        "prompt": "add here",
+        "optionA": "add here",
+        "optionB": "add here",
+        "optionC": "add here",
+        "solution": "add here"
+      },
+      {
+        "questionID": 35,
+        "quizID": 4,
+        "prompt": "add here",
+        "optionA": "add here",
+        "optionB": "add here",
+        "optionC": "add here",
+        "solution": "add here"
+      },
+      {
+        "questionID": 36,
+        "quizID": 4,
+        "prompt": "add here",
+        "optionA": "add here",
+        "optionB": "add here",
+        "optionC": "add here",
+        "solution": "add here"
+      },
+      {
+        "questionID": 37,
+        "quizID": 4,
+        "prompt": "add here",
+        "optionA": "add here",
+        "optionB": "add here",
+        "optionC": "add here",
+        "solution": "add here"
+      },
+      {
+        "questionID": 38,
+        "quizID": 4,
+        "prompt": "add here",
+        "optionA": "add here",
+        "optionB": "add here",
+        "optionC": "add here",
+        "solution": "add here"
+      },
+      {
+        "questionID": 39,
+        "quizID": 4,
         "prompt": "add here",
         "optionA": "add here",
         "optionB": "add here",
