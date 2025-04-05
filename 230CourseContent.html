@@ -90,9 +90,10 @@
        
                     Functions are defined with the keyword <b> def </b>. <b>getAnswer</b> is the name of the function, <b>answerNumber</b> is the input it accepts, 
                     and all the code following the : operator is code specific to that function. Now, instead of rewriting all this code everytime we want to use this feature, 
-                    we can simply call the getAnswer function, like this: 
+                    we can simply call the getAnswer function at any point in the rest of the code, like this: 
 
                     <br />  
+                    <br> 
                     <p id="code-block">
                         <code>&emsp; print(getAnswer(random.randint(1, 9)))</code>
                     </p>
@@ -105,34 +106,51 @@
                         characters. 
                         <br> 
                         <br> 
-                        <ul> 
-                            <li> \s - whitespace character </li>
-                            <li> \w - matches an alphanumeric character </li>
-                            <li> . - matches any character </li>
-                            <li> ? - matches the smallest amount of characters </li>
-                            <li> \d - matches 1 digit from 0-9 </li>
-                            <li> \d{4} - matches 4 digits </li>
-                            <li> * - matches 0 or more characters </li>
-                            <li> + - matches 1 or more characters </li>
-                            <li> \w+ - matches 1 or more word characters</li>
-                            <li> [] - negation, matches anything but what is within the brackets </li>
-                            <li> ^ - </li>
-                            <li> $ - </li>
+                </p>
+                        <ul style="padding-left: 40px;"> 
+                            <li> <b>\s</b> - whitespace character </li>
+                            <li> <b>\w</b> - matches an alphanumeric character </li>
+                            <li> <b>.</b> - matches any character </li>
+                            <li> <b>?</b> - matches the smallest amount of characters </li>
+                            <li> <b>\d</b> - matches 1 digit from 0-9 </li>
+                            <li> <b>\d{4}</b> - matches 4 digits </li>
+                            <li> <b>*</b> - matches 0 or more characters </li>
+                            <li> <b>+</b> - matches 1 or more characters </li>
+                            <li> <b>\w+</b> - matches 1 or more word characters</li>
+                            <li> <b>[]</b> - negation, matches anything but what is within the brackets </li>
+                            <li> <b>^</b> - matches the start of the string</li>
+                            <li> <b>$</b> - matches the end of a string</li>
                         </ul>
-                        <br \> 
+                        <br /> 
+                    <p> 
                         Let's take a look at a couple of uses of Regex in some lines of code: 
+                    </p>
                     <br /><br />
                     <p id="code-block">
                         <code>
-                            &emsp;^\(?\d{3}\)?[-.\s]?\d{3,4}[-.\s]?\d{3,4}$<br> <br> 
+                            &emsp;^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$<br> <br> 
                             &emsp;^[a-zA-Z0-9][a-zA-Z0-9._-]*@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$ <br> 
                            </code>
                     </p>
                     <br> 
-                    Slay. explain what the heck that is 
-                    <br /> 
-                    <br />
 
+                    <p>
+                    That's a lot of symbols! However, we can use the above chart to figure out what's going on. 
+                    In the first example, the code is checking whether or not a phone number is valid. It checks that there are only 3 digits in the area code,
+                    accepts separation between digits via a space, dash, slash, or period, checks for 3 digits and speration again, and finally accepts 
+                    4 digits. The ^ and $ symbols simply denote that the start of the input must match all the way through the end of the string. 
+                    <p> 
+                    <br> 
+                    In the second example, the regex is checking for email validity. The ^ starts checking input from the very beginning of the string, then it checks 
+                    that the input is an alphanumeric character. The next set of regex checks that the character is either an alphanumerica character or acceptable symbol 
+                    (like in jane.doe@biola.edu). From there, the * checks that the @ symbol is there before looking for alphanumeric characters. Finally, 
+                    the + operator looks for a . character, then accepts between 2 and 4 alphabetical characters since it is looking for a .com, .edu, or .io. 
+                    The $ character denotes matching through the end of the string. 
+                    
+                    </p>  
+                    <br />
+                </p>
+                
                 <p>
                     <b>HTML</b> is the standard language used to create webpages. It handles the structure and content of a webpage and was even used to create the content you're reading right now! 
                     It uses <b> tags </b> to differentiate various parts of the page from each other, such as paragraphs, lists, or headers. Let's look at an example: 
@@ -152,10 +170,14 @@
                         </code>
                     </p>
                     <br />
-                    explain a little about the example 
+                    Everything within < > brackets is a <b>tag</b>. They tell the computer what you want. Content in the head tag contains information about the following content. 
+                    Every tag in the body tag tells the computer about the expression of the content nested within. For example, <b>h1</b> prints output in a heading format, 
+                    so its big and bold. <b>p</b> simply denotes a paragraph, so it prints text to the screen as you see it right now. 
                     </p>
                     <br />
-                    <b>CSS</b> is _________ talk about the styling benefits 
+                    <b>CSS</b> is also a front facing language, but unlike HTML, it can't build anything on its own. Instead, it partners with HTML and focuses on the stylizing
+                    of the code. It allows for design choices like text color, background color, and special spacing. In the example below, you'll recognize the base HTML 
+                    commands and see where the CSS is adding some stylistic choices! 
                     <br /><br />
                     <p id="code-block">
                         <code>
@@ -171,31 +193,33 @@
                              </p>
   
                     <br />
-                    <b>JavaScript</b>, when paired with HTML, creates interactive webpages. It can add animations, pop-up windows, dynamic features, or even image carousels to a webpage. 
-                    Blah blah blah more info, etc 
+                    <b>JavaScript</b> functions similarly to CSS since it has to partner with HTML to build anything. It creates interactive webpages by adding animations, 
+                    pop-up windows, dynamic features, or even image carousels to a webpage. In the code cell below, you'll be able to identify the base HTML code. Additionally, 
+                    you'll notice the JavaScript <b>prompt</b> command that creates a pop up mini browser that asks users to input their birthday, uses a regex to verify that the birthdate was 
+                    properly submitted, and depending on whether or not, will alert or thank the user for the input. 
+                    
                     <br /><br />
                     <p id="code-block">
                         <code>
                             &lt;!DOCTYPE html&gt;<br>
                             &lt;html lang="en"&gt;<br>
                             &lt;head&gt;<br>
-                            &lt;title>JavaScript Pattern Matching</title&gt;<br>
+                            &lt;title>JavaScript Pattern Matching< /title&gt;<br>
                             &lt;/head&gt;<br>
                             &lt;body&gt;<br>
                             &lt;script type="text/javaScript"&gt;<br>
-                            &lt;var birthdate = prompt("Enter date of birth (mm-dd-yy)\n", "");&gt;<br>
-                            &lt;var position = birthdate.search(/^\d{2}-\d{2}-\d{2}$/);&gt;<br>
-                            &lt;if (position == -1)&gt;<br>
-                            &lt;document.write("Invalid date format ", "<br />");&gt;<br>
-                            &lt;else&gt;<br>
-                            &lt;document.write("Thank you", "<br />");&gt;<br>
+                            var birthdate = prompt("Enter date of birth (mm-dd-yy)\n", ""):<br>
+                            var position = birthdate.search(/^\d{2}-\d{2}-\d{2}$/);<br>
+                            if (position == -1) {<br>
+                            document.write("Invalid date format "); }<br>
+                            else{<br>
+                            document.write("Thank you"); }<br>
                             &lt;/script&gt;<br>
                             &lt;/body&gt;<br>
                             &lt;/html&gt;<br>
                         </code>
                     </p>
                     <br /> 
-        explaination of above code cell  
                 </p>
             </div>
         </div>
