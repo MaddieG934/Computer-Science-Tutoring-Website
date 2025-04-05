@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title> CSCI 230</title>
+    <meta name="author" content="Big Green Egg">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="230.js"></script>>
+</head>
+<body>
+
+    <header>
+        <img src="img/egg.png" alt="Big Green Egg Logo" class="left">
+        <h1>
+            Big Green Egg
+        </h1>
+        <img src="img/egg.png" alt="Big Green Egg Logo" class="right">
+    </header>
+    <nav id="navbar">
+        <ul>
+            <li class="Login"><a href="#">Login</a></li>
+    </nav>
+    
+    <div id="wrapper">
+        <div id="maincontent">
+            <div id="lessoncontent">
+                <h2 id="lessonHeader">Programming Languages</h2>
+                <br />
+
+                <p>   Now that you have covered basic Computer Science principles and understood Data Structures, 
+                    it's time to add some more languages to your repertoire! Let's start with some Python Basics.
+                </p> <br /> 
+                <p>
+                    <b>Python Fundamentals</b>
+                    <br> <br> Let's start with an code example: 
+                    <br /><br />
+                    <p id="code-block">
+                        <code>&emsp; <span style="color:blue">print('</span>Enter your name: <span style="color:blue">')</span></code><br/> 
+                        <code>&emsp; userName = </span><span style="color:blue">input()</span> </code><br/> 
+                        <code>&emsp; <span style="color:blue">print('</span>Nice to meet you</span><span style="color:blue">' + </span> userName <span style="color:blue">)</span></code><br/> 
+                        <code>&emsp; <span style="color:blue">print('</span>Enter your age: <span style="color:blue">')</span></code><br/> 
+                        <code>&emsp; userAge = </span><span style="color:blue">input()</span> </code><br/> 
+                        <code>&emsp; <span style="color:blue">print('</span>In 3 years, you will be <span style="color:blue">' + str(int(</span>userAge<span style="color:blue">) + 3) + '</span><span style="color:blue">years old')</span></code><br/> 
+
+                    </p>
+
+                  <p>
+                    <br> 
+                        In this code block, we see an example of how Python accepts input, denoted by line 2: userName = input(). To take in user input,
+                        Python requires users to create a new variable that will hold said input. 
+                  </p>
+                  <br > 
+
+                  <p> 
+                        To print out user input to the screen, Python requires users to <b> concatenate </b>. This is done via the <b> +</b>
+                        operator as shown in line 3. Users can use concatenation to print different data types in the same statement. 
+                  </p>
+
+                </p>
+                <br />
+
+                <p>
+                    <b>Functions</b> are like mini programs nested within a program. They allow you to reuse code for better program readability, 
+                    ease of coding, and they allow for easy updates within a big program. 
+                    They are created like this: 
+                    
+                    <br /><br />
+                    <p id="code-block">
+                        <code>&emsp;<span style="color:blue">def getAnswer(answerNumber): </span></code><br/> 
+                        <code>&emsp; if answerNumber == 1:</span></code><br/> 
+                        <code>&emsp;    return 'It is certain'</span></code><br/> 
+                        <code>&emsp; elif answerNumber == 2:</span></code><br/> 
+                        <code>&emsp;    return 'It is decidedly so'</span></code><br/> 
+                        <code>&emsp; elif answerNumber == 3:</span></code><br/> 
+                        <code>&emsp;    return 'Yes'</span></code><br/> 
+                        <code>&emsp; elif answerNumber == 4:</span></code><br/> 
+                        <code>&emsp;    return 'Reply hazy try again'</span></code><br/> 
+                        <code>&emsp; elif answerNumber == 5:</span></code><br/> 
+                        <code>&emsp;    return 'Ask again later'</span></code><br/> 
+                        <code>&emsp; elif answerNumber == 6:</span></code><br/> 
+                        <code>&emsp;    return 'Concentrate and ask again'</span></code><br/> 
+                        <code>&emsp; elif answerNumber == 7:</span></code><br/> 
+                        <code>&emsp;    return 'My reply is no'</span></code><br/> 
+                        <code>&emsp; elif answerNumber == 8:</span></code><br/> 
+                        <code>&emsp;    return 'Outlook not so good'</span></code><br/> 
+                        <code>&emsp; elif answerNumber == 9:</span></code><br/> 
+                        <code>&emsp;    return 'Very doubtful'</span></code><br/> 
+                    </p>
+                    <br />
+       
+                    Functions are defined with the keyword <b> def </b>. <b>getAnswer</b> is the name of the function, <b>answerNumber</b> is the input it accepts, 
+                    and all the code following the : operator is code specific to that function. Now, instead of rewriting all this code everytime we want to use this feature, 
+                    we can simply call the getAnswer function at any point in the rest of the code, like this: 
+
+                    <br />  
+                    <br> 
+                    <p id="code-block">
+                        <code>&emsp; print(getAnswer(random.randint(1, 9)))</code>
+                    </p>
+
+                </p>
+                <br />
+
+                <p>
+                    <b>Regular Expressions</b>, often abbreivated to just <b> Regex</b>, are used to help match patterns. They are unique characters that hold special meaning, such as the <b> . ^ $ * + ? { } [ ] \ | ( )</b>
+                        characters. 
+                        <br> 
+                        <br> 
+                </p>
+                        <ul style="padding-left: 40px;"> 
+                            <li> <b>\s</b> - whitespace character </li>
+                            <li> <b>\w</b> - matches an alphanumeric character </li>
+                            <li> <b>.</b> - matches any character </li>
+                            <li> <b>?</b> - matches the smallest amount of characters </li>
+                            <li> <b>\d</b> - matches 1 digit from 0-9 </li>
+                            <li> <b>\d{4}</b> - matches 4 digits </li>
+                            <li> <b>*</b> - matches 0 or more characters </li>
+                            <li> <b>+</b> - matches 1 or more characters </li>
+                            <li> <b>\w+</b> - matches 1 or more word characters</li>
+                            <li> <b>[]</b> - negation, matches anything but what is within the brackets </li>
+                            <li> <b>^</b> - matches the start of the string</li>
+                            <li> <b>$</b> - matches the end of a string</li>
+                        </ul>
+                        <br /> 
+                    <p> 
+                        Let's take a look at a couple of uses of Regex in some lines of code: 
+                    </p>
+                    <br /><br />
+                    <p id="code-block">
+                        <code>
+                            &emsp;^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$<br> <br> 
+                            &emsp;^[a-zA-Z0-9][a-zA-Z0-9._-]*@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$ <br> 
+                           </code>
+                    </p>
+                    <br> 
+
+                    <p>
+                    That's a lot of symbols! However, we can use the above chart to figure out what's going on. 
+                    In the first example, the code is checking whether or not a phone number is valid. It checks that there are only 3 digits in the area code,
+                    accepts separation between digits via a space, dash, slash, or period, checks for 3 digits and speration again, and finally accepts 
+                    4 digits. The ^ and $ symbols simply denote that the start of the input must match all the way through the end of the string. 
+                    <p> 
+                    <br> 
+                    In the second example, the regex is checking for email validity. The ^ starts checking input from the very beginning of the string, then it checks 
+                    that the input is an alphanumeric character. The next set of regex checks that the character is either an alphanumerica character or acceptable symbol 
+                    (like in jane.doe@biola.edu). From there, the * checks that the @ symbol is there before looking for alphanumeric characters. Finally, 
+                    the + operator looks for a . character, then accepts between 2 and 4 alphabetical characters since it is looking for a .com, .edu, or .io. 
+                    The $ character denotes matching through the end of the string. 
+                    
+                    </p>  
+                    <br />
+                </p>
+                
+                <p>
+                    <b>HTML</b> is the standard language used to create webpages. It handles the structure and content of a webpage and was even used to create the content you're reading right now! 
+                    It uses <b> tags </b> to differentiate various parts of the page from each other, such as paragraphs, lists, or headers. Let's look at an example: 
+                    <br /><br />
+                    <p id="code-block">
+                        <code>
+                            &lt;!DOCTYPE html&gt;<br>
+                            &lt;html lang="en"&gt;<br>
+                            &lt;head&gt;<br>
+                            &lt;title&gt;Page Title&lt;/title&gt;<br>
+                            &lt;/head&gt;<br>
+                            &lt;body&gt;<br>
+                            &lt;h1&gt;My First Heading&lt;/h1&gt;<br>
+                            &lt;p&gt;My first paragraph.&lt;/p&gt;<br>
+                            &lt;/body&gt;<br>
+                            &lt;/html&gt;
+                        </code>
+                    </p>
+                    <br />
+                    Everything within < > brackets is a <b>tag</b>. They tell the computer what you want. Content in the head tag contains information about the following content. 
+                    Every tag in the body tag tells the computer about the expression of the content nested within. For example, <b>h1</b> prints output in a heading format, 
+                    so its big and bold. <b>p</b> simply denotes a paragraph, so it prints text to the screen as you see it right now. 
+                    </p>
+                    <br />
+                    <b>CSS</b> is also a front facing language, but unlike HTML, it can't build anything on its own. Instead, it partners with HTML and focuses on the stylizing
+                    of the code. It allows for design choices like text color, background color, and special spacing. In the example below, you'll recognize the base HTML 
+                    commands and see where the CSS is adding some stylistic choices! 
+                    <br /><br />
+                    <p id="code-block">
+                        <code>
+                            &lt;head&gt;<br>
+                                &lt;style type=”text/css”&gt;<br>
+                                &lt;body { &gt;<br>
+                                    &lt;background-color: linen; }&gt;<br>
+                                    &lt;h1 { &gt;<br>
+                                        &lt;color: maroon;&gt;<br>
+                                        &lt;margin-left: 40px; }&gt;<br>
+                                        &lt;/style&gt;<br>
+                                        &lt;/head&gt;<br>                   
+                             </p>
+  
+                    <br />
+                    <b>JavaScript</b> functions similarly to CSS since it has to partner with HTML to build anything. It creates interactive webpages by adding animations, 
+                    pop-up windows, dynamic features, or even image carousels to a webpage. In the code cell below, you'll be able to identify the base HTML code. Additionally, 
+                    you'll notice the JavaScript <b>prompt</b> command that creates a pop up mini browser that asks users to input their birthday, uses a regex to verify that the birthdate was 
+                    properly submitted, and depending on whether or not, will alert or thank the user for the input. 
+                    
+                    <br /><br />
+                    <p id="code-block">
+                        <code>
+                            &lt;!DOCTYPE html&gt;<br>
+                            &lt;html lang="en"&gt;<br>
+                            &lt;head&gt;<br>
+                            &lt;title>JavaScript Pattern Matching< /title&gt;<br>
+                            &lt;/head&gt;<br>
+                            &lt;body&gt;<br>
+                            &lt;script type="text/javaScript"&gt;<br>
+                            var birthdate = prompt("Enter date of birth (mm-dd-yy)\n", ""):<br>
+                            var position = birthdate.search(/^\d{2}-\d{2}-\d{2}$/);<br>
+                            if (position == -1) {<br>
+                            document.write("Invalid date format "); }<br>
+                            else{<br>
+                            document.write("Thank you"); }<br>
+                            &lt;/script&gt;<br>
+                            &lt;/body&gt;<br>
+                            &lt;/html&gt;<br>
+                        </code>
+                    </p>
+                    <br /> 
+                </p>
+            </div>
+        </div>
+    </div>
+    <img src="img/flower1.png" alt="Flower Decor" class="left1">
+    <img src="img/flower2.png" alt="Flower Decor" class="left2">
+    <img src="img/flower3.png" alt="Flower Decor" class="left3">
+    <img src="img/flower3INV.png" alt="Flower Decor" class="right1">
+    <img src="img/flower1INV.png" alt="Flower Decor" class="right2">
+    <img src="img/flower2.png" alt="Flower Decor" class="right3">
+</body>
+</html>

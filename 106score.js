@@ -1,3 +1,8 @@
+// Navigate back to the home page
+function goToHome() {
+    window.location.href = './websitetest.html';
+}
+
 // Fetch data from data.json as an array of objects
 async function fetchData() {
     const response = await fetch('./data.json');
@@ -5,24 +10,21 @@ async function fetchData() {
     return data;
 }
 
-// Display object => lessons => second lesson (106) => header, content
-async function displayLesson() {
+// Display the quiz score just obtained
+async function populateScore() {
     let jsData = await fetchData();
-    let lesson = jsData[1].members[1];
+    let user = jsData[0].members[0];
 
-    if (lesson) {
-        document.getElementById("lessonHeader").textContent = lesson.header;
+    if (user) {
+        document.getElementById("scoreNum").innerHTML = user.last106Score;
     } else {
-        console.error('Lesson not found.');
+        error.log('User not found.');
     }
-}
-
-function goToQuiz() {
-    window.location.href = './106quiz.html';
+    
 }
 
 // On document load, display appropriate content
 document.addEventListener("DOMContentLoaded", function () {
-    displayLesson();
+    populateScore();
     console.log('content displayed');
 });
