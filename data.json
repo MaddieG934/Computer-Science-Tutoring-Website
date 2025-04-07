@@ -164,8 +164,7 @@
         "optionA": "Private variables cannot be changed, while public ones can",
         "optionB": "Public variables and functions are known to the user, while private variables are secret",
         "optionC": "Private variables can be accessed but not changed from outside the class, while public variables can be changed outside the class",
-        "solution": "Private variables can only be accessed from inside the class, such as through a function. Public variables and functions can be accessed and changed from outside the class",
-        "isCode": 0
+        "solution": "Private variables can only be accessed from inside the class, such as through a function. Public variables and functions can be accessed and changed from outside the class"
       },
       {
         "questionID": 9,
@@ -184,8 +183,8 @@
         "optionB": "model",
         "optionC": "iteration",
         "solution": "instance"
-       },	  
-       {
+      },
+      {
         "questionID": 11,
         "quizID": 3,
         "prompt": "QUESTION",
@@ -269,92 +268,92 @@
       {
         "questionID": 20,
         "quizID": 1,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "What is the correct way to display output in C++?",
+        "optionA": "print(\"Hello\");",
+        "optionB": "cout << \"Hello\";",
+        "optionC": "Console.Write(\"Hello\");",
+        "solution": "B"
       },
       {
         "questionID": 21,
         "quizID": 1,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "Which header file is necessary to use cout in C++?",
+        "optionA": "<stdio.h>",
+        "optionB": "<string>",
+        "optionC": "<iostream>",
+        "solution": "C"
       },
       {
         "questionID": 22,
         "quizID": 1,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "What is the output of this code?\n\nint age = 18;\nif (age >= 18)\n{\n  cout << \"You are eligible to vote.\";\n}",
+        "optionA": "Nothing is printed",
+        "optionB": "You are eligible to vote.",
+        "optionC": "You are not eligible to vote.",
+        "solution": "B"
       },
       {
         "questionID": 23,
         "quizID": 1,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "What is the correct syntax to get user input into a variable named age?",
+        "optionA": "cin << age;",
+        "optionB": "input(age);",
+        "optionC": "cin >> age;",
+        "solution": "C"
       },
       {
         "questionID": 24,
         "quizID": 1,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "Which data type is used to store decimal numbers with double precision?",
+        "optionA": "float",
+        "optionB": "double",
+        "optionC": "char",
+        "solution": "B"
       },
       {
         "questionID": 25,
         "quizID": 1,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "What will be the output of this code?\n\nint numbers[5] = {1, 2, 3, 4, 5};\ncout << numbers[0];",
+        "optionA": "5",
+        "optionB": "0",
+        "optionC": "1",
+        "solution": "C"
       },
       {
         "questionID": 26,
         "quizID": 1,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "Which loop guarantees that the loop body will execute at least once?",
+        "optionA": "for loop",
+        "optionB": "while loop",
+        "optionC": "do-while loop",
+        "solution": "C"
       },
       {
         "questionID": 27,
         "quizID": 1,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "What does this function do?\n\nvoid add(int a, int b) {\n  cout << \"Sum: \" << a + b;\n}",
+        "optionA": "Subtracts two numbers",
+        "optionB": "Adds two numbers and prints the sum",
+        "optionC": "Returns the product of two numbers",
+        "solution": "B"
       },
       {
         "questionID": 28,
         "quizID": 1,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "What is the purpose of the break statement in a switch?",
+        "optionA": "It restarts the switch block",
+        "optionB": "It exits the current case block",
+        "optionC": "It ends the program",
+        "solution": "B"
       },
       {
         "questionID": 29,
         "quizID": 1,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "What will be printed by the following code?\n\nstring name = \"Alice\";\ncout << \"Hello, \" << name;",
+        "optionA": "Hello, Alice",
+        "optionB": "name",
+        "optionC": "Hello name",
+        "solution": "A"
       },
       {
         "questionID": 30,
