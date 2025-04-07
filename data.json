@@ -7,7 +7,7 @@
         "userName": "Test User",
         "password": "password",
         "last105Score": 0,
-        "last106Score": 0,
+        "last106Score": 4,
         "last220Score": 0,
         "last230Score": 0,
         "max105Score": 0,
@@ -187,74 +187,74 @@
       {
         "questionID": 11,
         "quizID": 3,
-        "prompt": "QUESTION",
-        "optionA": "A",
-        "optionB": "B",
-        "optionC": "C",
-        "solution": "D"
+        "prompt": "Convert the following number from Decimal to Hexadecimal: 938324",
+        "optionA": "0xF2469",
+        "optionB": "0xE5153",
+        "optionC": "0x259D5",
+        "solution": "0xE5154"
       },
       {
         "questionID": 12,
         "quizID": 3,
-        "prompt": "QUESTION",
-        "optionA": "A",
-        "optionB": "B",
-        "optionC": "C",
-        "solution": "D"
+        "prompt": "Convert the following number from Hexadecimal to Decimal: 0x6FA8D",
+        "optionA": "624826",
+        "optionB": "451608",
+        "optionC": "623792",
+        "solution": "457357"
       },
       {
         "questionID": 13,
         "quizID": 3,
-        "prompt": "QUESTION",
-        "optionA": "A",
-        "optionB": "B",
-        "optionC": "C",
-        "solution": "D"
+        "prompt": "What is the appropriate suffix for this instruction, based on the operands: <strong>mov? %rsi, %rax</strong>    # ? should be",
+        "optionA": "B",
+        "optionB": "W",
+        "optionC": "L",
+        "solution": "Q"
       },
       {
         "questionID": 14,
         "quizID": 3,
-        "prompt": "QUESTION",
-        "optionA": "A",
-        "optionB": "B",
-        "optionC": "C",
-        "solution": "D"
+        "prompt": "Convert the following number from Binary to Hexadecimal: 10000010010011111010001101111100",
+        "optionA": "0x1AC295D3",
+        "optionB": "0x2948BCE0",
+        "optionC": "0x824D6E29",
+        "solution": "0x824FA3BC"
       },
       {
         "questionID": 15,
         "quizID": 3,
-        "prompt": "QUESTION",
-        "optionA": "A",
-        "optionB": "B",
-        "optionC": "C",
-        "solution": "D"
+        "prompt": "What command would you use to DECLARE a variable?",
+        "optionA": ".bss",
+        "optionB": ".define",
+        "optionC": ".int",
+        "solution": ".lcomm"
       },
       {
         "questionID": 16,
         "quizID": 3,
-        "prompt": "QUESTION",
-        "optionA": "A",
-        "optionB": "B",
-        "optionC": "C",
-        "solution": "D"
+        "prompt": "What do you subtract/add by to convert ASCII values to numbers?",
+        "optionA": "Whatever the Decimal value is for your number on the ASCII chart",
+        "optionB": "Whatever your value is",
+        "optionC": "0x3",
+        "solution": "0x30"
       },
       {
         "questionID": 17,
         "quizID": 3,
-        "prompt": "QUESTION",
-        "optionA": "A",
-        "optionB": "B",
-        "optionC": "C",
-        "solution": "D"
+        "prompt": "What symbol is used in x86-64 assembly to represent an immediate value?",
+        "optionA": "#",
+        "optionB": "%",
+        "optionC": "@",
+        "solution": "$"
       },
       {
         "questionID": 18,
         "quizID": 3,
-        "prompt": "QUESTION",
-        "optionA": "A",
-        "optionB": "B",
-        "optionC": "C",
-        "solution": "D"
+        "prompt": "What symbol is used to indicate registers being used?",
+        "optionA": "$",
+        "optionB": "@",
+        "optionC": "#",
+        "solution": "%"
       },
       {
         "questionID": 19,
@@ -444,6 +444,15 @@
         "optionB": "add here",
         "optionC": "add here",
         "solution": "add here"
+      },
+      {
+        "questionID": 40,
+        "quizID": 3,
+        "prompt": "QUESTION",
+        "optionA": "A",
+        "optionB": "B",
+        "optionC": "C",
+        "solution": "D"
       }
     ]
   }
