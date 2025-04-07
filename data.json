@@ -358,47 +358,47 @@
       {
         "questionID": 30,
         "quizID": 4,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "What keyword do you use to declare a function in Python? ",
+        "optionA": "Funct",
+        "optionB": "Definition",
+        "optionC": "Function",
+        "solution": "Def"
       },
       {
         "questionID": 31,
         "quizID": 4,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "What is concatenation?",
+        "optionA": "The keyword that declares a function",
+        "optionB": "The javascript commands that creates a pop-up alert",
+        "optionC": "Something to do with cats",
+        "solution": "An operator that adds different data types together"
       },
       {
         "questionID": 32,
         "quizID": 4,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "What does the Regex command ^dog check for?",
+        "optionA": "It checks that dog is not included in the user input",
+        "optionB": "It checks for alphanumeric characters",
+        "optionC": "It checks that given user input ends with dog",
+        "solution": "It checks that given user input begins with dog"
       },
       {
         "questionID": 33,
         "quizID": 4,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "What does the regex command [a-zA-Z0-9] check for?",
+        "optionA": "It checks that given user input includes 1 alphabetic character",
+        "optionB": "It checks that given user input ends with a number",
+        "optionC": "It checks that given user input is not alphanumeric",
+        "solution": "It checks that given user input is alphanumeric"
       },
       {
         "questionID": 34,
         "quizID": 4,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "What does the line userName = input() do?",
+        "optionA": "It prints user input to the screen",
+        "optionB": "It only accepts input but doesn't store it anywhere",
+        "optionC": "It only creates a variable for input",
+        "solution": "It takes in user input and stores it in the new variable UserName"
       },
       {
         "questionID": 35,
@@ -412,38 +412,38 @@
       {
         "questionID": 36,
         "quizID": 4,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "What does the line print('Nice to meet you') do?",
+        "optionA": "It declares a function definition",
+        "optionB": "It checks for input",
+        "optionC": "It stores data about the user",
+        "solution": "It prints the line within the parenthesis to the user's screen"
       },
       {
         "questionID": 37,
         "quizID": 4,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "In HTML, what are headings in arrow brackets < > called?",
+        "optionA": "H1",
+        "optionB": "Body",
+        "optionC": "Head",
+        "solution": "Tags"
       },
       {
         "questionID": 38,
         "quizID": 4,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "What is Javascript's main functionality",
+        "optionA": "It navigates databases",
+        "optionB": "It build webpages",
+        "optionC": "It pairs with CSS to add style and design choices",
+        "solution": "It pairs with HTML to create interactive webpages"
       },
       {
         "questionID": 39,
         "quizID": 4,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "what does the line: style type=”text/css'' do?  ",
+        "optionA": "It edits the margin size",
+        "optionB": "It styles the font of the CSS",
+        "optionC": "It changes the background color",
+        "solution": "It tells the HTML that there will be upcoming stylistic CSS commands"
       },
       {
         "questionID": 40,
