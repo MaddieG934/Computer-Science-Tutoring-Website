@@ -7,7 +7,7 @@
         "userName": "Test User",
         "password": "password",
         "last105Score": 0,
-        "last106Score": 5,
+        "last106Score": 0,
         "last220Score": 0,
         "last230Score": 0,
         "max105Score": 0,
@@ -185,7 +185,6 @@
         "optionC": "iteration",
         "solution": "instance"
       },
-      //add here for intro to c++
       {
         "questionID": 20,
         "quizID": 1,
@@ -303,7 +302,6 @@
         "optionC": "add here",
         "solution": "add here"
       }
-
     ]
   }
 ]
