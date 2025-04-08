@@ -5,14 +5,13 @@ async function fetchData() {
     return data;
 }
 
-// Display object => lessons => second lesson (105) => header, content
+// Display object => lessons => second lesson (106) => header, content
 async function displayLesson() {
     let jsData = await fetchData();
     let lesson = jsData[1].members[1];
 
     if (lesson) {
-       document.getElementById("lessonHeader").textContent = lesson.header;
-
+        document.getElementById("lessonHeader").textContent = lesson.header;
     } else {
         console.error('Lesson not found.');
     }
@@ -20,10 +19,6 @@ async function displayLesson() {
 
 function goToQuiz() {
     window.location.href = './105quiz.html';
-}
-
-function goToHome() {
-    window.location.href = './websitetest.html';
 }
 
 // On document load, display appropriate content

@@ -427,3 +427,65 @@ ul li.Login {
 	font-family: 'Alegreya';
 	padding-left: 15px;
 }
+
+/* new content */
+
+/* welcome section styling */
+#welcome {
+	text-align: center;
+	font-family: 'Alegreya';
+	padding: 60px 20px;
+	color: #848B66;
+}
+
+	#welcome h2 {
+		font-family: 'PP Woodland Bold';
+		font-size: 1.8em;
+		margin-bottom: 20px;
+	}
+
+	#welcome p {
+		max-width: 600px;
+		margin: 0 auto 50px auto;
+		font-size: 1em;
+		line-height: 1.6;
+	}
+
+/* course box */
+.course-box {
+	background-color: #f9f5f3;
+	border: 1px solid #F2DAD3;
+	padding: 40px 20px;
+	margin: 0 auto;
+	max-width: 500px;
+	border-radius: 10px;
+}
+
+	.course-box h3 {
+		font-family: 'PP Woodland Bold';
+		font-size: 1.4em;
+		margin-bottom: 15px;
+	}
+
+	.course-box p {
+		font-size: 1em;
+		line-height: 1.5;
+		margin-bottom: 30px;
+	}
+
+/* lesson button */
+.lesson-btn {
+	background-color: #848B66;
+	color: #fff;
+	font-family: 'PP Woodland Bold';
+	font-size: 1em;
+	padding: 12px 24px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+	.lesson-btn:hover {
+		background-color: #6d7553;
+	}
