@@ -489,3 +489,13 @@ ul li.Login {
 	.lesson-btn:hover {
 		background-color: #6d7553;
 	}
+
+/* go to main page button */
+.home-link {
+	text-decoration: none;
+	color: #848B66;
+}
+
+	.home-link:hover {
+		text-decoration: underline;
+	}
