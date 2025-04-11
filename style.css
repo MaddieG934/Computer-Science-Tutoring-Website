@@ -490,7 +490,7 @@ ul li.Login {
 		background-color: #6d7553;
 	}
 
-/* go to main page button */
+/* go to main page button for title*/
 .home-link {
 	text-decoration: none;
 	color: #848B66;
@@ -499,3 +499,19 @@ ul li.Login {
 	.home-link:hover {
 		text-decoration: underline;
 	}
+
+
+/* Make the egg image clickable */
+.egg-link {
+	display: inline-block;
+}
+
+	/* Add a little interactivity on hover */
+	.egg-link img {
+		cursor: pointer;
+		transition: transform 0.2s ease-in-out;
+	}
+
+		.egg-link img:hover {
+			transform: scale(1.05);
+		}
