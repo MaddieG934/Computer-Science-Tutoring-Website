@@ -1,31 +1,32 @@
-﻿﻿<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-US">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <title> CSCI 105 - Introduction to C++ </title>
+    <title>CSCI 105 - Introduction to Computer Science</title>
     <meta name="author" content="Big Green Egg">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="105.js"></script>>
+    <script type="text/javascript" src="220quiz.js"></script>
 </head>
 <body>
 
     <header>
         <img src="img/egg.png" alt="Big Green Egg Logo" class="left">
         <h1>
-            Big Green Egg
+            <a href="websitetest.html" class="home-link">Big Green Egg</a>
         </h1>
         <img src="img/egg.png" alt="Big Green Egg Logo" class="right">
     </header>
     <nav id="navbar">
         <ul>
-            <li><a href="#">Login</a></li>
+            <li class="Login"><a href="websitetest.html" class="hover-underline">Login</a></li>
     </nav>
 
     <div id="wrapper">
 
         <div id="maincontent">
 
-            <h2 style="text-align: center;">CSCI 105 - Introduction to C++</h2>
+            <h2 style="text-align: center;">CSCI 105 - Introduction to Computer Science</h2>
             <br> <br>
 
             <h3> What is C++?</h3>
@@ -350,8 +351,10 @@ int main()
             <br> <br>
 
             <h3> Let's test your understanding!</h3>
-            <h4>   Click below to take CSCI 105 - Intro to C++ QUIZ </h4>
-            <button id="tsoQuiz" onclick="goToQuiz()">Take the Quiz</button>
+            <h4>   Click below to take CSCI 105 - Intro to Computer Science QUIZ </h4>
+            
+            <button id="toQuiz" class="lesson-btn" onclick="goToQuiz()">Take the Quiz</button>
+
 
             <!-- QUIZ HERE -->
 
@@ -362,7 +365,7 @@ int main()
             <!-- END HERE -->
 
         </div>
-
+        
 
 
     </div>
