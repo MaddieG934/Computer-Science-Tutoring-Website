@@ -6,14 +6,17 @@
     <meta name="author" content="Big Green Egg">
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script type="text/javascript" src="106.js"></script>>
-</head>
+</head> 
 <body>
 
     <header>
         <img src="img/egg.png" alt="Big Green Egg Logo" class="left">
-        <h1>
-            Big Green Egg
-        </h1>
+        <h1> 
+
+            <a href="websitetest.html" class="home-link" style=text-decoration:none;><span style="color:#848B66">Big Green Egg</span></a>
+            <!-- removed underline from hyperlink, added proper color to text-->
+            
+            </h1>
         <img src="img/egg.png" alt="Big Green Egg Logo" class="right">
     </header>
     <nav id="navbar">
@@ -24,16 +27,18 @@
     <div id="wrapper">
         <div id="maincontent">
             <div id="lessoncontent">
-                <h2 id="lessonHeader">Data Structures</h2>
+                <h2 style="text-align: center;"><span style="color:#848B66">Data Structures</span></h2>
                 <br />
-
+                <div style="border: 4px solid #EED5CE; padding: 15px;"> <!--Adding pink border as seen in SDD-->
                 <p>
                     Common data structures include arrays, vectors, structures. and classes.
                 </p>
                 <br />
 
+                <h3> <span style="color:#848B66">Arrays</span></h3>
+                <br> 
                 <p>
-                    <b>Arrays</b> are lists of a fixed size whose elements are all the same type. They are created like this:
+                    Arrays are lists of a fixed size whose elements are all the same type. They are created like this:
                     <br /><br />
                     <p id="code-block">
                         <code>&emsp; <span style="color:blue">int</span> myArr = [<span style="color:seagreen">1</span>, <span style="color:seagreen">2</span>, <span style="color:seagreen">3</span>];</code>
@@ -46,9 +51,10 @@
                     </p>
                 </p>
                 <br />
-
+                <h3><span style="color:#848B66">Vectors</span></h3>
+                <br> 
                 <p>
-                    <b>Vectors</b> are also lists whose elements are all the same type, but you can dynamically add and delete element.
+                    Vectors are also lists whose elements are all the same type, but you can dynamically add and delete element.
                     To use vectors, you need to include the vector library. They are created like this:
                     <br /><br />
                     <p id="code-block">
@@ -85,9 +91,11 @@
                     and returns its position
                 </p>
                 <br />
+                <h3> <span style="color:#848B66">Structures</span></h3>
+                <br> 
 
                 <p>
-                    <b>Structures</b> are "blueprints" of containers that can hold elements of multiple types. They are created like this:
+                    Structures are "blueprints" of containers that can hold elements of multiple types. They are created like this:
                     <br /><br />
                     <p id="code-block">
                         <code>
@@ -117,9 +125,11 @@
                     </p>
                 </p>
                 <br />
+                <h3><span style="color:#848B66">Classes</span></h3>
+                <br> 
 
                 <p>
-                    <b>Classes</b> also can hold elements of different types, as well as functions to manipulaate those elements. They are created like this:
+                    Classes also can hold elements of different types, as well as functions to manipulaate those elements. They are created like this:
                     <br /><br />
                 <p id="code-block">
                     <code>
@@ -165,8 +175,17 @@
                 you will get an error.
                 </p>
             </div>
+            </div>
 
-            <button id="toQuiz" onclick="goToQuiz()">Take the Quiz</button>
+
+        <h3> Let's test your understanding!</h3>
+        <h4>   Click below to take CSCI 106 - Data Structures Quiz </h4>
+		<br>
+		<a href="106quiz.html">
+        <button id="toQuiz" onclick="goToQuiz()">Take the Quiz</button>
+		</a>
+
+        
         </div>
     </div>
 
