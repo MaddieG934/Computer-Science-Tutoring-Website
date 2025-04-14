@@ -7,7 +7,7 @@
         "userName": "Test User",
         "password": "password",
         "last105Score": 0,
-        "last106Score": 3,
+        "last106Score": 5,
         "last220Score": 0,
         "last230Score": 0,
         "max105Score": 0,
@@ -143,10 +143,10 @@
         "questionID": 6,
         "quizID": 2,
         "prompt": "What makes a structure different from an array?",
-        "optionA": "An array can change its size, while a structure cannot",
-        "optionB": "The values of structure elements can change, while those of an array cannot",
-        "optionC": "An array can hold elements of multiple types, while a structure cannot",
-        "solution": "An array is a container whose elements are all the same type. A structure is a blueprint of a container whose instances can hold elements of different types"
+        "optionA": "An array can change size, structure cannot",
+        "optionB": "The values of structure elements can change, array values cannot",
+        "optionC": "An array can hold mixed types, structures cannot",
+        "solution": "Arrays hold same-type elements; structures hold mixed types."
       },
       {
         "questionID": 7,
@@ -161,10 +161,10 @@
         "questionID": 8,
         "quizID": 2,
         "prompt": "What is the difference between public and private variables and functions in a class?",
-        "optionA": "Private variables cannot be changed, while public ones can",
-        "optionB": "Public variables and functions are known to the user, while private variables are secret",
-        "optionC": "Private variables can be accessed but not changed from outside the class, while public variables can be changed outside the class",
-        "solution": "Private variables can only be accessed from inside the class, such as through a function. Public variables and functions can be accessed and changed from outside the class",
+        "optionA": "Private: cannot be changed, public: can be changed",
+        "optionB": "Public: known to the user, private: secret",
+        "optionC": "Private: only access outside class, public: can change outside class",
+        "solution": "Private: access inside class. Public: access/change outside class",
         "isCode": 0
       },
       {
