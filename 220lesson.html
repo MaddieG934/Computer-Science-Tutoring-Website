@@ -11,9 +11,13 @@
 
 	<header>
 		<img src="img/egg.png" alt="Big Green Egg Logo" class="left">
-		<h1>
-			Big Green Egg
-		</h1>
+		<h1> 
+
+			<a href="websitetest.html" class="home-link" style=text-decoration:none;><span style="color:#848B66">Big Green Egg</span></a>
+			<!-- removed underline from hyperlink, added proper color to text-->
+			
+			</h1>
+			
 		<img src="img/egg.png" alt="Big Green Egg Logo" class="right">
 	</header>
 	<nav id="navbar">
@@ -24,8 +28,9 @@
 		
 		<div id="maincontent">
 		<p>&nbsp</p>
-		<h2 style="text-align: center;">CSCI 220 - Computer Organization and Assembly Language Programming</h2>
+		<h2 style="text-align: center;"><span style="color:#848B66">Computer Organization and Assembly Language Programming</span></h2>
 		<br />
+		<div style="border: 4px solid #EED5CE; padding: 15px;"> <!--Adding pink border as seen in SDD-->
 		<p>
 			Now that you have gone through the basics of learning C++,
 			understanding the architecture of computer systems, comprehending how data is represented, 
@@ -37,8 +42,8 @@
 			Binary is a system of 0's and 1's. Hexadecimals are numbers 0-9, then A-F (representing 10-15).
 			Decimals are what you'd be familiar with, just 0-9 digits.
 		</p>
-		<br /> <br /> <br />
-		<h3> Binary: </h3>
+		<br /> <br /> 
+		<h3><span style="color:#848B66"> Binary: </span></h3>
 		<p>
 			We'll just practice converting Binary to Hexadecimal, and vice versa.
 		<br /> <br />
@@ -66,7 +71,7 @@
 		<br /> <br />
 		</p>
 		
-		<h3> Hexadecimal to Decimal: </h3>
+		<h3> <span style="color:#848B66"> Hexadecimal to Decimal: </span> </h3>
 		
 		</p>
 		<br />
@@ -93,7 +98,7 @@ B = 11 x 16^1 = 176
 			We know that 2738 is 0xAB2, but let's continue and convert it back, to show the process.
 		</p>
 		<br />
-		<h3> Decimal to Hexadecimal: </h3>
+		<h3><span style="color:#848B66"> Decimal to Hexadecimal: </span></h3>
 		<br />
 		
 		<p>
@@ -115,7 +120,7 @@ B = 11 x 16^1 = 176
 		<br /> <br />
 		</p>
 		
-		<h3> Intro to Writing in Assembly </h3>
+		<h3> <span style="color:#848B66">Intro to Writing in Assembly </span></h3>
 		<br />
 		
 		<p>
@@ -239,7 +244,7 @@ movq $x, %rcx # x
 movq $0x2, %rdx # size
 int $0x80   #system interrupt to kernel </pre>
 		<p>
-		<br />
+		<br /> 
 			Exit program with return 0:
 		<br />
 		</p>
@@ -248,10 +253,12 @@ movl $1, %eax # $1 is sys_exit
 movl $0, %ebx # $0 is return value
 int  $0x80 # system interrupt to kernel </pre>
 
-        <br> <br>
+        <br> 
+		</div>
+		<br>
 
         <h3> Let's test your understanding!</h3>
-        <h4>   Click below to take CSCI 220 - Comp Org QUIZ </h4>
+        <h4>   Click below to take CSCI 220 - Comp Org Quiz </h4>
 		<br>
 		<a href="220quiz.html">
         <button id="toQuiz" onclick="goToQuiz()">Take the Quiz</button>

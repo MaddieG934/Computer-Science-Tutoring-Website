@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
     <meta charset="utf-8">
-    <title> CSCI 230</title>
+    <title> CSCI 230 Lesson</title>
     <meta name="author" content="Big Green Egg">
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script type="text/javascript" src="230.js"></script>>
@@ -11,9 +11,17 @@
 
     <header>
         <img src="img/egg.png" alt="Big Green Egg Logo" class="left">
-        <h1>
+       <!-- <h1>
             Big Green Egg
-        </h1>
+        </h1>-->
+
+<h1> 
+
+<a href="websitetest.html" class="home-link" style=text-decoration:none;><span style="color:#848B66">Big Green Egg</span></a>
+<!-- removed underline from hyperlink, added proper color to text-->
+
+</h1>
+
         <img src="img/egg.png" alt="Big Green Egg Logo" class="right">
     </header>
     <nav id="navbar">
@@ -24,15 +32,16 @@
     <div id="wrapper">
         <div id="maincontent">
             <div id="lessoncontent">
-                <h2 id="lessonHeader">Programming Languages</h2>
+                <h2 style="text-align: center;"><span style="color:#848B66">Programming Languages</span></h2>
                 <br />
-
-                <p>   Now that you have covered basic Computer Science principles and understood Data Structures, 
+                <div style="border: 4px solid #EED5CE; padding: 15px;"> <!--Adding pink border as seen in SDD-->
+                <p>   
+                    Now that you have covered basic Computer Science principles and understood Data Structures, 
                     it's time to add some more languages to your repertoire! Let's start with some Python Basics.
                 </p> <br /> 
+                <h3> <span style="color:#848B66">Python Fundamentals </span></h3>
                 <p>
-                    <b>Python Fundamentals</b>
-                    <br> <br> Let's start with an code example: 
+                    <br> Let's start with an code example: 
                     <br /><br />
                     <p id="code-block">
                         <code>&emsp; <span style="color:blue">print('</span>Enter your name: <span style="color:blue">')</span></code><br/> 
@@ -46,8 +55,8 @@
 
                   <p>
                     <br> 
-                        In this code block, we see an example of how Python accepts input, denoted by line 2: userName = input(). To take in user input,
-                        Python requires users to create a new variable that will hold said input. 
+                    In this code block, we see an example of how Python accepts input, denoted by line 2: userName = input(). To take in user input,
+                    Python requires users to create a new variable that will hold said input. 
                   </p>
                   <br > 
 
@@ -58,9 +67,10 @@
 
                 </p>
                 <br />
-
+<h3> <span style="color:#848B66"> Functions </span></h3>
+<br> 
                 <p>
-                    <b>Functions</b> are like mini programs nested within a program. They allow you to reuse code for better program readability, 
+                    Functions are like mini programs nested within a program. They allow you to reuse code for better program readability, 
                     ease of coding, and they allow for easy updates within a big program. 
                     They are created like this: 
                     
@@ -100,58 +110,58 @@
 
                 </p>
                 <br />
-
+<h3><span style="color:#848B66">Regular Expressions</span></h3>
+<br> 
                 <p>
-                    <b>Regular Expressions</b>, often abbreivated to just <b> Regex</b>, are used to help match patterns. They are unique characters that hold special meaning, such as the <b> . ^ $ * + ? { } [ ] \ | ( )</b>
+                    Regular Expressions, often abbreivated to just <b> Regex</b>, are used to help match patterns. They are unique characters that hold special meaning, such as the <b> . ^ $ * + ? { } [ ] \ | ( )</b>
                         characters. 
                         <br> 
                         <br> 
                 </p>
-                        <ul style="padding-left: 40px;"> 
-                            <li> <b>\s</b> - whitespace character </li>
-                            <li> <b>\w</b> - matches an alphanumeric character </li>
-                            <li> <b>.</b> - matches any character </li>
-                            <li> <b>?</b> - matches the smallest amount of characters </li>
-                            <li> <b>\d</b> - matches 1 digit from 0-9 </li>
-                            <li> <b>\d{4}</b> - matches 4 digits </li>
-                            <li> <b>*</b> - matches 0 or more characters </li>
-                            <li> <b>+</b> - matches 1 or more characters </li>
-                            <li> <b>\w+</b> - matches 1 or more word characters</li>
-                            <li> <b>^</b> - matches the start of the string</li>
-                            <li> <b>$</b> - matches the end of a string</li>
-                        </ul>
-                        <br /> 
-                    <p> 
-                        Let's take a look at a couple of uses of Regex in some lines of code: 
-                    </p>
-                    <br /><br />
-                    <p id="code-block">
-                        <code>
-                            &emsp;^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$<br> <br> 
-                            &emsp;^[a-zA-Z0-9][a-zA-Z0-9._-]*@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$ <br> 
-                           </code>
-                    </p>
-                    <br> 
+                    <ul style="padding-left: 40px;"> 
+                        <li> <b>\s</b> - whitespace character </li>
+                        <li> <b>\w</b> - matches an alphanumeric character </li>
+                        <li> <b>.</b> - matches any character </li>
+                        <li> <b>?</b> - matches the smallest amount of characters </li>
+                        <li> <b>\d</b> - matches 1 digit from 0-9 </li>
+                        <li> <b>\d{4}</b> - matches 4 digits </li>
+                        <li> <b>*</b> - matches 0 or more characters </li>
+                        <li> <b>+</b> - matches 1 or more characters </li>
+                        <li> <b>\w+</b> - matches 1 or more word characters</li>
+                        <li> <b>^</b> - matches the start of the string</li>
+                        <li> <b>$</b> - matches the end of a string</li>
+                    </ul>
+                    <br /> 
+                <p> 
+                    Let's take a look at a couple of uses of Regex in some lines of code: 
+                </p>
+                <br /><br />
+                <p id="code-block">
+                    <code>
+                        &emsp;^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$<br> <br> 
+                        &emsp;^[a-zA-Z0-9][a-zA-Z0-9._-]*@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$ <br> 
+                    </code>
+                </p>
+                <br> 
 
-                    <p>
+                <p>
                     That's a lot of symbols! However, we can use the above chart to figure out what's going on. 
                     In the first example, the code is checking whether or not a phone number is valid. It checks that there are only 3 digits in the area code,
                     accepts separation between digits via a space, dash, slash, or period, checks for 3 digits and speration again, and finally accepts 
                     4 digits. The ^ and $ symbols simply denote that the start of the input must match all the way through the end of the string. 
-                    <p> 
                     <br> 
                     In the second example, the regex is checking for email validity. The ^ starts checking input from the very beginning of the string, then it checks 
                     that the input is an alphanumeric character. The next set of regex checks that the character is either an alphanumerica character or acceptable symbol 
                     (like in jane.doe@biola.edu). From there, the * checks that the @ symbol is there before looking for alphanumeric characters. Finally, 
                     the + operator looks for a . character, then accepts between 2 and 4 alphabetical characters since it is looking for a .com, .edu, or .io. 
                     The $ character denotes matching through the end of the string. 
-                    
-                    </p>  
-                    <br />
-                </p>
                 
+                </p>  
+                    <br />
+                <h3> <span style="color:#848B66"> HTML </span></h3>
+                <br> 
                 <p>
-                    <b>HTML</b> is the standard language used to create webpages. It handles the structure and content of a webpage and was even used to create the content you're reading right now! 
+                    HTML is the standard language used to create webpages. It handles the structure and content of a webpage and was even used to create the content you're reading right now! 
                     It uses <b> tags </b> to differentiate various parts of the page from each other, such as paragraphs, lists, or headers. Let's look at an example: 
                     <br /><br />
                     <p id="code-block">
@@ -172,9 +182,12 @@
                     Everything within < > brackets is a <b>tag</b>. They tell the computer what you want. Content in the head tag contains information about the following content. 
                     Every tag in the body tag tells the computer about the expression of the content nested within. For example, <b>h1</b> prints output in a heading format, 
                     so its big and bold. <b>p</b> simply denotes a paragraph, so it prints text to the screen as you see it right now. 
-                    </p>
                     <br />
-                    <b>CSS</b> is also a front facing language, but unlike HTML, it can't build anything on its own. Instead, it partners with HTML and focuses on the stylizing
+                    
+                    <br> 
+                    <h3> <span style="color:#848B66">CSS</span></h3>
+                    <br> 
+                    CSS is also a front facing language, but unlike HTML, it can't build anything on its own. Instead, it partners with HTML and focuses on the stylizing
                     of the code. It allows for design choices like text color, background color, and special spacing. In the example below, you'll recognize the base HTML 
                     commands and see where the CSS is adding some stylistic choices! 
                     <br /><br />
@@ -188,15 +201,18 @@
                                         &lt;color: maroon;&gt;<br>
                                         &lt;margin-left: 40px; }&gt;<br>
                                         &lt;/style&gt;<br>
-                                        &lt;/head&gt;<br>                   
-                             </p>
+                                        &lt;/head&gt;<br> 
+                        </code>                 
+                    </p>
   
                     <br />
+                    <h3> <span style="color:#848B66">JavaScript</span></h3>
+                    <br> 
                     <p>
-                    <b>JavaScript</b> functions similarly to CSS since it has to partner with HTML to build anything. It creates interactive webpages by adding animations, 
-                    pop-up windows, dynamic features, or even image carousels to a webpage. In the code cell below, you'll be able to identify the base HTML code. Additionally, 
-                    you'll notice the JavaScript <b>prompt</b> command that creates a pop up mini browser that asks users to input their birthday, uses a regex to verify that the birthdate was 
-                    properly submitted, and depending on whether or not, will alert or thank the user for the input. 
+                        JavaScript functions similarly to CSS since it has to partner with HTML to build anything. It creates interactive webpages by adding animations, 
+                        pop-up windows, dynamic features, or even image carousels to a webpage. In the code cell below, you'll be able to identify the base HTML code. Additionally, 
+                        you'll notice the JavaScript <b>prompt</b> command that creates a pop up mini browser that asks users to input their birthday, uses a regex to verify that the birthdate was 
+                        properly submitted, and depending on whether or not, will alert or thank the user for the input. 
                     </p> 
                     <br /><br />
                     <p id="code-block">
@@ -221,6 +237,20 @@
                     </p>
                     <br /> 
                 </p>
+    </div>
+
+    <br> 
+        <h3><span style="color:#848B66">Let's test your understanding!</span></h3>
+        <br> 
+        <h4> <span style="color:#848B66">Click below to take CSCI 230 - Programming Languages Quiz</span></h4>
+		<br>
+		<a href="230quiz.html">
+        <button id="toQuiz" onclick="goToQuiz()">Take the Quiz</button>
+		</a>
+
+            <br> <br>
+            <br> <br>
+            
             </div>
         </div>
     </div>
