@@ -456,5 +456,14 @@
         "solution": "D"
       }
     ]
+  },
+  {
+    "type": "loginCheck",
+    "members": [
+      {
+        "isLoggedIn": 0,
+        "userId": -1
+      }
+    ]
   }
 ]
