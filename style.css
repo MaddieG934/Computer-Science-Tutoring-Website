@@ -139,6 +139,13 @@ body img.right3 {
 	header {
 		font-size: 170% !important;
 	}
+	.radio-section {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 90vh !important;
+	}
+
 	/*
 	body img.left1 {
 		position: relative;
@@ -554,27 +561,31 @@ ul li.Login {
 
 
 .radio-section {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 70vh;
-}
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 90vh !important;
+	}
 h1 {
 	margin-bottom: 20px;
-	grid-column: span 2;
 }
 .radio-item [type="radio"] {
 	display: none;
 }
 
+.radio-item + .radio-item {
+	margin-top: 15px;
+}
+
 .radio-item label {
 	display: block;
-	padding: 15px 20px 15px 50px;
+	padding: 20px 60px;
 	background: #848B66;
 	border-radius: 15px;
 	cursor: pointer;
 	font-size: 17px;
 	font-weight: 400;
+	min-width: 250px;
 	white-space: nowrap;
 	position: relative;
 	transition: 0.4s ease-in-out 0s;
@@ -613,16 +624,8 @@ h1 {
 }
 
 .radio-item label:hover {
-		background-color: #6d7553;
-	}
-	
-.radio-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two items per row */
-  gap: 15px 30px; /* vertical and horizontal spacing */
-  text-align: center;
+	background-color: #6d7553;
 }
-
 .Answers {
 	font-family: "Alegreya";
 	color: #FFFFFF;
