@@ -1,7 +1,5 @@
 let qSolutionEls = []; // Store element ID's of the location of the solutions to each question on each page load
 
-
-let currentQuestion = 0;
 // Switch to display score window
 function goToScore() {
     window.location.href = './220score.html';
@@ -58,8 +56,8 @@ async function calcScore() {
 async function populateQuiz() {
     let jsData = await fetchData();
     let questions = jsData[4].members;
-    let quizQuestions = questions.filter(question => question.quizID === 3); // Change "2" to the correct quizID, all questions for the same quiz should have the same quizID
-
+    let quizQuestions = questions.filter(question => question.quizID === 3); //updated to 3
+	
     console.log(quizQuestions);
 
     if (quizQuestions) {
