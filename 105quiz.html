@@ -14,73 +14,70 @@
     <header>
         <img src="img/egg.png" alt="Big Green Egg Logo" class="left">
         <h1>
-            Big Green Egg
+            <a href="websitetest.html" class="home-link">Big Green Egg</a>
         </h1>
         <img src="img/egg.png" alt="Big Green Egg Logo" class="right">
     </header>
     <nav id="navbar">
         <ul>
-            <li class="Login"><a href="#">Login</a></li>
+            <li class="Login"><a href="websitetest.html" class="hover-underline">Login</a></li>
+		</ul>
     </nav>
     <div id="wrapper">
         <div id="maincontent">
-            <form>
-                <p id="prompt_1"></p>
-                <input type="radio" id="1A" name="question_1" value="A" />
-                <label for="1A" id="1_A"></label><br />
-                <input type="radio" id="1B" name="question_1" value="B" />
-                <label for="1B" id="1_B"></label><br />
-                <input type="radio" id="1C" name="question_1" value="C" />
-                <label for="1C" id="1_C"></label><br />
-                <input type="radio" id="1D" name="question_1" value="D" />
-                <label for="1D" id="1_D"></label><br />
-                <br />
+            <form id="quizForm">
+						
+				<section class="radio-section">
+					<div class="radio-list">
+						<h1><p id="prompt_1" class="quiz-question"></p></h1>
+						<div class="radio-item"><input type="radio" id="1A" name="question_1" value="A"/><label for="1A" id="1_A" class="Answers"></label><br /></div>
+						<div class="radio-item"><input type="radio" id="1B" name="question_1" value="B"/><label for="1B" id="1_B" class="Answers"></label><br /></div>
+						<div class="radio-item"><input type="radio" id="1C" name="question_1" value="C"/><label for="1C" id="1_C" class="Answers"></label><br /></div>
+						<div class="radio-item"><input type="radio" id="1D" name="question_1" value="D"/><label for="1D" id="1_D" class="Answers"></label><br /></div>
+					</div>
+				</section>
 
-                <p id="prompt_2"></p>
-                <input type="radio" id="2A" name="question_2" value="A" />
-                <label for="2A" id="2_A"></label><br />
-                <input type="radio" id="2B" name="question_2" value="B" />
-                <label for="2B" id="2_B"></label><br />
-                <input type="radio" id="2C" name="question_2" value="C" />
-                <label for="2C" id="2_C"></label><br />
-                <input type="radio" id="2D" name="question_2" value="D" />
-                <label for="2D" id="2_D"></label><br />
-                <br />
+                <section class="radio-section">
+					<div class="radio-list">
+						<h1><p id="prompt_2" class="quiz-question"></p></h1>
+						<div class="radio-item"><input type="radio" id="2A" name="question_2" value="A"/><label for="2A" id="2_A" class="Answers"></label><br /></div>
+						<div class="radio-item"><input type="radio" id="2B" name="question_2" value="B"/><label for="2B" id="2_B" class="Answers"></label><br /></div>
+						<div class="radio-item"><input type="radio" id="2C" name="question_2" value="C"/><label for="2C" id="2_C" class="Answers"></label><br /></div>
+						<div class="radio-item"><input type="radio" id="2D" name="question_2" value="D"/><label for="2D" id="2_D" class="Answers"></label><br /></div>
+					</div>
+				</section>
 
-                <p id="prompt_3"></p>
-                <input type="radio" id="3A" name="question_3" value="A" />
-                <label for="3A" id="3_A"></label><br />
-                <input type="radio" id="3B" name="question_3" value="B" />
-                <label for="3B" id="3_B"></label><br />
-                <input type="radio" id="3C" name="question_3" value="C" />
-                <label for="3C" id="3_C"></label><br />
-                <input type="radio" id="3D" name="question_3" value="D" />
-                <label for="3D" id="3_D"></label><br />
-                <br />
+                <section class="radio-section">
+					<div class="radio-list">
+						<h1><p id="prompt_3" class="quiz-question"></p></h1>
+						<div class="radio-item"><input type="radio" id="3A" name="question_3" value="A"/><label for="3A" id="3_A" class="Answers"></label><br /></div>
+						<div class="radio-item"><input type="radio" id="3B" name="question_3" value="B"/><label for="3B" id="3_B" class="Answers"></label><br /></div>
+						<div class="radio-item"><input type="radio" id="3C" name="question_3" value="C"/><label for="3C" id="3_C" class="Answers"></label><br /></div>
+						<div class="radio-item"><input type="radio" id="3D" name="question_3" value="D"/><label for="3D" id="3_D" class="Answers"></label><br /></div>
+					</div>
+				</section>
 
-                <p id="prompt_4"></p>
-                <input type="radio" id="4A" name="question_4" value="A" />
-                <label for="4A" id="4_A"></label><br />
-                <input type="radio" id="4B" name="question_4" value="B" />
-                <label for="4B" id="4_B"></label><br />
-                <input type="radio" id="4C" name="question_4" value="C" />
-                <label for="4C" id="4_C"></label><br />
-                <input type="radio" id="4D" name="question_4" value="D" />
-                <label for="4D" id="4_D"></label><br />
-                <br />
+                <section class="radio-section">
+					<div class="radio-list">
+						<h1><p id="prompt_4" class="quiz-question"></p></h1>
+						<div class="radio-item"><input type="radio" id="4A" name="question_4" value="A"/><label for="4A" id="4_A" class="Answers"></label><br /></div>
+						<div class="radio-item"><input type="radio" id="4B" name="question_4" value="B"/><label for="4B" id="4_B" class="Answers"></label><br /></div>
+						<div class="radio-item"><input type="radio" id="4C" name="question_4" value="C"/><label for="4C" id="4_C" class="Answers"></label><br /></div>
+						<div class="radio-item"><input type="radio" id="4D" name="question_4" value="D"/><label for="4D" id="4_D" class="Answers"></label><br /></div>
+					</div>
+				</section>
 
-                <p id="prompt_5"></p>
-                <input type="radio" id="5A" name="question_5" value="A" />
-                <label for="5A" id="5_A"></label><br />
-                <input type="radio" id="5B" name="question_5" value="B" />
-                <label for="5B" id="5_B"></label><br />
-                <input type="radio" id="5C" name="question_5" value="C" />
-                <label for="5C" id="5_C"></label><br />
-                <input type="radio" id="5D" name="question_5" value="D" />
-                <label for="5D" id="5_D"></label><br />
-                <br />
+                <section class="radio-section">
+					<div class="radio-list">
+						<h1><p id="prompt_5" class="quiz-question"></p></h1>
+						<div class="radio-item"><input type="radio" id="5A" name="question_5" value="A"/><label for="5A" id="5_A" class="Answers"></label><br /></div>
+						<div class="radio-item"><input type="radio" id="5B" name="question_5" value="B"/><label for="5B" id="5_B" class="Answers"></label><br /></div>
+						<div class="radio-item"><input type="radio" id="5C" name="question_5" value="C"/><label for="5C" id="5_C" class="Answers"></label><br /></div>
+						<div class="radio-item"><input type="radio" id="5D" name="question_5" value="D"/><label for="5D" id="5_D" class="Answers"></label><br /></div>
+					</div>
+				</section>
 
-                <input type="submit" value="Submit" onclick="goToScore()" />
+                <input type="submit" value="Submit" class="submit-btn"/>
             </form>
         </div>
     </div>
