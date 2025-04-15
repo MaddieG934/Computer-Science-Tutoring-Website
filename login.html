@@ -18,24 +18,40 @@
         <img src="img/egg.png" alt="Big Green Egg Logo" class="right">
     </header>
     <nav id="navbar">
-        <ul>
-            <li class="Login"><a href="#">Login</a></li>
-    </nav>
+		<ul>
+			<li class="Login"><a href="websitetest.html" class="hover-underline">Login</a></li>
+	</nav>
     <div id="wrapper">
 
         <div id="maincontent">
-            <button id="cancel" onclick="goToHome()">Cancel</button>
+            <button id="cancel" class="lesson-btn" onclick="goToHome()"><- Back to Home</button> </br> 
+            <br> 
+         
+                <div class="course-box">
 
-            <form>
-                <label for="userName">User Name:</label>
-                <input type="text" id="userName" name="userName"/>
-                <label for="password">Password:</label>
-                <input type="text" id="password" name="password"/>
-                <input type="submit" value="Login"/>
-            </form>
+                    <form style="text-align: center"> 
 
-            <p>New User?</p>
-            <button id="createAccount" onclick="goToRegister()">Create Account</button>
+                        <h2><span style="color:#848B66" >Login</span></h2>
+                        <br> 
+                        <label for="userName">User Name:</label>
+                        <input type="text" id="userName" name="userName"/>
+                        <br> <br> 
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password"/>
+                        <br> <br> 
+                        <input type="submit" class="lesson-btn" value="Login"/>
+
+                    </form> 
+
+                </div>
+
+            <br> 
+            <h2><span style="color:#848B66" >New User?</span></h2>
+            <br> 
+            <button id="createAccount" class="lesson-btn" onclick="goToRegister()">Create Account</button>
+
+
+		
 
         </div>
 
