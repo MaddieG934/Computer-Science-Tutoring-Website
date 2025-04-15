@@ -588,12 +588,12 @@ h1 {
 .radio-item label:after {
 	height: 19px;
 	width: 19px;
-	border: 2px solid #E8E4E1;
+	border: 2px solid #FFFFFF;
 	left: 19px;
 	top: calc(50% - 12px);
 }
 .radio-item label:before {
-	background: #E8E4E1;
+	background: #FFFFFF;
 	height: 20px;
 	width: 20px;
 	left: 21px;
@@ -604,7 +604,7 @@ h1 {
 	transition: 0.4s ease-in-out 0s;
 }
 .radio-item [type="radio"]:checked ~ label {
-	border-color: #E8E4E1;
+	border-color: #FFFFFF;
 }
 .radio-item [type="radio"]:checked ~ label::before {
 	opacity: 1;
@@ -612,6 +612,10 @@ h1 {
 	transform: scale(1);
 }
 
+.radio-item label:hover {
+		background-color: #6d7553;
+	}
+	
 .radio-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two items per row */
@@ -621,5 +625,61 @@ h1 {
 
 .Answers {
 	font-family: "Alegreya";
-	color: #E8E4E1;
+	color: #FFFFFF;
+}
+
+.submit-btn {
+	position: relative;
+	background-color: #848B66;
+	color: #fff;
+	font-family: 'PP Woodland Bold';
+	font-size: 2em;
+	padding: 12px 24px;
+	border: none;
+	border-radius: 12px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	display: block;
+	margin: 0 auto;
+	top: -50px;
+}
+
+.submit-btn:hover {
+	background-color: #6d7553;
+}
+
+.your-score {
+	font-family: 'PP Woodland Bold';
+	font-size: 2.5em;
+	margin-top: 125px;
+	color: #848B66;
+	text-align: center;
+}
+
+.score {
+	font-family: 'PP Woodland Bold';
+	font-size: 2em;
+	margin-top: 50px;
+	color: #848B66;
+	text-align: center;
+}
+
+.return-btn {
+	position: relative;
+	background-color: #848B66;
+	color: #fff;
+	font-family: 'PP Woodland Bold';
+	font-size: 1.5em;
+	padding: 12px 24px;
+	border: none;
+	border-radius: 12px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	display: block;
+	margin: 0 auto;
+	bottom: -50px;
+}
+
+.return-btn:hover {
+	background-color: #6d7553;
 }
