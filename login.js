@@ -8,6 +8,16 @@ function goToRegister() {
     window.location.href = './register.html';
 }
 
+// Reload login page with username error display
+function goToUserNameError() {
+    window.location.href = './loginUserNameError.html';
+}
+
+// Reload login page with password error display
+function goToPasswordError() {
+    window.location.href = './loginPasswordError.html';
+}
+
 // Fetch data from data.json as an array of objects
 async function fetchData() {
     const response = await fetch('./data.json');
@@ -29,7 +39,8 @@ async function validateUser() {
 
     if (matchingUsers.length === 0) {
         // If there are no matching users, reload
-        window.location.href = './login.html';
+        goToUserNameError();
+        return;
     }
 
     // Get all users (should be 1 or 0) with the entered password
@@ -38,7 +49,8 @@ async function validateUser() {
 
     if (matchingPasswords.length === 0) {
         // If there are no matching passwords, reload
-        window.location.href = './login.html';
+        goToPasswordError();
+        return;
     }
 
     // Update the database to reflect the logged in user
@@ -55,6 +67,8 @@ async function validateUser() {
         .then(res => res.text())
         .then(msg => console.log(msg))
         .catch(err => console.error('Save failed', err));
+
+    goToHome(); // Proceed to home once user is logged in
 }
 
 // On document load
@@ -64,6 +78,5 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("loginForm").addEventListener("submit", async function (event) {
         event.preventDefault();
         await validateUser();
-        goToHome();
     });
 });
