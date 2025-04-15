@@ -19,31 +19,44 @@
     </header>
     <nav id="navbar">
 		<ul>
-			<li class="Login"><a href="websitetest.html" class="hover-underline">Login</a></li>
+			<li class="Login"><a href="login.html" class="hover-underline">Login</a></li>
 	</nav>
     <div id="wrapper">
 
         <div id="maincontent">
-            <button id="cancel" onclick="goToHome()">Cancel</button>
+            <button id="cancel" class="lesson-btn" onclick="goToHome()">Cancel</button>
+            </br> <br> 
 
-            <form>
+            <div class="course-box">
+
+            <form style="text-align: center"> 
+
+                <h2><span style="color:#848B66" >Create Account</span></h2>
+                <br> 
                 <label for="userName">User Name:</label>
                 <input type="text" id="userName" name="userName" />
                 <br> <br> 
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" />
                 <br> <br> 
-                <input type="submit" value="Create Account" />
-            </form>
+                <input type="submit" class="lesson-btn" value="Create Account" />
 
             <br> 
-            <p>Already have an account?</p>
-            <button id="loginLink" onclick="goToLogin()">Login</button>
-          
+      </div>
 
+        </form>
+
+        <br> <br> 
+        <h2><span style="color:#848B66">Already have an account?</span></h2>
+        <br> 
+            <button id="loginLink" class="lesson-btn" onclick="goToLogin()">Login</button>
+
+            
         </div>
 
     </div>
     </div>
 </body>
 </html>
+
+
