@@ -79,4 +79,14 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
         await validateUser();
     });
+
+    document.getElementById("loginFormUserNameError").addEventListener("submit", async function (event) {
+        event.preventDefault();
+        await validateUser();
+    });
+
+    document.getElementById("loginFormPasswordError").addEventListener("submit", async function (event) {
+        event.preventDefault();
+        await validateUser();
+    });
 });
