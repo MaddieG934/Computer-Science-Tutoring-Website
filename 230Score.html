@@ -6,26 +6,28 @@
     <title>Programming Languages Quiz</title>
     <meta name="author" content="Big Green Egg">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="230score.js"></script>>
+    <script type="text/javascript" src="230Score.js"></script>
 </head>
 <body>
 
     <header>
         <img src="img/egg.png" alt="Big Green Egg Logo" class="left">
         <h1>
-            Big Green Egg
+            <a href="websitetest.html" class="home-link">Big Green Egg</a>
         </h1>
         <img src="img/egg.png" alt="Big Green Egg Logo" class="right">
     </header>
     <nav id="navbar">
         <ul>
-            <li class="Login"><a href="#">Login</a></li>
+            <li class="Login"><a href="websitetest.html" class="hover-underline">Login</a></li>
+		</ul>
     </nav>
     <div id="wrapper">
         <div id="maincontent">
-            <p id="scoreMsg">Your score: <span id="scoreNum"></span> out of 5</p>
+            <p id="scoreMsg" class="your-score">Your score:</p>
+			<p id="scoreMsg" class="score">🎊   <span id="scoreNum"></span>/5   🎉</p>
 
-            <button id="toHome" onclick="goToHome()">Return to Home</button>
+            <button id="toHome" onclick="goToHome()" class="return-btn">Return to Home</button>
         </div>
     </div>
     <!--<div class= "image-container">

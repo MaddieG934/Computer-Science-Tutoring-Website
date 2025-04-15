@@ -7,7 +7,7 @@
         "userName": "Test User",
         "password": "password",
         "last105Score": 0,
-        "last106Score": 5,
+        "last106Score": 2,
         "last220Score": 0,
         "last230Score": 0,
         "max105Score": 0,
@@ -404,11 +404,11 @@
       {
         "questionID": 35,
         "quizID": 4,
-        "prompt": "question",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "this is the right one BD"
+        "prompt": "What is CSS's main functionality?",
+        "optionA": "CSS pairs with Python to build webpages",
+        "optionB": "CSS helps to create function definitions",
+        "optionC": "CSS pairs with JavaScript to create interactive webpages",
+        "solution": "CSS pairs with HTML to add style and design choices"
       },
       {
         "questionID": 36,
@@ -440,7 +440,7 @@
       {
         "questionID": 39,
         "quizID": 4,
-        "prompt": "what does the line: style type=”text/css'' do?  ",
+        "prompt": "what does the line: style type=''text/css'' do? ",
         "optionA": "It edits the margin size",
         "optionB": "It styles the font of the CSS",
         "optionC": "It changes the background color",
@@ -454,6 +454,15 @@
         "optionB": "B",
         "optionC": "C",
         "solution": "D"
+      }
+    ]
+  },
+  {
+    "type": "loginCheck",
+    "members": [
+      {
+        "isLoggedIn": 0,
+        "userId": -1
       }
     ]
   }
