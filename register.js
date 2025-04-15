@@ -2,6 +2,6 @@ function goToHome() {
     window.location.href = './websitetest.html';
 }
 
-function goToRegister() {
-    window.location.href = './register.html';
+function goToLogin() {
+    window.location.href = './login.html';
 }

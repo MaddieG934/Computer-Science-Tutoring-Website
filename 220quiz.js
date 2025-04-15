@@ -49,17 +49,6 @@ async function calcScore() {
         .then(msg => console.log(msg))
         .catch(err => console.error('Save failed', err));
 
-    //const fs = require('fs');
-    //const jsonString = JSON.stringify(data, null, 2);
-    //const filePath = 'data.json';
-
-    //try {
-    //    fs.writeFileSync(filePath, jsonString);
-    //    console.log('Data written to file successfully');
-    //} catch (err) {
-    //    console.error('Error writing to file:', err);
-    //}
-
     goToScore(); // Go to score page
 }
 
@@ -67,19 +56,8 @@ async function calcScore() {
 async function populateQuiz() {
     let jsData = await fetchData();
     let questions = jsData[4].members;
-
-    /*****************************************************************************
-     *                                                                           *
-     * TO GRILLS WHO WANT TO COPY: YOU ONLY HAVE TO CHANGE 2 (KINDA) THINGS!!!   *
-     *                                                                           *
-     * 1) Change the line below (most important!!!), see the comment right below *
-     *                                                                           *
-     * 2) Change the lines under the "Display data" comments, the first of these *
-     *    lines has more details in a comment                                    *
-     *                                                                           *
-     *****************************************************************************/
-    let quizQuestions = questions.filter(question => question.quizID === 3); // Change "2" to the correct quizID, all questions for the same quiz should have the same quizID
-
+    let quizQuestions = questions.filter(question => question.quizID === 3); //updated to 3
+	
     console.log(quizQuestions);
 
     if (quizQuestions) {
