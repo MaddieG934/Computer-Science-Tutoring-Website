@@ -75,7 +75,7 @@ async function validateUser() {
 document.addEventListener("DOMContentLoaded", function () {
 
     // When form is submitted, validate the user, then proceed as logged in
-    document.getElementById("loginForm").addEventListener("submit", async function (event) {
+    document.getElementById("loginFormUserNameError").addEventListener("submit", async function (event) {
         event.preventDefault();
         await validateUser();
     });
