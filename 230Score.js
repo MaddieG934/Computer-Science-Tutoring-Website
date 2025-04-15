@@ -16,7 +16,7 @@ async function populateScore() {
     let user = jsData[0].members[0];
 
     if (user) {
-        document.getElementById("scoreNum").innerHTML = user.last230Score;
+        document.getElementById("scoreNum").innerHTML = user.last106Score;
     } else {
         error.log('User not found.');
     }
