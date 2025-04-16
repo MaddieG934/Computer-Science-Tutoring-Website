@@ -385,9 +385,10 @@ nav {
 	min-height: 50px;
 	text-align: right;
 	outline: 2px solid #848B66;
-	}
+}
 	
 ul li.Login {
+	display:inline;
 	font-family: 'PP Woodland Bold';
 	color: #848B66;
 	font-size: 1.6em;

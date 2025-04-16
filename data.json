@@ -461,8 +461,8 @@
     "type": "loginCheck",
     "members": [
       {
-        "isLoggedIn": 0,
-        "userId": -1
+        "isLoggedIn": 1,
+        "userID": 0
       }
     ]
   }

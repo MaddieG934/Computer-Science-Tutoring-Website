@@ -5,11 +5,56 @@ function goToScore() {
     window.location.href = './230Score.html';
 }
 
+// Switch page to login page
+async function goToLogin() {
+    window.location.href = './login.html';
+}
+
 // Fetch data from data.json as an array of objects
 async function fetchData() {
     const response = await fetch('./data.json');
     const data = await response.json();
     return data;
+}
+
+// Display login info
+async function displayLoginInfo() {
+    let jsData = await fetchData();
+    let loginCheck = jsData[5].members[0];
+
+    if (loginCheck.isLoggedIn) {
+        let users = jsData[0].members;
+        let matchingUser = users.filter(user => user.userId === loginCheck.userId);
+        let userName = matchingUser.userName;
+
+        document.getElementById("loginInfo").innerHTML = "Logged in as: " + `${userName}`;
+        document.getElementById("loginLink").innerHTMl = "Logout";
+    } else {
+        document.getElementById("loginInfo").innerHTML = "Logged in as: Guest";
+        document.getElementById("loginLink").innerHTML = "Login";
+    }
+}
+
+// On click of "Lougout", change 
+async function logout() {
+    let jsData = await fetchData();
+    let loginCheck = jsData[5].members[0];
+
+    if (loginCheck.isLoggedIn) {
+        loginCheck.isLoggedIn = 0;
+        loginCheck.userId = -1;
+
+        fetch('/save-data', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(jsData)
+        })
+            .then(res => res.text())
+            .then(msg => console.log(msg))
+            .catch(err => console.error('Save failed', err));
+    }
 }
 
 // Determine the quiz score, write to user data, switch to display score window
@@ -101,6 +146,7 @@ async function populateQuiz() {
 
 // On document load, display appropriate content
 document.addEventListener("DOMContentLoaded", function () {
+    displayLoginInfo();
     populateQuiz();
     console.log('content displayed');
 
@@ -108,5 +154,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("quizForm").addEventListener("submit", async function (event) {
         event.preventDefault();
         await calcScore();
+    });
+
+    document.getElementById("loginLink").addEventListener("click", function () {
+        logout();
+        goToLogin();
     });
 });

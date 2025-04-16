@@ -1,8 +1,3 @@
-// Navigate back to the home page
-function goToHome() {
-    window.location.href = './websitetest.html';
-}
-
 // Switch page to login page
 async function goToLogin() {
     window.location.href = './login.html';
@@ -55,24 +50,9 @@ async function logout() {
     }
 }
 
-// Display the quiz score just obtained
-async function populateScore() {
-    let jsData = await fetchData();
-    let user = jsData[0].members[0];
-
-    if (user) {
-        document.getElementById("scoreNum").innerHTML = user.last106Score;
-    } else {
-        error.log('User not found.');
-    }
-    
-}
-
-// On document load, display appropriate content
+// On document load, display who is logged in, if any
 document.addEventListener("DOMContentLoaded", function () {
     displayLoginInfo();
-    populateScore();
-    console.log('content displayed');
 
     document.getElementById("loginLink").addEventListener("click", function () {
         logout();
