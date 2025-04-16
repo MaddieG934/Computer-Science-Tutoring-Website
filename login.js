@@ -8,14 +8,9 @@ function goToRegister() {
     window.location.href = './register.html';
 }
 
-// Reload login page with username error display
-function goToUserNameError() {
-    window.location.href = './loginUserNameError.html';
-}
-
-// Reload login page with password error display
-function goToPasswordError() {
-    window.location.href = './loginPasswordError.html';
+// Reload this page
+function reload() {
+    window.location.href = './login.html';
 }
 
 // Fetch data from data.json as an array of objects
@@ -29,18 +24,19 @@ async function fetchData() {
 async function validateUser() {
 
     let enteredName = document.getElementById("userName").value; // Entered user name
+    console.log(enteredName);
 
     let jsData = await fetchData(); // Fetch all users
-    let users = jsData[5].members;
+    let users = jsData[0].members;
+    console.log(users);
 
     // Get all users with the entered user name
     let matchingUsers = users.filter(user => user.userName === enteredName);
     console.log(matchingUsers);
 
     if (matchingUsers.length === 0) {
-        // If there are no matching users, reload
-        goToUserNameError();
-        return;
+        // If there are no matching users, return error code 1
+        return 1;
     }
 
     // Get all users (should be 1 or 0) with the entered password
@@ -48,9 +44,9 @@ async function validateUser() {
     let matchingPasswords = users.filter(user => user.password === enteredPassword);
 
     if (matchingPasswords.length === 0) {
-        // If there are no matching passwords, reload
-        goToPasswordError();
-        return;
+        // If there are no matching passwords, return error code 2
+        console.log('No matching passwords');
+        return 2
     }
 
     // Update the database to reflect the logged in user
@@ -68,15 +64,30 @@ async function validateUser() {
         .then(msg => console.log(msg))
         .catch(err => console.error('Save failed', err));
 
-    goToHome(); // Proceed to home once user is logged in
+    return 0;
 }
 
 // On document load
 document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("errorMsg").innerHTML = sessionStorage.getItem("msg");
 
     // When form is submitted, validate the user, then proceed as logged in
     document.getElementById("loginForm").addEventListener("submit", async function (event) {
         event.preventDefault();
-        await validateUser();
+        let code = await validateUser();
+
+        if (!code) {
+            // Proceed to home once user is logged in
+            sessionStorage.setItem("msg", "");
+            goToHome();
+        } else if (code === 1) {
+            // Error message when username is incorrect
+            sessionStorage.setItem("msg", "Username is not associated with an account");
+        } else {
+            // Error message when password is incorrect
+            sessionStorage.setItem("msg", "Password is incorrect");
+        }
+
+        reload();
     });
 });
