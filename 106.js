@@ -18,13 +18,13 @@ async function displayLoginInfo() {
     if (loginCheck.isLoggedIn) {
         let users = jsData[0].members;
         let matchingUser = users.filter(user => user.userID === loginCheck.userID);
-        let userName = matchingUser.userName;
+        let userName = matchingUser[0].userName;
 
         document.getElementById("loginInfo").innerHTML = "Logged in as: " + `${userName}`;
-        document.getElementById("loginLink").innerHTMl = "Logout";
+        document.getElementById("loginLink").textContent = "Logout";
     } else {
         document.getElementById("loginInfo").innerHTML = "Logged in as: Guest";
-        document.getElementById("loginLink").innerHTML = "Login";
+        document.getElementById("loginLink").textContent = "Login";
     }
 }
 
