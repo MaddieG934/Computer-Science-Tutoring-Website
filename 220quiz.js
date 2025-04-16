@@ -24,7 +24,7 @@ async function displayLoginInfo() {
 
     if (loginCheck.isLoggedIn) {
         let users = jsData[0].members;
-        let matchingUser = users.filter(user => user.userId === loginCheck.userId);
+        let matchingUser = users.filter(user => user.userID === loginCheck.userID);
         let userName = matchingUser.userName;
 
         document.getElementById("loginInfo").innerHTML = "Logged in as: " + `${userName}`;
@@ -42,7 +42,7 @@ async function logout() {
 
     if (loginCheck.isLoggedIn) {
         loginCheck.isLoggedIn = 0;
-        loginCheck.userId = -1;
+        loginCheck.userID = -1;
 
         fetch('/save-data', {
             method: 'POST',
