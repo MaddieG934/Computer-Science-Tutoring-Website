@@ -70,13 +70,13 @@ async function logout() {
 
 // Check entered username against existing usernames and save new user data
 async function createAccount() {
-    let enteredName = document.getElementById("userName").value; // Entered username
+    let enteredUserName = document.getElementById("userName").value; // Entered username
 
     let jsData = await fetchData(); // Fetch all users
     let users = jsData[0].members;
 
     // Get all users with the entered user name
-    let matchingUsers = users.filter(user => user.userName === enteredName);
+    let matchingUsers = users.filter(user => user.userName === enteredUserName);
     console.log(matchingUsers);
 
     if (matchingUsers.length > 0) {
