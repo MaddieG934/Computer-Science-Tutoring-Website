@@ -12,7 +12,7 @@ async function goToLogin() {
 
 // Switch page to 105 lesson page
 async function goTo105() {
-    let jsData = await jsData();
+    let jsData = await fetchData();
     let loginCheck = jsData[5].members[0];
 
     if (loginCheck.isLoggedIn) {
@@ -24,7 +24,7 @@ async function goTo105() {
 
 // Switch page to 106 lesson page
 async function goTo106() {
-    let jsData = await jsData();
+    let jsData = await fetchData();
     let loginCheck = jsData[5].members[0];
 
     if (loginCheck.isLoggedIn) {
@@ -36,7 +36,7 @@ async function goTo106() {
 
 // Switch page to 220 lesson page
 async function goTo220() {
-    let jsData = await jsData();
+    let jsData = await fetchData();
     let loginCheck = jsData[5].members[0];
 
     if (loginCheck.isLoggedIn) {
@@ -48,7 +48,7 @@ async function goTo220() {
 
 // Switch page to 230 lesson page
 async function goTo230() {
-    let jsData = await jsData();
+    let jsData = await fetchData();
     let loginCheck = jsData[5].members[0];
 
     if (loginCheck.isLoggedIn) {
@@ -96,10 +96,6 @@ async function logout() {
             .then(msg => console.log(msg))
             .catch(err => console.error('Save failed', err));
     }
-}
-
-function checkLogin() {
-    let jsData = await jsData;
 }
 
 // On document load, display who is logged in, if any
