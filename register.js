@@ -102,7 +102,8 @@ async function createAccount() {
         "max230Score": 0
     }
 
-    jsData[0].members.push(newUser);
+    users.push(newUser);
+    jsData[0].members = users;
 
     // Update data.json
     fetch('/save-data', {
