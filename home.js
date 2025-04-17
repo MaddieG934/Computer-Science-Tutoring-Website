@@ -73,28 +73,34 @@ async function logout() {
 // On attempting to take a course, first check whether the user is logged in
 async function checkLogin() {
     let jsData = await fetchData();
-    return jsData[5].members[0].isLoggedIn;
+    let code = jsData[5].members[0].isLoggedIn;
+    return code;
 }
 
 // On document load, display who is logged in, if any
 document.addEventListener("DOMContentLoaded", function () {
     displayLoginInfo();
 
+    // If user decides to log out
     document.getElementById("loginLink").addEventListener("click", function () {
         logout();
         goToLogin();
     });
 
+    // On clicking any "take lesson" button, proceed to that lesson if the user is logged in
     document.getElementById("105-btn").addEventListener("click", function () {
-        if (checkLogin()) {
-            goTo105();
-        } else {
-            goToLogin();
-        }
+        let code = checkLogin();
+        console.log(code);
+        //if (code) {
+        //    goTo105();
+        //} else {
+        //    goToLogin();
+        //}
     });
 
     document.getElementById("106-btn").addEventListener("click", function () {
-        if (checkLogin()) {
+        let code = checkLogin();
+        if (code) {
             goTo106();
         } else {
             goToLogin();
@@ -102,7 +108,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.getElementById("220-btn").addEventListener("click", function () {
-        if (checkLogin()) {
+        let code = checkLogin();
+        if (code) {
             goTo220();
         } else {
             goToLogin();
@@ -110,7 +117,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.getElementById("230-btn").addEventListener("click", function () {
-        if (checkLogin()) {
+        let code = checkLogin();
+        if (code) {
             goTo230();
         } else {
             goToLogin();

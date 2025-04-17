@@ -40,16 +40,16 @@ async function logout() {
 }
 
 // Display object => lessons => second lesson (106) => header, content
-async function displayLesson() {
-    let jsData = await fetchData();
-    let lesson = jsData[1].members[1];
+//async function displayLesson() {
+//    let jsData = await fetchData();
+//    let lesson = jsData[2].members[1];
 
-    if (lesson) {
-        document.getElementById("lessonHeader").textContent = lesson.header;
-    } else {
-        console.error('Lesson not found.');
-    }
-}
+//    if (lesson) {
+//        document.getElementById("lessonHeader").textContent = lesson.header;
+//    } else {
+//        console.error('Lesson not found.');
+//    }
+//}
 
 function goToQuiz() {
     window.location.href = './106quiz.html';
@@ -58,8 +58,8 @@ function goToQuiz() {
 // On document load, display appropriate content
 document.addEventListener("DOMContentLoaded", function () {
     displayLoginInfo();
-    displayLesson();
-    console.log('content displayed');
+    //displayLesson();
+    //console.log('content displayed');
 
     document.getElementById("loginLink").addEventListener("click", function () {
         logout();
