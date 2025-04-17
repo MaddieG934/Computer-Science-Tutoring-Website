@@ -18,8 +18,10 @@
         <img src="img/egg.png" alt="Big Green Egg Logo" class="right">
     </header>
     <nav id="navbar">
-		<ul>
-			<li class="Login"><a href="login.html" class="hover-underline">Login</a></li>
+        <ul>
+            <li id="loginInfo" class="Login"></li>
+            <li class="Login"><a id="loginLink" class="hover-underline"></a></li>
+        </ul>
 	</nav>
     <div id="wrapper">
 
@@ -29,7 +31,7 @@
 
             <div class="course-box">
 
-            <form style="text-align: center"> 
+            <form id="registerForm" style="text-align: center"> 
 
                 <h2><span style="color:#848B66" >Create Account</span></h2>
                 <br> 
@@ -40,6 +42,8 @@
                 <input type="password" id="password" name="password" />
                 <br> <br> 
                 <input type="submit" class="lesson-btn" value="Create Account" />
+
+                <p id="errorMsg"></p>
 
             <br> 
       </div>

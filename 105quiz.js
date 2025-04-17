@@ -1,5 +1,10 @@
 let qSolutionEls = []; // Store element ID's of the location of the solutions to each question on each page load
 
+// Switch page to login page
+async function goToLogin() {
+    window.location.href = './login.html';
+}
+
 // Switch to display score window
 function goToScore() {
     window.location.href = './105score.html';
@@ -10,6 +15,46 @@ async function fetchData() {
     const response = await fetch('./data.json');
     const data = await response.json();
     return data;
+}
+
+// Display login info
+async function displayLoginInfo() {
+    let jsData = await fetchData();
+    let loginCheck = jsData[5].members[0];
+
+    if (loginCheck.isLoggedIn) {
+        let users = jsData[0].members;
+        let matchingUser = users.filter(user => user.userID === loginCheck.userID);
+        let userName = matchingUser[0].userName;
+
+        document.getElementById("loginInfo").innerHTML = "Logged in as: " + `${userName}`;
+        document.getElementById("loginLink").textContent = "Logout";
+    } else {
+        document.getElementById("loginInfo").innerHTML = "Logged in as: Guest";
+        document.getElementById("loginLink").textContent = "Login";
+    }
+}
+
+// On click of "Lougout", change 
+async function logout() {
+    let jsData = await fetchData();
+    let loginCheck = jsData[5].members[0];
+
+    if (loginCheck.isLoggedIn) {
+        loginCheck.isLoggedIn = 0;
+        loginCheck.userID = -1;
+
+        fetch('/save-data', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(jsData)
+        })
+            .then(res => res.text())
+            .then(msg => console.log(msg))
+            .catch(err => console.error('Save failed', err));
+    }
 }
 
 // Determine the quiz score, write to user data, switch to display score window
@@ -48,17 +93,6 @@ async function calcScore() {
         .then(res => res.text())
         .then(msg => console.log(msg))
         .catch(err => console.error('Save failed', err));
-
-    //const fs = require('fs');
-    //const jsonString = JSON.stringify(data, null, 2);
-    //const filePath = 'data.json';
-
-    //try {
-    //    fs.writeFileSync(filePath, jsonString);
-    //    console.log('Data written to file successfully');
-    //} catch (err) {
-    //    console.error('Error writing to file:', err);
-    //}
 
     goToScore(); // Go to score page
 }
@@ -123,6 +157,7 @@ async function populateQuiz() {
 
 // On document load, display appropriate content
 document.addEventListener("DOMContentLoaded", function () {
+    displayLoginInfo();
     populateQuiz();
     console.log('content displayed');
 
@@ -130,5 +165,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("quizForm").addEventListener("submit", async function (event) {
         event.preventDefault();
         await calcScore();
+    });
+
+    document.getElementById("loginLink").addEventListener("click", function () {
+        logout();
+        goToLogin();
     });
 });

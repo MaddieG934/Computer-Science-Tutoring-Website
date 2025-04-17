@@ -14,6 +14,19 @@
         "max106Score": 5,
         "max220Score": 0,
         "max230Score": 0
+      },
+      {
+        "userID": 1,
+        "userName": "Bob",
+        "password": "1234",
+        "last105Score": 0,
+        "last106Score": 0,
+        "last220Score": 0,
+        "last230Score": 0,
+        "max105Score": 0,
+        "max106Score": 0,
+        "max220Score": 0,
+        "max230Score": 0
       }
     ]
   },
@@ -260,11 +273,11 @@
       {
         "questionID": 19,
         "quizID": 3,
-        "prompt": "QUESTION",
-        "optionA": "A",
-        "optionB": "B",
-        "optionC": "C",
-        "solution": "D"
+        "prompt": "Which is NOT an Assembly command?",
+        "optionA": "add",
+        "optionB": "sub",
+        "optionC": "mov",
+        "solution": "imult"
       },
       {
         "questionID": 20,
@@ -449,11 +462,11 @@
       {
         "questionID": 40,
         "quizID": 3,
-        "prompt": "QUESTION",
-        "optionA": "A",
-        "optionB": "B",
-        "optionC": "C",
-        "solution": "D"
+        "prompt": "What integers are hexadecimals made up of? ",
+        "optionA": "0-15",
+        "optionB": "A-E, then 0-9",
+        "optionC": "0-9, then A-E",
+        "solution": "0-9,then A-F"
       }
     ]
   },
@@ -462,7 +475,7 @@
     "members": [
       {
         "isLoggedIn": 0,
-        "userId": -1
+        "userID": -1
       }
     ]
   }

@@ -1,8 +1,3 @@
-// Navigate back to the home page
-function goToHome() {
-    window.location.href = './websitetest.html';
-}
-
 // Switch page to login page
 async function goToLogin() {
     window.location.href = './login.html';
@@ -24,6 +19,7 @@ async function displayLoginInfo() {
         let users = jsData[0].members;
         let matchingUser = users.filter(user => user.userID === loginCheck.userID);
         let userName = matchingUser[0].userName;
+        console.log(userName);
 
         document.getElementById("loginInfo").innerHTML = "Logged in as: " + `${userName}`;
         document.getElementById("loginLink").textContent = "Logout";
@@ -55,24 +51,9 @@ async function logout() {
     }
 }
 
-// Display the quiz score just obtained
-async function populateScore() {
-    let jsData = await fetchData();
-    let user = jsData[0].members[0];
-
-    if (user) {
-        document.getElementById("scoreNum").innerHTML = user.last106Score;
-    } else {
-        error.log('User not found.');
-    }
-
-}
-
-// On document load, display appropriate content
+// On document load
 document.addEventListener("DOMContentLoaded", function () {
     displayLoginInfo();
-    populateScore();
-    console.log('content displayed');
 
     document.getElementById("loginLink").addEventListener("click", function () {
         logout();

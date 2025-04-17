@@ -1,11 +1,26 @@
-// Navigate back to the home page
-function goToHome() {
-    window.location.href = './websitetest.html';
-}
-
 // Switch page to login page
 async function goToLogin() {
     window.location.href = './login.html';
+}
+
+// Switch page to 105 lesson page
+async function goTo105() {
+    window.location.href = './105lesson.html';
+}
+
+// Switch page to 106 lesson page
+async function goTo106() {
+    window.location.href = './106lesson.html';
+}
+
+// Switch page to 220 lesson page
+async function goTo220() {
+    window.location.href = './220lesson.html';
+}
+
+// Switch page to 230 lesson page
+async function goTo230() {
+    window.location.href = './230CourseContent.html';
 }
 
 // Fetch data from data.json as an array of objects
@@ -55,27 +70,58 @@ async function logout() {
     }
 }
 
-// Display the quiz score just obtained
-async function populateScore() {
+// On attempting to take a course, first check whether the user is logged in
+async function checkLogin() {
     let jsData = await fetchData();
-    let user = jsData[0].members[0];
-
-    if (user) {
-        document.getElementById("scoreNum").innerHTML = user.last106Score;
-    } else {
-        error.log('User not found.');
-    }
-
+    let code = jsData[5].members[0].isLoggedIn;
+    return code;
 }
 
-// On document load, display appropriate content
+// On document load, display who is logged in, if any
 document.addEventListener("DOMContentLoaded", function () {
     displayLoginInfo();
-    populateScore();
-    console.log('content displayed');
 
+    // If user decides to log out
     document.getElementById("loginLink").addEventListener("click", function () {
         logout();
         goToLogin();
+    });
+
+    // On clicking any "take lesson" button, proceed to that lesson if the user is logged in
+    document.getElementById("105-btn").addEventListener("click", function () {
+        let code = checkLogin();
+        console.log(code);
+        //if (code) {
+        //    goTo105();
+        //} else {
+        //    goToLogin();
+        //}
+    });
+
+    document.getElementById("106-btn").addEventListener("click", function () {
+        let code = checkLogin();
+        if (code) {
+            goTo106();
+        } else {
+            goToLogin();
+        }
+    });
+
+    document.getElementById("220-btn").addEventListener("click", function () {
+        let code = checkLogin();
+        if (code) {
+            goTo220();
+        } else {
+            goToLogin();
+        }
+    });
+
+    document.getElementById("230-btn").addEventListener("click", function () {
+        let code = checkLogin();
+        if (code) {
+            goTo230();
+        } else {
+            goToLogin();
+        }
     });
 });
