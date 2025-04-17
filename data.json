@@ -260,11 +260,11 @@
       {
         "questionID": 19,
         "quizID": 3,
-        "prompt": "QUESTION",
-        "optionA": "A",
-        "optionB": "B",
-        "optionC": "C",
-        "solution": "D"
+        "prompt": "Which is NOT an Assembly command?",
+        "optionA": "add",
+        "optionB": "sub",
+        "optionC": "mov",
+        "solution": "imult"
       },
       {
         "questionID": 20,
@@ -449,11 +449,11 @@
       {
         "questionID": 40,
         "quizID": 3,
-        "prompt": "QUESTION",
-        "optionA": "A",
-        "optionB": "B",
-        "optionC": "C",
-        "solution": "D"
+        "prompt": "What integers are hexadecimals made up of? ",
+        "optionA": "0-15",
+        "optionB": "A-E, then 0-9",
+        "optionC": "0-9, then A-E",
+        "solution": "0-9,then A-F"
       }
     ]
   },
