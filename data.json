@@ -30,8 +30,8 @@
       },
       {
         "userID": 2,
-        "userName": "Joe",
-        "password": "4321",
+        "userName": "autumn",
+        "password": "test",
         "last105Score": 0,
         "last106Score": 0,
         "last220Score": 0,
@@ -487,8 +487,8 @@
     "type": "loginCheck",
     "members": [
       {
-        "isLoggedIn": 0,
-        "userID": -1
+        "isLoggedIn": 1,
+        "userID": 2
       }
     ]
   }
