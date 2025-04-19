@@ -7,9 +7,17 @@
     <meta name="author" content="Big Green Egg">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="230Score.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
 </head>
 <body>
-
+	<script>
+		window.addEventListener('load', () => {
+			const jsConfetti = new JSConfetti()
+			jsConfetti.addConfetti({
+			emojis: ['🌈', '🌷', '🎉', '✨', '💫', '🌸'],
+			})
+		})
+	</script>
     <header>
         <img src="img/egg.png" alt="Big Green Egg Logo" class="left">
         <h1>
