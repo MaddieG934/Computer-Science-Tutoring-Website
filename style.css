@@ -726,3 +726,60 @@ h1 {
 .return-btn:hover {
 	background-color: #6d7553;
 }
+
+.textSwapContainer {
+
+	position: relative; 
+	font-size: 1em; 
+	min-height: 10em; 
+	width: 100%; 
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	white-space: normal;
+	display: flex; 
+	flex-direction: column;
+}
+
+.transitionText {
+
+	position: absolute;
+	transition: opacity 0.8s ease; 
+	width: 100%; 
+	font-size: 1em; 
+	display: flex; 
+	white-space: normal;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.firstDisplay {
+
+	opacity: 1; 
+	width: 100%;
+	display: block;
+}
+
+.hoverText {
+
+	opacity: 0; 
+	width: 100%;
+	display: block;
+}
+
+.firstDisplay h3, 
+.firstDisplay p, 
+.hoverText h3, 
+.hoverText p {
+
+	display: block; 
+}
+
+.textSwapContainer:hover .firstDisplay {
+	opacity: 0;
+}
+
+.textSwapContainer:hover .hoverText {
+	opacity: 1;
+}
