@@ -55,6 +55,8 @@ async function logout() {
     }
 }
 
+
+
 // Display the quiz score just obtained
 async function populateScore() {
     let jsData = await fetchData();
