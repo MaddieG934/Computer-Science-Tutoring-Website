@@ -7,11 +7,37 @@
         "userName": "Test User",
         "password": "password",
         "last105Score": 0,
-        "last106Score": 0,
+        "last106Score": 2,
         "last220Score": 0,
         "last230Score": 0,
         "max105Score": 0,
         "max106Score": 5,
+        "max220Score": 0,
+        "max230Score": 0
+      },
+      {
+        "userID": 1,
+        "userName": "Bob",
+        "password": "1234",
+        "last105Score": 0,
+        "last106Score": 0,
+        "last220Score": 0,
+        "last230Score": 0,
+        "max105Score": 0,
+        "max106Score": 0,
+        "max220Score": 0,
+        "max230Score": 0
+      },
+      {
+        "userID": 2,
+        "userName": "autumn",
+        "password": "test",
+        "last105Score": 0,
+        "last106Score": 0,
+        "last220Score": 0,
+        "last230Score": 0,
+        "max105Score": 0,
+        "max106Score": 0,
         "max220Score": 0,
         "max230Score": 0
       }
@@ -269,92 +295,92 @@
       {
         "questionID": 20,
         "quizID": 1,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "Which of the following is used to display output in C++?",
+        "optionA": "cin",
+        "optionB": "printf",
+        "optionC": "input",
+        "solution": "cout"
       },
       {
         "questionID": 21,
         "quizID": 1,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "Which keyword is used to declare an integer variable?",
+        "optionA": "number",
+        "optionB": "float",
+        "optionC": "string",
+        "solution": "int"
       },
       {
         "questionID": 22,
         "quizID": 1,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "What does the 'cin' statement do in C++?",
+        "optionA": "Displays output",
+        "optionB": "Declares a variable",
+        "optionC": "Ends a program",
+        "solution": "Receives user input"
       },
       {
         "questionID": 23,
         "quizID": 1,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "Which control structure would you use to make a decision in a program?",
+        "optionA": "for loop",
+        "optionB": "do-while loop",
+        "optionC": "function",
+        "solution": "if-else statement"
       },
       {
         "questionID": 24,
         "quizID": 1,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "Which loop executes at least once regardless of the condition?",
+        "optionA": "for loop",
+        "optionB": "while loop",
+        "optionC": "foreach loop",
+        "solution": "do-while loop"
       },
       {
         "questionID": 25,
         "quizID": 1,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "Which function definition is correct in C++?",
+        "optionA": "function greet() {}",
+        "optionB": "def greet() {}",
+        "optionC": "function greet[] {}",
+        "solution": "void greet() {}"
       },
       {
         "questionID": 26,
         "quizID": 1,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "How would you define a function that adds two integers?",
+        "optionA": "void add(a + b)",
+        "optionB": "function add(int a, int b) return a + b;",
+        "optionC": "int add(a, b)",
+        "solution": "void add(int a, int b)"
       },
       {
         "questionID": 27,
         "quizID": 1,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "Which of the following is a correct array declaration in C++?",
+        "optionA": "array numbers = [1, 2, 3];",
+        "optionB": "int numbers[] = 1, 2, 3;",
+        "optionC": "numbers int[3] = {1,2,3};",
+        "solution": "int numbers[3] = {1, 2, 3};"
       },
       {
         "questionID": 28,
         "quizID": 1,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "Which header file is needed to use the 'string' type in C++?",
+        "optionA": "#include <str>",
+        "optionB": "#include <cstring>",
+        "optionC": "#include <data>",
+        "solution": "#include <string>"
       },
       {
         "questionID": 29,
         "quizID": 1,
-        "prompt": "add here",
-        "optionA": "add here",
-        "optionB": "add here",
-        "optionC": "add here",
-        "solution": "add here"
+        "prompt": "What will the following code output: cout << numbers[0]; with numbers[5] = {1,2,3,4,5}?",
+        "optionA": "0",
+        "optionB": "2",
+        "optionC": "5",
+        "solution": "1"
       },
       {
         "questionID": 30,
@@ -461,8 +487,8 @@
     "type": "loginCheck",
     "members": [
       {
-        "isLoggedIn": 0,
-        "userID": -1
+        "isLoggedIn": 1,
+        "userID": 2
       }
     ]
   }

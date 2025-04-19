@@ -19,6 +19,7 @@ async function displayLoginInfo() {
         let users = jsData[0].members;
         let matchingUser = users.filter(user => user.userID === loginCheck.userID);
         let userName = matchingUser[0].userName;
+        console.log(userName);
 
         document.getElementById("loginInfo").innerHTML = "Logged in as: " + `${userName}`;
         document.getElementById("loginLink").textContent = "Logout";
@@ -36,30 +37,23 @@ async function logout() {
     if (loginCheck.isLoggedIn) {
         loginCheck.isLoggedIn = 0;
         loginCheck.userID = -1;
+
+        fetch('/save-data', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(jsData)
+        })
+            .then(res => res.text())
+            .then(msg => console.log(msg))
+            .catch(err => console.error('Save failed', err));
     }
 }
 
-// Display object => lessons => second lesson (106) => header, content
-//async function displayLesson() {
-//    let jsData = await fetchData();
-//    let lesson = jsData[2].members[1];
-
-//    if (lesson) {
-//        document.getElementById("lessonHeader").textContent = lesson.header;
-//    } else {
-//        console.error('Lesson not found.');
-//    }
-//}
-
-function goToQuiz() {
-    window.location.href = './106quiz.html';
-}
-
-// On document load, display appropriate content
+// On document load
 document.addEventListener("DOMContentLoaded", function () {
     displayLoginInfo();
-    //displayLesson();
-    //console.log('content displayed');
 
     document.getElementById("loginLink").addEventListener("click", function () {
         logout();

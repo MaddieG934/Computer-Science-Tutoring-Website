@@ -1,13 +1,61 @@
-// Switch page to login page
-async function goToLogin() {
-    window.location.href = './login.html';
-}
-
 // Fetch data from data.json as an array of objects
 async function fetchData() {
     const response = await fetch('./data.json');
     const data = await response.json();
     return data;
+}
+
+// Switch page to login page
+async function goToLogin() {
+    window.location.href = './login.html';
+}
+
+// Switch page to 105 lesson page
+async function goTo105() {
+    let jsData = await fetchData();
+    let loginCheck = jsData[5].members[0];
+
+    if (loginCheck.isLoggedIn) {
+        window.location.href = './105lesson.html';
+    } else {
+        goToLogin();
+    }
+}
+
+// Switch page to 106 lesson page
+async function goTo106() {
+    let jsData = await fetchData();
+    let loginCheck = jsData[5].members[0];
+
+    if (loginCheck.isLoggedIn) {
+        window.location.href = './106lesson.html';
+    } else {
+        goToLogin();
+    }
+}
+
+// Switch page to 220 lesson page
+async function goTo220() {
+    let jsData = await fetchData();
+    let loginCheck = jsData[5].members[0];
+
+    if (loginCheck.isLoggedIn) {
+        window.location.href = './220lesson.html';
+    } else {
+        goToLogin();
+    }
+}
+
+// Switch page to 230 lesson page
+async function goTo230() {
+    let jsData = await fetchData();
+    let loginCheck = jsData[5].members[0];
+
+    if (loginCheck.isLoggedIn) {
+        window.location.href = './230CourseContent.html';
+    } else {
+        goToLogin();
+    }
 }
 
 // Display login info
@@ -54,8 +102,26 @@ async function logout() {
 document.addEventListener("DOMContentLoaded", function () {
     displayLoginInfo();
 
+    // If user decides to log out
     document.getElementById("loginLink").addEventListener("click", function () {
         logout();
         goToLogin();
+    });
+
+    // On clicking any "take lesson" button, proceed to that lesson if the user is logged in
+    document.getElementById("105-btn").addEventListener("click", function () {
+        goTo105();
+    });
+
+    document.getElementById("106-btn").addEventListener("click", function () {
+        goTo106();
+    });
+
+    document.getElementById("220-btn").addEventListener("click", function () {
+        goTo220();
+    });
+
+    document.getElementById("230-btn").addEventListener("click", function () {
+        goTo230();
     });
 });

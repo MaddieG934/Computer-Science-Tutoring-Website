@@ -65,11 +65,9 @@ async function logout() {
 async function validateUser() {
 
     let enteredName = document.getElementById("userName").value; // Entered user name
-    console.log(enteredName);
 
     let jsData = await fetchData(); // Fetch all users
     let users = jsData[0].members;
-    console.log(users);
 
     // Get all users with the entered user name
     let matchingUsers = users.filter(user => user.userName === enteredName);
