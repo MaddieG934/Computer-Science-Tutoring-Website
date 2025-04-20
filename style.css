@@ -130,7 +130,7 @@ body img.right3 {
 }
 	
 	ul li.Login {
-		padding-top: 5px;
+		padding-top: 5px !important;
 		font-size: 1.5em !important;
 		padding-right: 5% !important;
 		outline: 2px #848B66;
