@@ -33,7 +33,7 @@ async function displayLoginInfo() {
     }
 }
 
-// On click of "Lougout", change 
+// On click of "Logout", change 
 async function logout() {
     let jsData = await fetchData();
     let loginCheck = jsData[5].members[0];
@@ -61,7 +61,7 @@ async function populateScore() {
     let user = jsData[0].members[0];
 
     if (user) {
-        document.getElementById("scoreNum").innerHTML = user.last106Score;
+        document.getElementById("scoreNum").innerHTML = user.last230Score;
     } else {
         error.log('User not found.');
     }

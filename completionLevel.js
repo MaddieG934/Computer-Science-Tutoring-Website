@@ -57,6 +57,8 @@ async function completeness(courseId, scoreNum) {
         courseElement.innerText = `${percentage}%`; 
     }
 
+    console.log(`updating course ${courseid} to ${percentage}%`); 
+
 }
 
 // Display the quiz score just obtained
@@ -73,7 +75,7 @@ async function populateScore() {
         completeness(220, user.max220Score);
         completeness(230, user.max230Score);
     } else {
-        error.log('User not found.');
+        console.error('User not found.'); /* changed the kind of error it logs  */
     }
     
 }

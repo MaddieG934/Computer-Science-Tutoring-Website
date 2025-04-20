@@ -72,10 +72,10 @@ async function calcScore() {
     let jsData = await fetchData();
 
     if (jsData[0].members[0]) {
-        jsData[0].members[0].last106Score = score;
+        jsData[0].members[0].last220Score = score;
 
-        if (score > jsData[0].members[0].max106Score) {
-            jsData[0].members[0].max106Score = score;
+        if (score > jsData[0].members[0].max220Score) {
+            jsData[0].members[0].max220Score = score;
         }
     } else {
         error.log('User not found');
