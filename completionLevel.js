@@ -15,6 +15,7 @@ async function fetchData() {
     return data;
 }
 
+
 // Display login info
 async function displayLoginInfo() {
     let jsData = await fetchData();
@@ -41,18 +42,23 @@ async function logout() {
     if (loginCheck.isLoggedIn) {
         loginCheck.isLoggedIn = 0;
         loginCheck.userID = -1;
-
-        fetch('/save-data', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(jsData)
-        })
-            .then(res => res.text())
-            .then(msg => console.log(msg))
-            .catch(err => console.error('Save failed', err));
     }
+}
+
+async function completeness(courseId, scoreNum) {
+
+
+    const percentage = (scoreNum/5) * 100; 
+
+    const courseElement = document.querySelector(`[data-course="${courseId}"]`); 
+
+    if (courseElement) {
+
+        courseElement.innerText = `${percentage}%`; 
+    }
+
+    console.log(`updating course ${courseid} to ${percentage}%`); 
+
 }
 
 // Display the quiz score just obtained
@@ -61,9 +67,15 @@ async function populateScore() {
     let user = jsData[0].members[0];
 
     if (user) {
-        document.getElementById("scoreNum").innerHTML = user.last230Score;
+
+        console.log("user found", user); 
+
+        completeness(105, user.max105Score);
+        completeness(106, user.max106Score);
+        completeness(220, user.max220Score);
+        completeness(230, user.max230Score);
     } else {
-        error.log('User not found.');
+        console.error('User not found.'); /* changed the kind of error it logs  */
     }
     
 }
