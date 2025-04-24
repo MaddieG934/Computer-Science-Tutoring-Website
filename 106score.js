@@ -47,7 +47,7 @@ async function logout() {
 // Display the quiz score just obtained
 async function populateScore() {
     let jsData = await fetchData();
-    let user = jsData[0].members[0];
+    let user = jsData[0].members[0]; 
 
     if (user) {
         document.getElementById("scoreNum").innerHTML = user.last106Score;

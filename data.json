@@ -8,12 +8,12 @@
         "password": "password",
         "last105Score": 2,
         "last106Score": 1,
-        "last220Score": 1,
-        "last230Score": 1,
+        "last220Score": 2,
+        "last230Score": 5,
         "max105Score": 2,
         "max106Score": 5,
-        "max220Score": 1,
-        "max230Score": 2
+        "max220Score": 2,
+        "max230Score": 5
       },
       {
         "userID": 1,
@@ -487,8 +487,8 @@
     "type": "loginCheck",
     "members": [
       {
-        "isLoggedIn": 0,
-        "userID": -1
+        "isLoggedIn": 1,
+        "userID": 2
       }
     ]
   }
