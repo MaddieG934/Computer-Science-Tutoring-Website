@@ -39,8 +39,15 @@ async function logout() {
     let loginCheck = jsData[5].members[0];
 
     if (loginCheck.isLoggedIn) {
-        loginCheck.isLoggedIn = 0;
-        loginCheck.userID = -1;
+        let users = jsData[0].members;
+        let matchingUser = users.filter(user => user.userID === loginCheck.userID);
+        let userName = matchingUser[0].userName;
+
+        document.getElementById("loginInfo").innerHTML = "Logged in as: " + `${userName}`;
+        document.getElementById("loginLink").textContent = "Logout";
+    } else {
+        document.getElementById("loginInfo").innerHTML = "Logged in as: Guest";
+        document.getElementById("loginLink").textContent = "Login";
     }
 }
 
