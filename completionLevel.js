@@ -42,6 +42,17 @@ async function logout() {
     if (loginCheck.isLoggedIn) {
         loginCheck.isLoggedIn = 0;
         loginCheck.userID = -1;
+
+        fetch('/save-data', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(jsData)
+        })
+            .then(res => res.text())
+            .then(msg => console.log(msg))
+            .catch(err => console.error('Save failed', err));
     }
 }
 
