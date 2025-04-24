@@ -64,20 +64,27 @@ async function completeness(courseId, scoreNum) {
 // Display the quiz score just obtained
 async function populateScore() {
     let jsData = await fetchData();
-    let user = jsData[0].members[0];
 
-    if (user) {
-
-        console.log("user found", user); 
-
-        completeness(105, user.max105Score);
-        completeness(106, user.max106Score);
-        completeness(220, user.max220Score);
-        completeness(230, user.max230Score);
+    let loginCheck = jsData[5].members[0];
+    if (loginCheck.isLoggedIn) {
+        let users = jsData[0].members;
+        let user = users.filter(user => user.userID === loginCheck.userID);
+        if (user.size() > 0) {
+            // Base completeness on the logged in user's maximum obtained score
+            completeness(105, user[0].max105Score);
+            completeness(106, user[0].max106Score);
+            completeness(220, user[0].max220Score);
+            completeness(230, user[0].max230Score);
+        } else {
+            console.error("User not found.");
+        }
     } else {
-        console.error('User not found.'); /* changed the kind of error it logs  */
+        // If no one is logged in, assume the score is 0
+        completeness(105, 0);
+        completeness(106, 0);
+        completeness(220, 0);
+        completeness(230, 0);
     }
-    
 }
 
 // On document load, display appropriate content

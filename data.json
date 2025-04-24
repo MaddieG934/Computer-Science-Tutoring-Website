@@ -487,8 +487,8 @@
     "type": "loginCheck",
     "members": [
       {
-        "isLoggedIn": 0,
-        "userID": -1
+        "isLoggedIn": 1,
+        "userID": 0
       }
     ]
   }
