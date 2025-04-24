@@ -47,7 +47,6 @@ async function logout() {
 
 async function completeness(courseId, scoreNum) {
 
-
     const percentage = (scoreNum/5) * 100; 
 
     const courseElement = document.querySelector(`[data-course="${courseId}"]`); 
@@ -57,7 +56,7 @@ async function completeness(courseId, scoreNum) {
         courseElement.innerText = `${percentage}%`; 
     }
 
-    console.log(`updating course ${courseid} to ${percentage}%`); 
+    console.log(`updating course ${courseId} to ${percentage}%`); 
 
 }
 
@@ -69,7 +68,8 @@ async function populateScore() {
     if (loginCheck.isLoggedIn) {
         let users = jsData[0].members;
         let user = users.filter(user => user.userID === loginCheck.userID);
-        if (user.size() > 0) {
+        console.log(user);
+        if (user.length > 0) {
             // Base completeness on the logged in user's maximum obtained score
             completeness(105, user[0].max105Score);
             completeness(106, user[0].max106Score);
