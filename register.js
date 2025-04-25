@@ -1,23 +1,18 @@
 // Switch page to home
 function goToHome() {
+    sessionStorage.setItem("msg", "");
     window.location.href = './websitetest.html';
 }
 
 // Switch to new user page
 function goToLogin() {
+    sessionStorage.setItem("msg", "");
     window.location.href = './login.html';
 }
 
 // Reload this page
 function reload() {
     window.location.href = './register.html';
-}
-
-// Fetch data from data.json as an array of objects
-async function fetchData() {
-    const response = await fetch('./data.json');
-    const data = await response.json();
-    return data;
 }
 
 // Fetch data from data.json as an array of objects
@@ -133,7 +128,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (!code) {
             // Proceed to login once new user is created
-            sessionStorage.setItem("msg", "");
             goToLogin();
         } else {
             // Error message when username is taken

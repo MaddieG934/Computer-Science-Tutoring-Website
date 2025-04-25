@@ -500,8 +500,8 @@
     "type": "loginCheck",
     "members": [
       {
-        "isLoggedIn": 1,
-        "userID": 0
+        "isLoggedIn": 0,
+        "userID": -1
       }
     ]
   }

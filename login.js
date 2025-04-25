@@ -1,10 +1,12 @@
 // Switch page to home
 function goToHome() {
+    sessionStorage.setItem("msg", "");
     window.location.href = './websitetest.html';
 }
 
 // Switch to new user page
 function goToRegister() {
+    sessionStorage.setItem("msg", "");
     window.location.href = './register.html';
 }
 
@@ -118,7 +120,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (!code) {
             // Proceed to home once user is logged in
-            sessionStorage.setItem("msg", "");
             goToHome();
         } else if (code === 1) {
             // Error message when username is incorrect
