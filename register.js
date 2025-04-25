@@ -81,6 +81,11 @@ async function createAccount() {
 
     // Get the rest of the new user data and create an object
     let enteredPassword = document.getElementById("password").value;
+    if (enterdPassword.length === 0) {
+        // If the password field is empty, return error code 2
+        return 2;
+    }
+
     let newUserId = users[users.length - 1].userID + 1;
 
     let newUser = {
@@ -129,9 +134,12 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!code) {
             // Proceed to login once new user is created
             goToLogin();
-        } else {
+        } else if (code == 1) {
             // Error message when username is taken
             sessionStorage.setItem("msg", "Username is already associated with an account");
+            reload();
+        } else {
+            sessionStorage.setItem("msg", "Password field is missing");
             reload();
         }
     });
