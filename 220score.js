@@ -8,6 +8,11 @@ async function goToLogin() {
     window.location.href = './login.html';
 }
 
+// Return to quiz page
+async function goToQuiz() {
+    window.location.href = './220quiz.html';
+}
+
 // Fetch data from data.json as an array of objects
 async function fetchData() {
     const response = await fetch('./data.json');
