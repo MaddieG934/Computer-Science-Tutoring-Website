@@ -148,4 +148,8 @@ document.addEventListener("DOMContentLoaded", function () {
         logout();
         goToLogin();
     });
+
+    document.getElementById("toHome").addEventListener("click", function () {
+        goToHome();
+    });
 });

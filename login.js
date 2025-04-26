@@ -136,4 +136,8 @@ document.addEventListener("DOMContentLoaded", function () {
         logout();
         reload();
     });
+
+    document.getElementById("toHome").addEventListener("click", function () {
+        goToHome();
+    });
 });
