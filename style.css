@@ -530,7 +530,7 @@ ul li.Login {
 	border-radius: 8px;
 	cursor: pointer;
 	transition: background-color 0.3s ease;
-	/*z-index: 2;*/
+	position:relative;
 }
 
 	.lesson-btn:hover {
@@ -744,16 +744,16 @@ h1 {
 
 .transitionText {
 
-	position: absolute;
-	z-index: 1;
+	position:absolute;
 	transition: opacity 0.8s ease; 
-	width: 100%; 
+	width: 100%;
 	font-size: 1em; 
-	display: flex; 
+	display: flex;
 	white-space: normal;
-	justify-content: center;
+	justify-content:center;
 	align-items: center;
 	text-align: center;
+
 }
 
 .firstDisplay {
@@ -765,7 +765,7 @@ h1 {
 
 .hoverText {
 
-	opacity: 0; 
+	opacity: 0;
 	width: 100%;
 	display: block;
 	pointer-events: none;

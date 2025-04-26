@@ -81,7 +81,7 @@ async function createAccount() {
 
     // Get the rest of the new user data and create an object
     let enteredPassword = document.getElementById("password").value;
-    if (enterdPassword.length === 0) {
+    if (enteredPassword.length === 0) {
         // If the password field is empty, return error code 2
         return 2;
     }
@@ -147,5 +147,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("loginLink").addEventListener("click", function () {
         logout();
         goToLogin();
+    });
+
+    document.getElementById("toHome").addEventListener("click", function () {
+        goToHome();
     });
 });
