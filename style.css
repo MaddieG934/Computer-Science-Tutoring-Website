@@ -516,7 +516,7 @@ ul li.Login {
 	.course-box p {
 		font-size: 1em;
 		line-height: 1.5;
-		margin-bottom: 30px;
+		/*margin-bottom: 30px;*/
 	}
 
 /* lesson button */
@@ -768,6 +768,7 @@ h1 {
 	opacity: 0;
 	width: 100%;
 	display: block;
+	pointer-events: none;
 }
 
 .firstDisplay h3, 
@@ -784,4 +785,9 @@ h1 {
 
 .textSwapContainer:hover .hoverText {
 	opacity: 1;
+}
+
+.hoverText.show, .hoverText:hover {
+	opacity: 1; 
+	pointer-events: auto; 
 }
