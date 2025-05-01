@@ -6,7 +6,7 @@
         "userID": 0,
         "userName": "Test User",
         "password": "password",
-        "last105Score": 2,
+        "last105Score": 0,
         "last106Score": 1,
         "last220Score": 2,
         "last230Score": 5,
@@ -500,8 +500,8 @@
     "type": "loginCheck",
     "members": [
       {
-        "isLoggedIn": 1,
-        "userID": 2
+        "isLoggedIn": 0,
+        "userID": -1
       }
     ]
   }
