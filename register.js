@@ -1,23 +1,18 @@
 // Switch page to home
 function goToHome() {
+    sessionStorage.setItem("msg", "");
     window.location.href = './websitetest.html';
 }
 
 // Switch to new user page
 function goToLogin() {
+    sessionStorage.setItem("msg", "");
     window.location.href = './login.html';
 }
 
 // Reload this page
 function reload() {
     window.location.href = './register.html';
-}
-
-// Fetch data from data.json as an array of objects
-async function fetchData() {
-    const response = await fetch('./data.json');
-    const data = await response.json();
-    return data;
 }
 
 // Fetch data from data.json as an array of objects
@@ -86,6 +81,11 @@ async function createAccount() {
 
     // Get the rest of the new user data and create an object
     let enteredPassword = document.getElementById("password").value;
+    if (enteredPassword.length === 0) {
+        // If the password field is empty, return error code 2
+        return 2;
+    }
+
     let newUserId = users[users.length - 1].userID + 1;
 
     let newUser = {
@@ -133,11 +133,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (!code) {
             // Proceed to login once new user is created
-            sessionStorage.setItem("msg", "");
             goToLogin();
-        } else {
+        } else if (code == 1) {
             // Error message when username is taken
             sessionStorage.setItem("msg", "Username is already associated with an account");
+            reload();
+        } else {
+            sessionStorage.setItem("msg", "Password field is missing");
             reload();
         }
     });
@@ -145,5 +147,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("loginLink").addEventListener("click", function () {
         logout();
         goToLogin();
+    });
+
+    document.getElementById("toHome").addEventListener("click", function () {
+        goToHome();
     });
 });

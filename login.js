@@ -1,10 +1,12 @@
 // Switch page to home
 function goToHome() {
+    sessionStorage.setItem("msg", "");
     window.location.href = './websitetest.html';
 }
 
 // Switch to new user page
 function goToRegister() {
+    sessionStorage.setItem("msg", "");
     window.location.href = './register.html';
 }
 
@@ -80,16 +82,16 @@ async function validateUser() {
 
     // Get all users (should be 1 or 0) with the entered password
     let enteredPassword = document.getElementById("password").value;
-    let matchingPasswords = users.filter(user => user.password === enteredPassword);
+    let matchingPassword = matchingUsers[0].password;
 
-    if (matchingPasswords.length === 0) {
+    if (matchingPassword != enteredPassword) {
         // If there are no matching passwords, return error code 2
         return 2;
     }
 
     // Update the database to reflect the logged in user
     jsData[5].members[0].isLoggedIn = 1;
-    jsData[5].members[0].userID = matchingPasswords[0].userID;
+    jsData[5].members[0].userID = matchingUsers[0].userID;
 
     fetch('/save-data', {
         method: 'POST',
@@ -118,7 +120,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (!code) {
             // Proceed to home once user is logged in
-            sessionStorage.setItem("msg", "");
             goToHome();
         } else if (code === 1) {
             // Error message when username is incorrect
@@ -134,5 +135,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("loginLink").addEventListener("click", function () {
         logout();
         reload();
+    });
+
+    document.getElementById("toHome").addEventListener("click", function () {
+        goToHome();
     });
 });

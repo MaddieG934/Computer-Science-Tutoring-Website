@@ -516,7 +516,7 @@ ul li.Login {
 	.course-box p {
 		font-size: 1em;
 		line-height: 1.5;
-		margin-bottom: 30px;
+		/*margin-bottom: 30px;*/
 	}
 
 /* lesson button */
@@ -530,6 +530,7 @@ ul li.Login {
 	border-radius: 8px;
 	cursor: pointer;
 	transition: background-color 0.3s ease;
+	position:relative;
 }
 
 	.lesson-btn:hover {
@@ -743,15 +744,16 @@ h1 {
 
 .transitionText {
 
-	position: absolute;
+	position:absolute;
 	transition: opacity 0.8s ease; 
-	width: 100%; 
+	width: 100%;
 	font-size: 1em; 
-	display: flex; 
+	display: flex;
 	white-space: normal;
-	justify-content: center;
+	justify-content:center;
 	align-items: center;
 	text-align: center;
+
 }
 
 .firstDisplay {
@@ -763,9 +765,10 @@ h1 {
 
 .hoverText {
 
-	opacity: 0; 
+	opacity: 0;
 	width: 100%;
 	display: block;
+	pointer-events: none;
 }
 
 .firstDisplay h3, 
@@ -782,4 +785,9 @@ h1 {
 
 .textSwapContainer:hover .hoverText {
 	opacity: 1;
+}
+
+.hoverText.show, .hoverText:hover {
+	opacity: 1; 
+	pointer-events: auto; 
 }
