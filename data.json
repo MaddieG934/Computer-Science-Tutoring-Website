@@ -10,10 +10,10 @@
         "last106Score": 0,
         "last220Score": 0,
         "last230Score": 0,
-        "max105Score": 5,
-        "max106Score": 5,
+        "max105Score": 2,
+        "max106Score": 3,
         "max220Score": 5,
-        "max230Score": 5
+        "max230Score": 4
       },
       {
         "userID": 1,
@@ -25,8 +25,8 @@
         "last230Score": 0,
         "max105Score": 0,
         "max106Score": 0,
-        "max220Score": 0,
-        "max230Score": 0
+        "max220Score": 5,
+        "max230Score": 1
       },
       {
         "userID": 2,
@@ -36,10 +36,10 @@
         "last106Score": 0,
         "last220Score": 0,
         "last230Score": 0,
-        "max105Score": 0,
-        "max106Score": 0,
-        "max220Score": 0,
-        "max230Score": 0
+        "max105Score": 2,
+        "max106Score": 2
+        "max220Score": 2,
+        "max230Score": 2
       },
       {
         "userID": 3,
@@ -49,9 +49,9 @@
         "last106Score": 0,
         "last220Score": 0,
         "last230Score": 0,
-        "max105Score": 0,
+        "max105Score": 3,
         "max106Score": 0,
-        "max220Score": 0,
+        "max220Score": 4,
         "max230Score": 0
       },
       {
@@ -62,7 +62,7 @@
         "last106Score": 0,
         "last220Score": 0,
         "last230Score": 0,
-        "max105Score": 0,
+        "max105Score": 5,
         "max106Score": 0,
         "max220Score": 0,
         "max230Score": 0
@@ -513,8 +513,8 @@
     "type": "loginCheck",
     "members": [
       {
-        "isLoggedIn": 1,
-        "userID": 1
+        "isLoggedIn": 0,
+        "userID": -1
       }
     ]
   }
